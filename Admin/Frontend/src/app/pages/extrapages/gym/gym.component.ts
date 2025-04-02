@@ -19,6 +19,14 @@ import { GymService } from 'src/app/services/gym.service';
         this.gyms = data;
       });
     }
+
+    deleteGym(gymId: number): void {
+      this.gymService.deleteGym(gymId).subscribe(() => {
+        // Remove deleted gym from the list
+        this.gyms = this.gyms.filter(gym => gym.gym_id !== gymId);
+        console.log('Gym deleted successfully');
+      });
+    }
     
   }
 

@@ -18,5 +18,7 @@ export class GymService {
   addGym(gym: Gym): Observable<Gym> {
     return this.http.post<Gym>(`${this.apiUrl}/AddGym`, gym);
   }
-  
+  deleteGym(gymId: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/deleteGym/${gymId}`);
+  }
 }
