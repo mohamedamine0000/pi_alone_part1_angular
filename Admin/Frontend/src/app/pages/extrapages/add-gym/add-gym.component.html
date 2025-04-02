@@ -4,39 +4,52 @@
   <div class="page-content mt-5 pt-5">
     <div class="container">
       <h2>Add New Gym</h2>
-      <form [formGroup]="gymForm" (ngSubmit)="addGym()">
-        
-        <label>Gym Name:</label>
-        <input type="text" formControlName="gymName" required>
+<form [formGroup]="gymForm" (ngSubmit)="addGym()">
+  
+  <label>Gym Name:</label>
+  <input type="text" formControlName="gymName" required>
 
-        <label>Location:</label>
-        <input type="text" formControlName="location" required>
+  <label>Location:</label>
+  <input type="text" formControlName="location" required>
 
-        <label>Subscription Fee:</label>
-        <input type="number" formControlName="subscription_fee" required>
+  <label>Subscription Fee:</label>
+  <input type="number" formControlName="subscription_fee" required>
 
-        <label>Number of Members:</label>
-        <input type="number" formControlName="num_members" required>
+  <label>Number of Members:</label>
+  <input type="number" formControlName="num_members" required>
 
-        <label>Number of Machines:</label>
-        <input type="number" formControlName="number_machines" required>
+  <label>Number of Machines:</label>
+  <input type="number" formControlName="number_machines" required>
 
-        <label>Open Days:</label>
-        <select formControlName="open_days">
-          <option *ngFor="let day of daysEnum" [value]="day">{{ day }}</option>
-        </select>
+  <label>Open Days:</label>
+  <select formControlName="open_days">
+    <option *ngFor="let day of daysEnum" [value]="day">{{ day }}</option>
+  </select>
 
-        <label>Number of Coaches:</label>
-        <input type="number" formControlName="numbercoaches" required>
+  <label>Number of Coaches:</label>
+  <input type="number" formControlName="numbercoaches" required>
 
-        <label>Open Hours:</label>
-        <input type="text" formControlName="open_hours" required>
+  <label>Open Hours:</label>
+  <input type="text" formControlName="open_hours" required>
 
-        <label>Gym 3D Link:</label>
-        <input type="text" formControlName="gym_3d" required>
+  <label>Gym 3D Link:</label>
+  <input type="text" formControlName="gym_3d" required>
 
-        <button type="submit" class="btn btn-success" [disabled]="!gymForm.valid">Add Gym</button>
-      </form>
+  <!-- Activities -->
+  <label>Activities:</label>
+  <div *ngFor="let activity of activities">
+    <input type="checkbox" (change)="toggleActivity(activity.activity_id)"> {{ activity.activity_time }} - {{ activity.type_act }}
+  </div>
+
+  <!-- Events -->
+  <label>Events:</label>
+  <div *ngFor="let event of events">
+    <input type="checkbox" (change)="toggleEvent(event.id_event)"> {{ event.event_name }}
+  </div>
+
+  <button type="submit" class="btn btn-success" [disabled]="!gymForm.valid">Add Gym</button>
+</form>
+
     </div>
   </div>
 </div>

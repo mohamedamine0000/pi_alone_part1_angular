@@ -12,5 +12,7 @@ export interface Gym {
   numbercoaches: number;
   open_hours: string;
   gym_3d: string;
+  events: Event[]; 
+  activities: Activities[];
 }
 

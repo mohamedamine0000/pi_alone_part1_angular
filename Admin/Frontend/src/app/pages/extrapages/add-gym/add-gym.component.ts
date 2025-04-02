@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GymService } from 'src/app/services/gym.service';
 import { Gym } from 'src/app/models/gym.model';
+import { Activities } from 'src/app/models/activities';
+import { Event } from 'src/app/models/event';
+import { ActivitiesService } from 'src/app/services/activities.service';
+import { EventService } from 'src/app/services/event.service';
 
 @Component({
   selector: 'app-add-gym',
@@ -10,15 +14,21 @@ import { Gym } from 'src/app/models/gym.model';
 })
 export class AddGymComponent implements OnInit {
   gymForm!: FormGroup;
-  daysEnum = ['MondayToSaturday', 'FullWeek', 'MondayToFriday']; // List of open days
+  daysEnum = ['MondayToSaturday', 'FullWeek', 'MondayToFriday'];
+
+  activities: Activities[] = [];
+  events: Event[] = [];
+  selectedActivities: number[] = [];
+  selectedEvents: number[] = [];
 
   constructor(
     private fb: FormBuilder,
-    private gymService: GymService
+    private gymService: GymService,
+    private activitiesService: ActivitiesService,
+    private eventService: EventService
   ) {}
 
   ngOnInit(): void {
-    // Initialize the form
     this.gymForm = this.fb.group({
       gymName: ['', Validators.required],
       location: ['', Validators.required],
@@ -30,12 +40,35 @@ export class AddGymComponent implements OnInit {
       open_hours: ['', Validators.required],
       gym_3d: ['', Validators.required]
     });
+
+    // Fetch activities and events
+    this.activitiesService.getActivities().subscribe(data => this.activities = data);
+    this.eventService.getEvents().subscribe(data => this.events = data);
   }
 
-  // Handle form submission
+  toggleActivity(activityId: number) {
+    if (this.selectedActivities.includes(activityId)) {
+      this.selectedActivities = this.selectedActivities.filter(id => id !== activityId);
+    } else {
+      this.selectedActivities.push(activityId);
+    }
+  }
+
+  toggleEvent(eventId: number) {
+    if (this.selectedEvents.includes(eventId)) {
+      this.selectedEvents = this.selectedEvents.filter(id => id !== eventId);
+    } else {
+      this.selectedEvents.push(eventId);
+    }
+  }
+
   addGym(): void {
     if (this.gymForm.valid) {
-      const newGym: Gym = this.gymForm.value;
+      const newGym: Gym = {
+        ...this.gymForm.value,
+        events: this.selectedEvents.map(id => ({ id_event: id } as Event)),
+        activities: this.selectedActivities.map(id => ({ activity_id: id } as Activities))
+      };
 
       this.gymService.addGym(newGym).subscribe(response => {
         console.log('Gym added successfully!', response);
