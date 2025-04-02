@@ -1,0 +1,118 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumb title="Input Masks" [breadcrumbItems]="breadCrumbItems"></app-breadcrumb>
+<!-- End Breadcrumbs -->
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Examples</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <div>
+                    <h5 class="fs-14 mb-3 text-muted">Date Formatting</h5>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="mb-3">
+                                <label for="cleave-date" class="form-label">Date</label>
+                                <p-inputMask mask="99/99/9999" [(ngModel)]="val3" placeholder="dd/mm/yyyy"
+                                    styleClass="form-control" slotChar="mm/dd/yyyy"></p-inputMask>
+                            </div>
+
+                        </div><!-- end col -->
+
+                        <div class="col-xl-6">
+                            <div class="mb-3">
+                                <label for="cleave-date-format" class="form-label">Date Formatting</label>
+                                <p-inputMask mask="99/99" [(ngModel)]="val2" placeholder="mm/dd"
+                                    styleClass="form-control" slotChar="mm/dd"></p-inputMask>
+                            </div>
+                        </div><!-- end col -->
+                    </div><!-- end row -->
+                </div>
+                <div class="border mt-3 border-dashed"></div>
+                <div class="mt-4">
+                    <h6 class="mb-3 fs-14 text-muted">Time Formatting</h6>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="mb-3">
+                                <label for="cleave-time" class="form-label">Time</label>
+                                <p-inputMask mask="99:99:99" styleClass="form-control" [(ngModel)]="val4"
+                                    placeholder="hh:mm:ss"></p-inputMask>
+                            </div>
+                        </div><!-- end col -->
+                        <div class="col-xl-6">
+                            <div class="mb-3">
+                                <label for="cleave-time-format" class="form-label">Time Formatting</label>
+                                <p-inputMask mask="99:99" styleClass="form-control" [(ngModel)]="val4"
+                                    placeholder="hh:mm"></p-inputMask>
+                            </div>
+                        </div><!-- end col -->
+                    </div><!-- end row -->
+                </div>
+                <div class="border mt-3 border-dashed"></div>
+                <div class="mt-4">
+                    <h5 class="fs-14 mb-3 text-muted">Custom Options</h5>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="mb-3">
+                                <label for="cleave-ccard" class="form-label">Credit Card</label>
+                                <p-inputMask mask="9999 9999 9999 9999" styleClass="form-control" [(ngModel)]="val4"
+                                    placeholder="xxxx xxxx xxxx xxxx"></p-inputMask>
+                            </div>
+
+                        </div><!-- end col -->
+
+                        <div class="col-xl-6">
+                            <div class="mb-3">
+                                <label for="cleave-delimiter" class="form-label">Delimiter</label>
+                                <p-inputMask mask="999.999.999" styleClass="form-control" [(ngModel)]="val4"
+                                    placeholder="xxx.xxx.xxx"></p-inputMask>
+                            </div>
+                        </div><!-- end col -->
+                    </div><!-- end row -->
+
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="mb-3">
+                                <label for="cleave-delimiters" class="form-label">Delimiters</label>
+                                <p-inputMask mask="999.999.999-99" styleClass="form-control" [(ngModel)]="val4"
+                                    placeholder="xxx.xxx.xxx-xx"></p-inputMask>
+                            </div>
+                        </div><!-- end col -->
+
+                        <div class="col-xl-6">
+                            <div class="mb-3">
+                                <label for="cleave-prefix" class="form-label">Prefix</label>
+                                <p-inputMask mask="PREFIX-9999-9999-9999" [(ngModel)]="val4" placeholder="PREFIX-"
+                                    styleClass="form-control"></p-inputMask>
+                            </div>
+                        </div><!-- end col -->
+                    </div><!-- end row -->
+
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="mb-3 mb-xl-0">
+                                <label for="cleave-phone" class="form-label">Phone</label>
+                                <p-inputMask styleClass="form-control" id="cleave-phone" mask="(999) 999-9999"
+                                    [(ngModel)]="val2" placeholder="(xxx)xxx-xxxx"></p-inputMask>
+                            </div>
+                        </div><!-- end col -->
+
+                        <div class="col-xl-6">
+                            <div class="mb-0">
+                                <label for="cleave-numeral" class="form-label">Numeral Formatting</label>
+                                <p-inputMask [(ngModel)]="val1" styleClass="form-control" mask="999999999"
+                                    placeholder="Enter numeral"></p-inputMask>
+                            </div>
+                        </div><!-- end col -->
+                    </div><!-- end row -->
+                </div>
+            </div><!-- end card-body -->
+        </div><!-- end card -->
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->

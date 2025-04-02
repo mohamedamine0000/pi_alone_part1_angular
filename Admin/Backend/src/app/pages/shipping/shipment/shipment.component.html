@@ -1,0 +1,279 @@
+<!-- breadcrumb -->
+<app-breadcrumbs title="Shipments" [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
+
+<div class="card" id="shipmentsList">
+    <div class="card-header border-bottom-dashed">
+        <div class="row align-items-center">
+            <div class="col-xxl-3 col-sm-6">
+                <h6 class="card-title mb-0">Shipping</h6>
+            </div>
+            <div class="col-xxl-auto col-sm-auto ms-auto">
+                <button data-bs-target="#createModal" data-bs-toggle="modal" (click)="showPositionDialog()"
+                    class="btn btn-success add-btn"><i class="bi bi-plus-circle me-1 align-middle"></i> Add
+                    Shipping</button>
+            </div>
+        </div>
+    </div>
+    <div class="card-header border-bottom-dashed">
+        <div class="row g-3">
+            <div class="col-xxl-3 col-lg-6">
+                <div class="search-box">
+                    <input type="text" class="form-control search"
+                        (input)="dt.filterGlobal($event.target.value, 'contains')"
+                        placeholder="Search for order ID, shipment no, customer, order status or something...">
+                    <i class="ri-search-line search-icon"></i>
+                </div>
+            </div>
+            <div class="col-xxl-3 col-lg-6">
+                <p-calendar placeholder="Select date" selectionMode="range"></p-calendar>
+            </div>
+            <div class="col-xxl-2 col-lg-6">
+                <select class="form-control" data-choices data-choices-search-false name="choices-single-default"
+                    id="idStatus" (input)="dt.filterGlobal($event.target.value, 'contains')">
+                    <option value="">Status</option>
+                    <option value="Pickups">Pickups</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Shipping">Shipping</option>
+                    <option value="Delivered">Delivered</option>
+                    <option value="Out Of Delivery">Out Of Delivery</option>
+                </select>
+            </div>
+            <div class="col-xxl-2 col-lg-6">
+                <select class="form-control" data-choices data-choices-search-false
+                    (input)="dt.filterGlobal($event.target.value, 'contains')" name="choices-single-default">
+                    <option value="">Status</option>
+                    <option value="all" selected>All</option>
+                    <option value="Today">Today</option>
+                    <option value="Yesterday">Yesterday</option>
+                    <option value="Last 7 Days">Last 7 Days</option>
+                    <option value="Last 30 Days">Last 30 Days</option>
+                    <option value="This Month">This Month</option>
+                    <option value="Last Month">Last Month</option>
+                </select>
+            </div>
+            <div class="col-xxl-2 col-lg-6">
+                <button type="button" class="btn btn-primary w-100" onclick="filterData();">Filters</button>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive table-card">
+            <p-table #dt [value]="products" [paginator]="true" [rows]="10" (onPage)="onPageChange($event)"
+                [globalFilterFields]="['shipment_no','customer_name','supplier','location','status']">
+                <ng-template pTemplate="header">
+                    <tr class="gridjs-tr">
+                        <th>Order ID</th>
+                        <th>Shipment No</th>
+                        <th>Customer</th>
+                        <th>Supplier</th>
+                        <th>Location</th>
+                        <th>Order Date</th>
+                        <th>Arrival Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-data let-index="rowIndex">
+                    <tr>
+                        <td class="id" scope="row"><a href="javascript:void(0);"
+                                class="fw-medium link-primary">#TBT{{data.id}}</a></td>
+                        <td class="shipment_no"><a href="javascript:void(0);"
+                                class="text-reset">#{{data.shipment_no}}</a>
+                        </td>
+                        <td>{{data.customer_name}}</td>
+                        <td>{{data.supplier}}</td>
+                        <td>{{data.location}}</td>
+                        <td> {{data.order_date}}</td>
+                        <td>{{data.arrival_date}}</td>
+                        <td><span class="badge text-uppercase" [ngClass]="{'bg-success-subtle text-success': data.status === 'Delivered',
+                            'bg-warning-subtle text-warning': data.status === 'Pending',
+                            'bg-danger-subtle text-danger': data.status === 'Out Of Delivery',
+                            'bg-secondary-subtle text-secondary': data.status === 'Pickups',
+                            'bg-info-subtle text-info': data.status === 'Shipping'}">{{data.status}}</span></td>
+                        <td>
+                            <ul class="hstack gap-2 list-unstyled mb-0">
+                                <li>
+                                    <a href="javascript:void(0);"
+                                        class="badge bg-primary-subtle text-primary edit-item-btn"
+                                        data-bs-toggle="modal" (click)="editProduct(index)">Edit</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" data-bs-toggle="modal"
+                                        class="badge bg-danger-subtle text-danger remove-item-btn"
+                                        (click)="showDialog(index)">Delete</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="paginatorleft" let-state>
+                    Showing {{first}} - {{endIndex}} of {{products.length}} results
+                </ng-template>
+
+                <ng-template pTemplate="emptymessage">
+                    <tr class="py-4">
+                        <td colspan="9" class="">
+                            <div class="avatar-md mb-4  mx-auto">
+                                <div class="avatar-title bg-primary-subtle text-primary rounded-circle fs-24">
+                                    <i class="bi bi-search"></i>
+                                </div>
+                            </div>
+                            <h5 class="mt-2 d-flex justify-content-center">Sorry! No Result Found</h5>
+                            <p class="text-muted mb-0 d-flex justify-content-center">We've searched more than 150+
+                                shipment orders We did not find
+                                any
+                                shipment
+                                orders for you search.</p>
+
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- createModal -->
+<p-dialog header="Header" [modal]="true" [(visible)]="displayPosition" [style]="{width: '800px'}"
+    class="modal-dialog modal-dialog-centered">
+
+    <ng-template pTemplate="header" style="width:498px" styleClass="modal-header">
+        <h5 class="modal-title fs-18" id="exampleModalLabel">Create Shipping</h5>
+    </ng-template>
+    <ng-template pTemplate="body" styleClass="modal-body">
+        <div id="alert-error-msg" class="d-none alert alert-danger py-2"></div>
+        <form class="tablelist-form" novalidate autocomplete="off" (ngSubmit)="saveCoupen()" [formGroup]="coupenForm">
+            <input type="hidden" id="id-field">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="mb-3">
+                        <label for="customerName-field" class="form-label">Customer Name</label>
+                        <input type="text" class="form-control" id="customerName-field"
+                            placeholder="Enter customer name" required formControlName="customer_name">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="mb-3">
+                        <label for="supplierName-field" class="form-label">Supplier Name</label>
+                        <input type="text" class="form-control" id="supplierName-field"
+                            placeholder="Enter supplier name" required formControlName="supplier">
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="mb-3">
+                        <label for="orderDate-field" class="form-label">Order Date</label>
+                        <input type="text" class="form-control" id="orderDate-field" data-provider="flatpickr"
+                            data-date-format="d M, Y" placeholder="Select date" required formControlName="order_date">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mb-3">
+                        <label for="arrivalDate-field" class="form-label">Arrival Date</label>
+                        <input type="text" class="form-control" id="arrivalDate-field" data-provider="flatpickr"
+                            data-date-format="d M, Y" placeholder="Select date" required formControlName="arrival_date">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mb-3">
+                        <label for="locationSelect" class="form-label">Location</label>
+                        <select class="form-control" name="choices-single-default" id="locationSelect" required
+                            formControlName="location">
+                            <option value="">Location</option>
+                            <option value="Ascension Island">Ascension Island</option>
+                            <option value="Andorra">Andorra</option>
+                            <option value="United Arab Emirates">United Arab Emirates</option>
+                            <option value="Afghanistan">Afghanistan</option>
+                            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                            <option value="Armenia">Armenia</option>
+                            <option value="Antarctica">Antarctica</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="Belgium">Belgium</option>
+                            <option value="Benin">Benin</option>
+                            <option value="Bermuda">Bermuda</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="Belarus">Belarus</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Switzerland">Switzerland</option>
+                            <option value="Cook Islands">Cook Islands</option>
+                            <option value="Chile">Chile</option>
+                            <option value="China">China</option>
+                            <option value="Christmas Island">Christmas Island</option>
+                            <option value="Cyprus">Cyprus</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Denmark">Denmark</option>
+                            <option value="Egypt">Egypt</option>
+                            <option value="Estonia">Estonia</option>
+                            <option value="Spain">Spain</option>
+                            <option value="Ethiopia">Ethiopia</option>
+                            <option value="Europe">Europe</option>
+                            <option value="Finland">Finland</option>
+                            <option value="Faroe Islands">Faroe Islands</option>
+                            <option value="France">France</option>
+                            <option value="England">England</option>
+                            <option value="Scotland">Scotland</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="UA">UA</option>
+                            <option value="Poland">Poland</option>
+                            <option value="Italy">Italy</option>
+                            <option value="Ukraine">Ukraine</option>
+                            <option value="Serbia">Serbia</option>
+                            <option value="Sweden">Sweden</option>
+                            <option value="Albania">Albania</option>
+                            <option value="Spain">Spain</option>
+                            <option value="Jersey">Jersey</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mb-3">
+                        <label for="statusSelect" class="form-label">Status</label>
+                        <select class="form-control" name="choices-single-default" id="statusSelect" required
+                            formControlName="status">
+                            <option value="">Status</option>
+                            <option value="Pickups">Pickups</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Shipping">Shipping</option>
+                            <option value="Delivered">Delivered</option>
+                            <option value="Out Of Delivery">Out Of Delivery</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="hstack gap-2 justify-content-end">
+                        <button type="button" class="btn btn-ghost-danger" data-bs-dismiss="modal"><i
+                                class="ri-close-line align-bottom me-1"></i> Close</button>
+                        <button type="submit" class="btn btn-primary" id="add-btn">Add Shipping</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </ng-template>
+</p-dialog>
+
+<!-- deleteModal -->
+<p-dialog [(visible)]="display" class="modal-dialog modal-dialog-centered" [modal]="true">
+    <ng-template pTemplate="body">
+        <div class="text-center">
+            <div class="text-danger">
+                <i class="bi bi-trash display-4"></i>
+            </div>
+            <div class="mt-4 fs-15">
+                <h4 class="mb-1">Are you sure ?</h4>
+                <p class="text-muted mx-4 mb-0">Are you sure you want to remove this shipping order ?</p>
+            </div>
+        </div>
+        <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
+            <button type="button" class="btn w-sm btn-light btn-hover" (click)="display = false" id="deleteRecord-close"
+                data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn w-sm btn-danger btn-hover" (click)="deleteRecord()">Yes, Delete
+                It!</button>
+        </div>
+    </ng-template>
+</p-dialog>
+<!-- end modal -->

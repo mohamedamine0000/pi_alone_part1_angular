@@ -1,0 +1,24 @@
+import { Component } from '@angular/core';
+import { OnInit } from '@angular/core';
+import { Gym } from 'src/app/models/gym.model';
+import { GymService } from 'src/app/services/gym.service';
+
+@Component({
+  selector: 'app-gym',
+  templateUrl: './gym.component.html',
+  styleUrl: './gym.component.scss'
+})
+
+  export class GymComponent implements OnInit {
+    gyms: Gym[] = [];
+  
+    constructor(private gymService: GymService) {}
+  
+    ngOnInit(): void {
+      this.gymService.getGyms().subscribe((data) => {
+        this.gyms = data;
+      });
+    }
+    
+  }
+

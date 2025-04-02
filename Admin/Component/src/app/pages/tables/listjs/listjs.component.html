@@ -1,0 +1,350 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumb title="Listjs" [breadcrumbItems]="breadCrumbItems"></app-breadcrumb>
+<!-- End Breadcrumbs -->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Add, Edit & Remove</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <div id="customerList">
+                    <div class="row g-4 mb-3">
+                        <div class="col-sm-auto">
+                            <div>
+                                <button type="button" class="btn btn-success add-btn" (click)="addcustomer()"><i class="ri-add-line align-bottom me-1"></i> Add</button>
+                                <button class="btn btn-soft-danger ms-1" (click)="deleteSelected()"><i class="ri-delete-bin-2-line"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="d-flex justify-content-sm-end">
+                                <div class="search-box ms-2">
+                                    <input type="text" class="form-control search" placeholder="Search...">
+                                    <i class="ri-search-line search-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p-table [value]="ListJsDatas" [paginator]="true" [rows]="1" [tabIndex]="true" styleClass="table-responsive p-datatable-sm" [(selection)]="selectedProducts" selectionMode="multiple" (onRowSelect)="onRowSelect($event)">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th scope="col" style="width: 50px;">
+                                    <div class="form-check">
+                                        <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                                    </div>
+                                </th>
+                                <th class="sort" data-sort="customer_name">Customer</th>
+                                <th class="sort" data-sort="email">Email</th>
+                                <th class="sort" data-sort="phone">Phone</th>
+                                <th class="sort" data-sort="date">Joining Date</th>
+                                <th class="sort" data-sort="status">Delivery Status</th>
+                                <th class="sort" data-sort="action">Action</th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-product let-index="rowIndex">
+                            <tr>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <p-tableCheckbox [value]="product"></p-tableCheckbox>
+                                    </div>
+                                </th>
+                                <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ2101</a></td>
+                                <td class="customer_name">{{product.name}}</td>
+                                <td class="email">{{product.email}}</td>
+                                <td class="phone">{{product.phone}}</td>
+                                <td class="date">{{product.date}}</td>
+                                <td class="status"><span class="badge text-uppercase" [ngClass]="{'bg-success-subtle text-success':product.status == 'Active','bg-danger-subtle text-danger':product.status == 'Block'}">{{product.status}}</span>
+                                </td>
+                                <td>
+                                    <div class="d-flex gap-2">
+                                        <div class="edit">
+                                            <button class="btn btn-sm btn-success edit-item-btn" (click)="editcustomer(index)">Edit</button>
+                                        </div>
+                                        <div class="remove">
+                                            <button class="btn btn-sm btn-danger remove-item-btn" (click)="removecutomer(index)">Remove</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="paginatorleft" let-state>
+                        </ng-template>
+                    </p-table>
+                </div>
+            </div><!-- end card -->
+        </div>
+        <!-- end col -->
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->
+
+<div class="row">
+    <div class="col-xl-4">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Data Attributes + Custom</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Use data attributes and other custom attributes as keys</p>
+                <div id="users">
+                    <div class="row mb-2">
+                        <div class="col">
+                            <div>
+                                <input class="search form-control" placeholder="Search" />
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-light sort" data-sort="name">
+                                Sort by name
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mx-n3">
+                        <p-scrollPanel [style]="{height: '220px'}">
+                            <ul class="list list-group list-group-flush mb-0">
+                                @for (data of attributedata; track $index) {
+                                <li class="list-group-item" data-id="1">
+                                    <div class="d-flex">
+                                        <div class="flex-grow-1">
+                                            <h5 class="fs-13 mb-1"><a href="javascript:void(0);" class="link name text-body">{{data.name}}</a></h5>
+                                            <p class="born timestamp text-muted mb-0" data-timestamp="12345">
+                                                {{data.year}}</p>
+                                        </div>
+                                        <div class="flex-shrink-0">
+                                            <div>
+                                                <img class="image avatar-xs rounded-circle" alt="" src="{{data.img}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>}
+                                <!-- end list item -->
+                            </ul>
+                        </p-scrollPanel>
+                    </div>
+                    <!-- <div data-simplebar style="height: 242px;" class="mx-n3"> -->
+
+                    <!-- end ul list -->
+                    <!-- </div> -->
+                </div>
+            </div><!-- end card body -->
+        </div>
+        <!-- end card -->
+    </div>
+    <!-- end col -->
+
+    <div class="col-xl-4">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Existing List</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Basic Example with Existing List</p>
+                <div id="contact-existing-list">
+                    <div class="row mb-2">
+                        <div class="col">
+                            <div>
+                                <input class="search form-control" placeholder="Search" />
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-light sort" data-sort="contact-name">
+                                Sort by name
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mx-n3">
+                        <p-scrollPanel [style]="{height: '220px'}">
+                            <ul class="list list-group list-group-flush mb-0">
+                                @for (data of existingData; track $index) {
+                                <li class="list-group-item" data-id="01">
+                                    <div class="d-flex align-items-start">
+                                        <div class="flex-shrink-0 me-3">
+                                            <div>
+                                                <img class="image avatar-xs rounded-circle" alt="" src="{{data.img}}">
+                                            </div>
+                                        </div>
+
+                                        <div class="flex-grow-1 overflow-hidden">
+                                            <h5 class="contact-name fs-13 mb-1"><a href="javascript:void(0);" class="link text-body">{{data.name}}</a></h5>
+                                            <p class="contact-born text-muted mb-0">{{data.content}}</p>
+                                        </div>
+
+                                        <div class="flex-shrink-0 ms-2">
+                                            <div class="fs-11 text-muted">{{data.time}}</div>
+                                        </div>
+                                    </div>
+                                </li>}
+                            </ul>
+                        </p-scrollPanel>
+                        <!-- end ul list -->
+                    </div>
+                </div>
+            </div><!-- end card -->
+        </div>
+        <!-- end col -->
+    </div>
+    <!-- end col -->
+
+    <div class="col-xl-4">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Fuzzy Search</h4>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <p class="text-muted">Example of how to use the fuzzy search plugin</p>
+                <div id="fuzzysearch-list">
+                    <input type="text" class="fuzzy-search form-control mb-2" placeholder="Search" />
+
+                    <p-scrollPanel [style]="{height: '220px'}">
+                        <ul class="list mb-0">
+                            @for (data of fuzzyData; track $index) {
+                            <li>
+                                <p class="name">{{data.name}}</p>
+                            </li>
+                            }
+                        </ul>
+                    </p-scrollPanel>
+                </div>
+            </div>
+        </div>
+        <!-- end card -->
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->
+
+<div class="row">
+    <div class="col-xl-4">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Pagination</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Example of how to use the pagination plugin</p>
+
+                <div id="pagination-list">
+                    <div class="mb-2">
+                        <input class="search form-control" placeholder="Search" />
+                    </div>
+
+                    <div class="mx-n3">
+                        <ul #dt class="list list-group list-group-flush mb-0">
+                            @for (data of paginationDatas; track $index) {
+                            <li class="list-group-item">
+                                <div class="d-flex align-items-center pagi-list">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div>
+                                            <img class="image avatar-xs rounded-circle" alt="" src="{{data.img}}">
+                                        </div>
+                                    </div>
+
+                                    <div class="flex-grow-1 overflow-hidden">
+                                        <h5 class="fs-13 mb-1"><a href="javascript:void(0);" class="link text-body">{{data.name}}</a>
+                                        </h5>
+                                        <p class="born timestamp text-muted mb-0">{{data.type}}</p>
+                                    </div>
+
+                                    <div class="flex-shrink-0 ms-2">
+                                        <div>
+                                            <button type="button" class="btn btn-sm btn-light"><i class="ri-mail-line align-bottom"></i> Message</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            }
+                            <p-paginator [rows]="3" [totalRecords]="6" (onPageChange)="onPageChange($event)"></p-paginator>
+                            <!-- end list item -->
+                        </ul>
+                        <!-- end ul list -->
+
+                    </div>
+                </div>
+            </div><!-- end card -->
+        </div>
+        <!-- end col -->
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->
+
+<p-dialog [visible]="addmodal" [modal]="true" [style]="{width: '28vw'}">
+    <ng-template pTemplate="header" class="modal-header bg-light p-3">
+        <div>
+            <h5 class="modal-title" id="exampleModalLabel">Add Customer</h5>
+        </div>
+    </ng-template>
+    <form class="tablelist-form" (ngSubmit)="saveListJs()" [formGroup]="listJsForm">
+        <div class="modal-body">
+
+            <div class="mb-3" id="modal-id" style="display: none;">
+                <label for="id-field" class="form-label">ID</label>
+                <input type="text" id="id-field" class="form-control" formControlName="id" placeholder="ID" readonly />
+            </div>
+
+            <div class="mb-3">
+                <label for="customername-field" class="form-label">Customer Name</label>
+                <input type="text" id="customername-field" class="form-control" formControlName="name" placeholder="Enter Name" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="email-field" class="form-label">Email</label>
+                <input type="email" id="email-field" class="form-control" formControlName="email" placeholder="Enter Email" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="phone-field" class="form-label">Phone</label>
+                <input type="text" id="phone-field" class="form-control" formControlName="phone" placeholder="Enter Phone no." required />
+            </div>
+
+            <div class="mb-3">
+                <label for="date-field" class="form-label">Joining Date</label>
+                <input type="text" id="date-field" class="form-control" formControlName="date" placeholder="Select Date" required />
+            </div>
+
+            <div>
+                <label for="status-field" class="form-label">Status</label>
+                <select class="form-control" data-trigger name="status-field" formControlName="status" id="status-field">
+                    <option value="">Status</option>
+                    <option value="Active">Active</option>
+                    <option value="Block">Block</option>
+                </select>
+            </div>
+        </div>
+        <div class="modal-footer mt-2">
+            <div class="hstack gap-2 justify-content-end">
+                <button type="button" class="btn btn-light" (click)="addmodal = false">Close</button>
+                <button type="submit" class="btn btn-success" id="add-btn">Add Customer</button>
+            </div>
+        </div>
+    </form>
+</p-dialog>
+
+<!-- Modal -->
+<p-dialog [visible]="removemodal" [modal]="true" [style]="{width: '28vw'}">
+    <div class="modal-content">
+        <div class="modal-body">
+            <div class="mt-2 text-center">
+                <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop" colors="primary:#f7b84b,secondary:#f06548" style="width:100px;height:100px"></lord-icon>
+                <div class="mt-4 pt-2 fs-15 mx-4 mx-sm-5">
+                    <h4>Are you Sure ?</h4>
+                    <p class="text-muted mx-4 mb-0">Are you Sure You want to Remove this Record ?</p>
+                </div>
+            </div>
+            <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
+                <button type="button" class="btn w-sm btn-light" (click)="removemodal = false">Close</button>
+                <button type="button" class="btn w-sm btn-danger " id="delete-record" (click)="deleteRecord()">Yes,
+                    Delete It!</button>
+            </div>
+        </div>
+    </div>
+</p-dialog>
+<!--end modal -->

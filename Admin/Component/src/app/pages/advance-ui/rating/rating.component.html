@@ -1,0 +1,119 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumb title="Ratings" [breadcrumbItems]="breadCrumbItems"></app-breadcrumb>
+<!-- End Breadcrumbs -->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header align-items-center d-flex">
+                <h4 class="card-title mb-0 flex-grow-1">Rater Js</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Rater-js is a star rating widget for the browser. here are the various examples of
+                    rating shown below with variation.</p>
+                <div class="live-preview">
+                    <div class="table-responsive">
+                        <table class="table align-middle mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Title</th>
+                                    <th scope="col">Example</th>
+                                    <th scope="col">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Basic Rater</th>
+                                    <td>
+                                        <p-rating [cancel]="false" [stars]="5" [(ngModel)]="rateValue1">
+                                        </p-rating>
+                                    </td>
+                                    <td>
+                                        <pre><code class="language-markup">&lt;p-rating [cancel]="false" [stars]="5" [(ngModel)]="rateValue1">&lt;/p-rating></code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Rater with Step</th>
+                                    <td>
+                                        <p-rating [cancel]="false" [stars]="5" [(ngModel)]="rateValue2">
+                                        </p-rating>
+                                    </td>
+                                    <td>
+                                        <pre><code class="language-markup">&lt;p-rating [cancel]="false" [stars]="5" [(ngModel)]="rateValue2">&lt;/p-rating></code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Custom Messages</th>
+                                    <td>
+                                        <p-rating [cancel]="false" [stars]="5" [(ngModel)]="rateValue3">
+                                        </p-rating>
+                                    </td>
+                                    <td>
+                                        <pre><code class="language-markup">&lt;p-rating [cancel]="false" [stars]="5" [(ngModel)]="rateValue3">&lt;/p-rating></code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th style="min-width: 300px;" scope="row">Example with unlimited number of stars.
+                                        readOnly option is set to true.</th>
+                                    <td>
+                                        <p-rating [cancel]="false"  [readonly]="true" [stars]="16" [(ngModel)]="rateValue4">
+                                        </p-rating>
+                                    </td>
+                                    <td>
+                                        <pre><code class="language-markup">&lt;p-rating [cancel]="false"  [readonly]="true" [stars]="16" [(ngModel)]="rateValue4">&lt;/p-rating></code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Disabled</th>
+                                    <td>
+                                        <div dir="ltr">
+                                            <p-rating [ngModel]="rateValue5" [disabled]="true" [stars]="5"></p-rating>
+                                            <span class="ratingnum badge bg-info align-middle ms-2"></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <pre><code class="language-markup">&lt;p-rating [disabled]="true" [stars]="5" [(ngModel)]="rateValue5">&lt;/p-rating></code></pre>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">Clear/Reset Rater</th>
+                                    <td>
+                                        <div dir="ltr">
+                                            <p-rating [cancel]="false" [stars]="5"  [(ngModel)]="rateValue6" class="d-inline-block">
+                                            </p-rating>  
+                                            <p-rating [(ngModel)]="rateValue6" [stars]="10" class="d-inline-block">
+                                                <ng-template pTemplate="cancel">
+                                                    <button id="raterreset-button" class="btn btn-light btn-sm ms-2">Reset</button>
+                                                </ng-template>
+                                             </p-rating>
+                                        </div>
+                                    </td>
+                                    <td>    
+                                        <pre><code class="language-markup">&lt;p-rating [cancel]="false" [stars]="5"  [(ngModel)]="rateValue6" class="d-inline-block"&gt;&lt;/p-rating&gt;
+&lt;p-rating [(ngModel)]="rateValue6" [stars]="10" class="d-inline-block"&gt;
+  &lt;ng-template pTemplate=&quot;ccancel&quot;&gt;
+    &lt;button id=&quot;raterreset-button&quot; class=&quot;btn btn-light btn-sm ms-2&quot;&gt;Reset&lt;/button&gt;
+  &lt;/ng-template&gt;
+&lt;/p-rating&gt;</code></pre>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- end table -->
+                    </div>
+                    <!-- end table responsive -->
+                </div>
+
+                <div class="d-none code-view">
+                    <pre><code class="language-markup">&lt;div data-simplebar style=&quot;max-height: 220px;&quot;&gt;
+    ...
+&lt;/div&gt;</code></pre>
+                </div>
+            </div><!-- end card-body -->
+        </div><!-- end card -->
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->

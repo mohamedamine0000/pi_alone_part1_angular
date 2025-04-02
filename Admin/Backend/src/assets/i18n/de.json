@@ -1,0 +1,120 @@
+{
+  "HEADER": {
+    "MORE": {
+      "TEXT": "Mehr"
+    }
+  },
+  "MENUITEMS": {
+    "MENU": {
+      "TEXT": "SPEISEKARTE"
+    },
+    "DASHBOARD": {
+      "TEXT": "Armaturenbrett",
+      "BADGE": "Heiß"
+    },
+    "PRODUCTS": {
+      "TEXT": "Produkte",
+      "LIST": {
+        "LISTVIEW": "Listenansicht",
+        "GRIDVIEW": "Rasteransicht",
+        "OVERVIEW": "Überblick",
+        "CREATEPRODUCT": "Produkt erstellen",
+        "CATEGORIES": "Kategorien",
+        "SUBCATEGORIES": "Unterkategorien"
+      }
+    },
+    "ORDERS": {
+      "TEXT": "Aufträge",
+      "LIST": {
+        "LISTVIEW": "Listenansicht",
+        "OVERVIEW": "Überblick"
+      }
+    },
+    "CALENDER": {
+      "TEXT": "Kalender"
+    },
+    "SELLERS": {
+      "TEXT": "Verkäufer",
+      "LIST": {
+        "LISTVIEW": "Listenansicht",
+        "GRIDVIEW": "Rasteransicht",
+        "OVERVIEW": "Überblick"
+      }
+    },
+    "INVOICE": {
+      "TEXT": "Rechnung",
+      "LIST": {
+        "LISTVIEW": "Listenansicht",
+        "OVERVIEW": "Überblick",
+        "CREATEINVOICE": "Rechnung erstellen"
+      }
+    },
+    "USERLIST": {
+      "TEXT": "Benutzerliste"
+    },
+    "SHIPPING": {
+      "TEXT": "Versand",
+      "LIST": {
+        "SHIPPINGLIST": "Versandliste",
+        "SHIPMENT": "Sendungen"
+      }
+    },
+    "COUPONS": {
+      "TEXT": "Gutscheine"
+    },
+    "REVIEWS&RATINGS": {
+      "TEXT": "Rezensionen & Bewertungen"
+    },
+    "BRANDS": {
+      "TEXT": "Marken"
+    },
+    "STATISTICS": {
+      "TEXT": "Statistiken"
+    },
+    "LOCALIZATION": {
+      "TEXT": "Lokalisierung",
+      "LIST": {
+        "TRANSACTIONS": "Transaktionen",
+        "CURRENCYRATES": "Wechselkurse"
+      }
+    },
+    "ACCOUNTS": {
+      "TEXT": "Konten",
+      "LIST": {
+        "MYACCOUNT": "Mein Konto",
+        "SETTINGS": "Einstellungen",
+        "SIGNUP": "Anmeldung",
+        "SIGNIN": "Anmelden",
+        "PASSWORDRESET": "Passwort zurücksetzen",
+        "PASSWORDCREATE": "Passwort erstellen",
+        "SUCCESSMESSAGE": "Erfolgsmeldung",
+        "TWOSTEPVERIFY": "Überprüfung in zwei Schritten",
+        "LOGOUT": "Ausloggen",
+        "ERROR404": "Fehler 404",
+        "ERROR500": "Fehler 500",
+        "COMINGSOON": "Demnächst"
+      }
+    },
+    "COMPONENTS": {
+      "TEXT": "Komponenten",
+      "BADGE": "v1.0"
+    },
+    "MULTILEVEL": {
+      "TEXT": "Mehrstufig",
+      "LIST": {
+        "LEVEL1": {
+          "1": "Stufe 1.1",
+          "2": "Stufe 1.2",
+          "LEVEL2": {
+            "1": "Stufe 2.1",
+            "2": "Stufe 2.2",
+            "LEVEL3": {
+              "1": "Stufe 3.1",
+              "2": "Stufe 3.2"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,224 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumb title="Knob" [breadcrumbItems]="breadCrumbItems"></app-breadcrumb>
+<!-- End Breadcrumbs -->
+
+<div class="row">
+    <div class="col-xxl-6">
+        <div class="card ">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Basic knob</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p-knob [(ngModel)]="value"></p-knob>
+            </div>
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height:60px;">
+<code>&lt;!--Basic knob --&gt;</code>
+&lt;p-knob [(ngModel)]=&quot;value&quot;&gt;&lt;/p-knob&gt;</pre>
+            </div>
+        </div>
+    </div>
+    <!-- basic -->
+    <div class="col-xxl-6">
+        <div class="card ">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Reactive Forms</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <form [formGroup]="formGroup">
+                    <p-knob formControlName="value"></p-knob>
+                </form>
+            </div>
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height:60px;">
+<code>&lt;!--Reactive Forms --&gt;</code>
+&lt;form [formGroup]=&quot;formGroup&quot;&gt;
+&lt;p-knob formControlName=&quot;value&quot;&gt;&lt;/p-knob&gt;
+&lt;/form&gt;</pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xxl-6">
+        <div class="card ">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Min/Max</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p-knob [(ngModel)]="value1" [min]="-50" [max]="50"></p-knob>
+            </div>
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height:60px;">
+<code>&lt;!--Min/Max --&gt;</code>
+&lt;p-knob [(ngModel)]=&quot;value&quot;&gt;&lt;/p-knob&gt;</pre>
+            </div>
+        </div>
+    </div>
+    <!-- basic -->
+    <div class="col-xxl-6">
+        <div class="card ">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Step</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p-knob [(ngModel)]="value2" [step]="20"></p-knob>
+            </div>
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height:60px;">
+<code>&lt;!--Step --&gt;</code>
+
+&lt;p-knob [(ngModel)]=&quot;value&quot; [step]=&quot;10&quot;&gt;&lt;/p-knob&gt;</pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-xxl-6">
+        <div class="card ">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Template</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p-knob [(ngModel)]="value3" valueTemplate="{value}%"></p-knob>
+            </div>
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height:60px;">
+<code>&lt;!--Template --&gt;</code>
+&lt;p-knob [(ngModel)]=&quot;value&quot;&gt;&lt;/p-knob&gt;
+</pre>
+            </div>
+        </div>
+    </div>
+    <!-- basic -->
+    <div class="col-xxl-6">
+        <div class="card ">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Stroke</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p-knob [(ngModel)]="value4" [strokeWidth]="5"></p-knob>
+            </div>
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height:60px;">
+<code>&lt;!--Stroke --&gt;</code>
+
+&lt;p-knob [(ngModel)]=&quot;value4&quot; [strokeWidth]=&quot;5&quot;&gt;&lt;/p-knob&gt;</pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xxl-6">
+        <div class="card ">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Size</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p-knob [(ngModel)]="value6" [size]="200"></p-knob>
+            </div>
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height:60px;">
+<code>&lt;!--Size --&gt;</code>
+&lt;p-knob [(ngModel)]=&quot;value&quot; [size]=&quot;200&quot;&gt;&lt;/p-knob&gt;
+</pre>
+            </div>
+        </div>
+    </div>
+    <!-- basic -->
+    <div class="col-xxl-6">
+        <div class="card ">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Color</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p-knob [(ngModel)]="value5" valueColor="SlateGray" rangeColor="MediumTurquoise"></p-knob>
+            </div>
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height:60px;">
+<code>&lt;!--Color --&gt;</code>
+
+&lt;p-knob [(ngModel)]=&quot;value5&quot; valueColor=&quot;SlateGray&quot; rangeColor=&quot;MediumTurquoise&quot;&gt;&lt;/p-knob&gt;</pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xxl-6">
+        <div class="card ">
+            <div class="card-header">
+                <h4 class="card-title mb-0">ReadOnly</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p-knob [(ngModel)]="value" [readonly]="true"></p-knob>
+            </div>
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height:60px;">
+<code>&lt;!-- ReadOnly --&gt;</code>
+&lt;p-knob [(ngModel)]=&quot;value&quot; [readonly]=&quot;true&quot;&gt;&lt;/p-knob&gt;
+</pre>
+            </div>
+        </div>
+    </div>
+    <!-- basic -->
+    <div class="col-xxl-6">
+        <div class="card ">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Disabled</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p-knob [(ngModel)]="value" [disabled]="true"></p-knob>
+            </div>
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height:60px;">
+<code>&lt;!-- Disabled --&gt;</code>
+&lt;p-knob [(ngModel)]=&quot;value&quot; [disabled]=&quot;true&quot;&gt;&lt;/p-knob&gt;</pre>
+            </div>
+        </div>
+    </div>
+</div>

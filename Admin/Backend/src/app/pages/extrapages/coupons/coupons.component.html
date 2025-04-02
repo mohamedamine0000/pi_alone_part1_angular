@@ -1,0 +1,237 @@
+<app-breadcrumbs title="Coupons" [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
+
+<div id="couponsList">
+    <div class="row">
+        <div class="col-xxl-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-xxl-3 col-md-5">
+                            <div class="search-box">
+                                <input type="text" class="form-control search" id="searchProductList" placeholder="Search by coupons code & name..." (input)="dv.filterGlobal($event.target.value, 'contains')">
+                                <i class="ri-search-line search-icon"></i>
+                            </div>
+                        </div><!--end col-->
+                        <div class="col-md-auto ms-auto">
+                            <button data-bs-target="#showModal" data-bs-toggle="modal" class="btn btn-success add-btn" (click)="showPositionDialog()"><i class="bi bi-plus-circle me-1 align-middle"></i>Add
+                                Coupon</button>
+                        </div><!--end col-->
+                    </div><!--end row-->
+                </div>
+            </div><!--end card-->
+        </div><!--end col-->
+    </div><!--end row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive table-card">
+                        <p-table #dv [value]="products" [paginator]="true" [globalFilterFields]="['title','rating','discount','price,status','type']" [rows]="10" (onPage)="onPageChange($event)">
+                            <ng-template pTemplate="header">
+                                <tr>
+                                    <th scope="col">Discount</th>
+                                    <th scope="col">Coupon Title</th>
+                                    <th scope="col">Code</th>
+                                    <th scope="col">Product Type</th>
+                                    <th scope="col">Start Date</th>
+                                    <th scope="col">End Date</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-product let-index="rowIndex">
+                                <tr>
+                                    <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#TB01</a></td>
+                                    <td class="discount">
+                                        <h5 class="mb-0 fs-16">{{product.discount}}</h5>
+                                    </td>
+                                    <td class="couponTitle">{{product.couponTitle}}</td>
+                                    <td class="code">{{product.code}}</td>
+                                    <td class="productType">{{product.productType}}</td>
+                                    <td class="startDate">{{product.startDate}}</td>
+                                    <td class="endDate">{{product.endDate}}</td>
+                                    <td class="status"><span class="badge text-uppercase" [ngClass]="{'bg-success-subtle text-success': product.status === 'Active',
+                                            'bg-danger-subtle text-danger': product.status === 'Expired'}">{{product.status}}</span>
+                                    </td>
+                                    <td>
+                                        <ul class="hstack gap-2 list-unstyled mb-0">
+                                            <li>
+                                                <a href="javascript:void(0);" data-bs-toggle="offcanvas" class="badge bg-dark-subtle text-dark view-item-btn" (click)="viewDetail(index)">View</a>
+                                            </li>
+                                            <li>
+                                                <a class="badge bg-primary-subtle text-primary edit-item-btn" href="javascript:void(0);" data-bs-toggle="modal" (click)="editProduct(index)">Edit</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);" data-bs-toggle="modal" class="badge bg-danger-subtle text-danger remove-item-btn" (click)="showDialog(index)">Delete</a>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="paginatorleft" let-state>
+                                Showing {{first}} - {{endIndex}} of {{products.length}} results
+                            </ng-template>
+
+                            <ng-template pTemplate="emptymessage">
+                                <tr>
+                                    <td class="text-center" colspan="6">
+                                        <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#121331,secondary:#08a88a" style="width:75px;height:75px"></lord-icon>
+                                        <h5 class="mt-2">Sorry! No Result Found</h5>
+                                        <p class="text-muted mb-0">We've searched more than 150+ Users We did not find
+                                            any Users
+                                            for you search.</p>
+                                    </td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+                    </div>
+                </div><!--end card-body-->
+            </div><!--end card-->
+        </div><!--end col-->
+    </div><!--end row-->
+</div>
+
+<!-- createModal -->
+<p-dialog header="Header" [modal]="true" [(visible)]="editableModel" [style]="{width: '800px'}" class="modal-dialog modal-dialog-centered">
+    <ng-template pTemplate="header" class="modal-header px-4 pt-4">
+        <h5 class="modal-title fs-18" id="exampleModalLabel">Add Coupons</h5>
+    </ng-template>
+    <ng-template pTemplate="content">
+        <form class="tablelist-form" novalidate autocomplete="off" (ngSubmit)="saveCoupen()" [formGroup]="coupenForm">
+            <div class="row">
+                <div id="alert-error-msg" class="d-none alert alert-danger py-2"></div>
+                <input type="hidden" id="id-field" />
+                <div class="col-lg-12">
+                    <div class="mb-3">
+                        <label for="couponTitle" class="form-label">Coupon Title</label>
+                        <input type="text" formControlName="couponTitle" required autofocus class="form-control" id="couponTitle-field" placeholder="Coupon title">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mb-3">
+                        <label for="couponCode" class="form-label">Code</label>
+                        <input type="text" class="form-control" formControlName="code" id="code-field" placeholder="Enter coupon code" required>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mb-3">
+                        <label for="ProductSelect" class="form-label">Product Type</label>
+                        <select class="form-control" name="categorySelect" id="productType-field" formControlName="productType">
+                            <option value="">Select Product</option>
+                            <option value="Headphone">Headphone</option>
+                            <option value="Watch">Watch</option>
+                            <option value="Furniture">Furniture</option>
+                            <option value="Clothing">Clothing</option>
+                            <option value="Footwear">Footwear</option>
+                            <option value="Lighting">Lighting</option>
+                            <option value="Beauty & Personal Care">Beauty & Personal Care</option>
+                            <option value="Books">Books</option>
+                            <option value="Other Accessories">Other Accessories</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mb-3">
+                        <label for="startDate" class="form-label">Start Date</label>
+                        <input type="text" class="form-control" formControlName="startDate" id="enddate-field" data-provider="flatpickr" data-date-format="d M, Y" placeholder="Select date" required>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mb-3">
+                        <label for="endDate" class="form-label">END Date</label>
+                        <input type="text" class="form-control" formControlName="endDate" id="enddate-field" data-provider="flatpickr" data-date-format="d M, Y" placeholder="Select date" required>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mb-3">
+                        <label for="amountPercentage" class="form-label">Amount/Percentage</label>
+                        <input type="text" class="form-control" formControlName="discount" id="discount-field" placeholder="Enter amount/percentage" required>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mb-3">
+                        <label for="statusSelect" class="form-label">Status</label>
+                        <select class="form-control" formControlName="status" name="choices-single-default" id="status-Field">
+                            <option value="">Status</option>
+                            <option value="Active">Active</option>
+                            <option value="Expired">Expired</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-12 modal-footer">
+                    <div class="hstack gap-2 justify-content-end">
+                        <button type="button" class="btn btn-ghost-danger" data-bs-dismiss="modal"><i class="ri-close-line align-bottom me-1" (click)="editableModel=false"></i>
+                            Close</button>
+                        <button type="submit" class="btn btn-primary" id="add-btn">Add Coupons</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </ng-template>
+</p-dialog>
+<!--  -->
+<p-sidebar [(visible)]="viewdatasidebar" [baseZIndex]="10000" position="right" [style]="{width:'399px'}">
+    <ng-template pTemplate="header">
+        <h5 class="offcanvas-title" id="couponDetailsLabel">{{coupenDetail.couponTitle}}</h5>
+    </ng-template>
+    <ng-template pTemplate="content">
+        <div class="p-4">
+            <div>
+                <img src="assets/images/ecommerce/offer-banner.jpg" alt="" class="img-thumbnail">
+            </div>
+            <div class="mt-3">
+                <div class="table-responsive">
+                    <table>
+                        <tr>
+                            <td><span class="text-muted">Use Code</span></td>
+                            <td><span class="fw-medium">{{coupenDetail.code}}</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="text-muted">Discount</span></td>
+                            <td><span class="fw-medium text-uppercase">{{coupenDetail.discount}}</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="text-muted">Start Date</span></td>
+                            <td><span class="fw-medium">{{coupenDetail.startDate}}</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="text-muted">END Date</span></td>
+                            <td><span class="fw-medium">{{coupenDetail.endDate}}</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="text-muted">Product Type</span></td>
+                            <td><span class="fw-medium">{{coupenDetail.productType}}</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="text-muted">Status</span></td>
+                            <td><span class="badge bg-danger-subtle text-danger">{{coupenDetail.status}}</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</p-sidebar>
+
+
+<!-- deleteModal -->
+<p-dialog [(visible)]="display" class="modal-dialog modal-dialog-centered p-5" [draggable]="false" [modal]="true">
+    <ng-template pTemplate="body">
+        <div class="text-center">
+            <div class=" text-danger">
+                <i class="bi bi-trash display-4"></i>
+            </div>
+            <div class="mt-4 fs-15">
+                <h4 class="mb-1">Are you sure ?</h4>
+                <p class="text-muted mx-4 mb-0">Are you sure you want to remove this coupons ?</p>
+            </div>
+        </div>
+        <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
+            <button type="button" class="btn w-sm btn-light btn-hover" (click)="display=false" id="deleteRecord-close" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn w-sm btn-danger btn-hover" (click)="deleteRecord()">Yes, Delete
+                It!</button>
+        </div>
+    </ng-template>
+</p-dialog>
+<!-- end modal -->

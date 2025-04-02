@@ -1,0 +1,120 @@
+{
+  "HEADER": {
+    "MORE": {
+      "TEXT": "Di più"
+    }
+  },
+  "MENUITEMS": {
+    "MENU": {
+      "TEXT": "MENÙ"
+    },
+    "DASHBOARD": {
+      "TEXT": "Pannello di controllo",
+      "BADGE": "Calda"
+    },
+    "PRODUCTS": {
+      "TEXT": "Prodotti",
+      "LIST": {
+        "LISTVIEW": "Visualizzazione elenco",
+        "GRIDVIEW": "Vista a griglia",
+        "OVERVIEW": "Panoramica",
+        "CREATEPRODUCT": "Crea prodotto",
+        "CATEGORIES": "Categorie",
+        "SUBCATEGORIES": "Sottocategorie"
+      }
+    },
+    "ORDERS": {
+      "TEXT": "Ordini",
+      "LIST": {
+        "LISTVIEW": "Visualizzazione elenco",
+        "OVERVIEW": "Panoramica"
+      }
+    },
+    "CALENDER": {
+      "TEXT": "Calendario"
+    },
+    "SELLERS": {
+      "TEXT": "Venditori",
+      "LIST": {
+        "LISTVIEW": "Visualizzazione elenco",
+        "GRIDVIEW": "Vista a griglia",
+        "OVERVIEW": "Panoramica"
+      }
+    },
+    "INVOICE": {
+      "TEXT": "Fattura",
+      "LIST": {
+        "LISTVIEW": "Visualizzazione elenco",
+        "OVERVIEW": "Panoramica",
+        "CREATEINVOICE": "Crea fattura"
+      }
+    },
+    "USERLIST": {
+      "TEXT": "Elenco utenti"
+    },
+    "SHIPPING": {
+      "TEXT": "Spedizione",
+      "LIST": {
+        "SHIPPINGLIST": "Lista di spedizione",
+        "SHIPMENT": "Spedizioni"
+      }
+    },
+    "COUPONS": {
+      "TEXT": "Buone"
+    },
+    "REVIEWS&RATINGS": {
+      "TEXT": "Recensioni e valutazioni"
+    },
+    "BRANDS": {
+      "TEXT": "Marche"
+    },
+    "STATISTICS": {
+      "TEXT": "Statistiche"
+    },
+    "LOCALIZATION": {
+      "TEXT": "Localizzazione",
+      "LIST": {
+        "TRANSACTIONS": "Transazioni",
+        "CURRENCYRATES": "Tassi di valuta"
+      }
+    },
+    "ACCOUNTS": {
+      "TEXT": "Conti",
+      "LIST": {
+        "MYACCOUNT": "Il mio conto",
+        "SETTINGS": "Impostazioni",
+        "SIGNUP": " Iscrizione",
+        "SIGNIN": "Registrazione",
+        "PASSWORDRESET": "Reimpostazione della password",
+        "PASSWORDCREATE": "Password Crea",
+        "SUCCESSMESSAGE": "Messaggio di successo",
+        "TWOSTEPVERIFY": "Verifica in due passaggi",
+        "LOGOUT": "Disconnettersi",
+        "ERROR404": "Errore 404",
+        "ERROR500": "Errore 500",
+        "COMINGSOON": "Prossimamente"
+      }
+    },
+    "COMPONENTS": {
+      "TEXT": "Componenti",
+      "BADGE": "v1.0"
+    },
+    "MULTILEVEL": {
+      "TEXT": "Multilivello",
+      "LIST": {
+        "LEVEL1": {
+          "1": "Livello 1.1",
+          "2": "Livello 1.2",
+          "LEVEL2": {
+            "1": "Livello 2.1",
+            "2": "Livello 2.2",
+            "LEVEL3": {
+              "1": "Livello 3.1",
+              "2": "Livello 3.2"
+            }
+          }
+        }
+      }
+    }
+  }
+}

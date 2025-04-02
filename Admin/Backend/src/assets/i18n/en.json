@@ -1,0 +1,122 @@
+{
+  "HEADER": {
+    "MORE": {
+      "TEXT": "More"
+    }
+  },
+  "MENUITEMS": {
+    "MENU": {
+      "TEXT": "MENU"
+    },
+    "DASHBOARD": {
+      "TEXT": "Dashboard",
+      "BADGE": "Hot"
+    },
+    "PRODUCTS": {
+      "TEXT": "Products",
+      "LIST": {
+        "LISTVIEW": "List View",
+        "GRIDVIEW": "Grid View",
+        "OVERVIEW": "Overview",
+        "CREATEPRODUCT": "Create Product",
+        "CATEGORIES": "Categories",
+        "SUBCATEGORIES": "Sub Categories"
+      }
+    },
+    "ORDERS": {
+      "TEXT": "Orders",
+      "LIST": {
+        "LISTVIEW": "List View",
+        "OVERVIEW": "Overview",
+        "TWOCOLUMN": "Two Column",
+        "HOVERED": "Hovered"
+      }
+    },
+    "CALENDER": {
+      "TEXT": "Calendar"
+    },
+    "SELLERS": {
+      "TEXT": "Sellers",
+      "LIST": {
+        "LISTVIEW": "List View",
+        "GRIDVIEW": "Grid View",
+        "OVERVIEW": "Overview"
+      }
+    },
+    "INVOICE": {
+      "TEXT": "Invoice",
+      "LIST": {
+        "LISTVIEW": "List View",
+        "OVERVIEW": "Overview",
+        "CREATEINVOICE": "Create Invoice"
+      }
+    },
+    "USERLIST": {
+      "TEXT": "Users List"
+    },
+    "SHIPPING": {
+      "TEXT": "Shipping",
+      "LIST": {
+        "SHIPPINGLIST": "Shipping List",
+        "SHIPMENT": "Shipments"
+      }
+    },
+    "COUPONS": {
+      "TEXT": "Coupons"
+    },
+    "REVIEWS&RATINGS": {
+      "TEXT": "Reviews & Ratings"
+    },
+    "BRANDS": {
+      "TEXT": "Brands"
+    },
+    "STATISTICS": {
+      "TEXT": "Statistics"
+    },
+    "LOCALIZATION": {
+      "TEXT": "Localization",
+      "LIST": {
+        "TRANSACTIONS": "Transactions",
+        "CURRENCYRATES": "Currency Rates"
+      }
+    },
+    "ACCOUNTS": {
+      "TEXT": "Accounts",
+      "LIST": {
+        "MYACCOUNT": "My Account",
+        "SETTINGS": "Settings",
+        "SIGNUP": "Sign Up",
+        "SIGNIN": "Sign In",
+        "PASSWORDRESET": "Password Reset",
+        "PASSWORDCREATE": "Password Create",
+        "SUCCESSMESSAGE": "Success Message",
+        "TWOSTEPVERIFY": "Two Step Verify",
+        "LOGOUT": "Logout",
+        "ERROR404": "Error 404",
+        "ERROR500": "Error 500",
+        "COMINGSOON": "Coming Soon"
+      }
+    },
+    "COMPONENTS": {
+      "TEXT": "Components",
+      "BADGE": "v1.0"
+    },
+    "MULTILEVEL": {
+      "TEXT": "Multi Level",
+      "LIST": {
+        "LEVEL1": {
+          "1": "Level 1.1",
+          "2": "Level 1.2",
+          "LEVEL2": {
+            "1": "Level 2.1",
+            "2": "Level 2.2",
+            "LEVEL3": {
+              "1": "Level 3.1",
+              "2": "Level 3.2"
+            }
+          }
+        }
+      }
+    }
+  }
+}

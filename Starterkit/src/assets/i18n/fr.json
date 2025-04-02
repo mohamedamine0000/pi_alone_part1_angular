@@ -1,0 +1,120 @@
+{
+  "HEADER": {
+    "MORE": {
+      "TEXT": "Plus"
+    }
+  },
+  "MENUITEMS": {
+    "MENU": {
+      "TEXT": "MENU"
+    },
+    "DASHBOARD": {
+      "TEXT": "Tableau de bord",
+      "BADGE": "Chaude"
+    },
+    "PRODUCTS": {
+      "TEXT": "Des produits",
+      "LIST": {
+        "LISTVIEW": "Affichage de liste",
+        "GRIDVIEW": "Vue Grille",
+        "OVERVIEW": "Aperçu",
+        "CREATEPRODUCT": "Créer un produit",
+        "CATEGORIES": "Catégories",
+        "SUBCATEGORIES": "Sous-catégories"
+      }
+    },
+    "ORDERS": {
+      "TEXT": "Ordres",
+      "LIST": {
+        "LISTVIEW": "Affichage de liste",
+        "OVERVIEW": "Aperçu"
+      }
+    },
+    "CALENDER": {
+      "TEXT": "Calendrier"
+    },
+    "SELLERS": {
+      "TEXT": "Les vendeurs",
+      "LIST": {
+        "LISTVIEW": "Affichage de liste",
+        "GRIDVIEW": "Vue Grille",
+        "OVERVIEW": "Aperçu"
+      }
+    },
+    "INVOICE": {
+      "TEXT": "Facture",
+      "LIST": {
+        "LISTVIEW": "Affichage de liste",
+        "OVERVIEW": "Aperçu",
+        "CREATEINVOICE": "Créer une facture"
+      }
+    },
+    "USERLIST": {
+      "TEXT": "Liste des utilisateurs"
+    },
+    "SHIPPING": {
+      "TEXT": "Expédition",
+      "LIST": {
+        "SHIPPINGLIST": "Liste d'expédition",
+        "SHIPMENT": "Expéditions"
+      }
+    },
+    "COUPONS": {
+      "TEXT": "Bons de réduction"
+    },
+    "REVIEWS&RATINGS": {
+      "TEXT": "Avis et notes"
+    },
+    "BRANDS": {
+      "TEXT": "Marques"
+    },
+    "STATISTICS": {
+      "TEXT": "Statistiques"
+    },
+    "LOCALIZATION": {
+      "TEXT": "Localisation",
+      "LIST": {
+        "TRANSACTIONS": "Transactions",
+        "CURRENCYRATES": "Taux de change"
+      }
+    },
+    "ACCOUNTS": {
+      "TEXT": "Comptes",
+      "LIST": {
+        "MYACCOUNT": "Mon compte",
+        "SETTINGS": "Paramètres",
+        "SIGNUP": "S'inscrire",
+        "SIGNIN": "S'identifier",
+        "PASSWORDRESET": "Réinitialisation du mot de passe",
+        "PASSWORDCREATE": "Créer un mot de passe",
+        "SUCCESSMESSAGE": "Message de réussite",
+        "TWOSTEPVERIFY": "Vérification en deux étapes",
+        "LOGOUT": "Se déconnecter",
+        "ERROR404": "Erreur 404",
+        "ERROR500": "Erreur 500",
+        "COMINGSOON": "À venir"
+      }
+    },
+    "COMPONENTS": {
+      "TEXT": "Composantes",
+      "BADGE": "v1.0"
+    },
+    "MULTILEVEL": {
+      "TEXT": "Multi-niveaux",
+      "LIST": {
+        "LEVEL1": {
+          "1": "Niveau 1.1",
+          "2": "Niveau 1.1",
+          "LEVEL2": {
+            "1": "Niveau 2.1",
+            "2": "Niveau 2.2",
+            "LEVEL3": {
+              "1": "Niveau 3.1",
+              "2": "Niveau 3.2"
+            }
+          }
+        }
+      }
+    }
+  }
+}

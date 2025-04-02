@@ -1,0 +1,147 @@
+{
+  "MENUITEMS": {
+    "MENU": {
+      "TEXT": "COMPOSANTES"
+    },
+    "OVERVIEW": {
+      "TEXT": "Aperçu"
+    },
+    "BOOTSTRAPUI": {
+      "TEXT": "Interface utilisateur d'amorçage",
+      "LIST": {
+        "ALERTS": "Alertes",
+        "BADGES": "Insignes",
+        "BUTTONS": "Boutons",
+        "COLORS": "Couleurs",
+        "CARDS": "Cartes",
+        "CAROUSEL": "Carrousel",
+        "DROPDOWNS": "Listes déroulantes",
+        "GRID": "Grille",
+        "IMAGES": "Images",
+        "TIMELINE": "Calendrier",
+        "KNOB": "Bouton",
+        "SPLITTER": "Séparatrice",
+        "SPEEDDIAL": "Numérotation abrégée",
+        "TABS": "Onglets",
+        "ACCORDIAN": "Accordéon et effondrement",
+        "MODALS": "Modaux",
+        "OFFCANVAS": "Hors toile",
+        "PLACEHOLDERS": "Espaces réservés",
+        "PROGRESS": "Progrès",
+        "NOTIFICATION": "Avis",
+        "MEDIA": "Objet multimédia",
+        "VIDEO": "Intégrer la vidéo",
+        "TYPOGRAPHY": "Typographie",
+        "LISTS": "Listes",
+        "GENERAL": "Générale",
+        "UTILITIES": "Utilitaires"
+      }
+    },
+    "ADVANCEUI": {
+      "TEXT": "Interface utilisateur avancée",
+      "LIST": {
+        "SWEETALERT": "Alertes sucrées",
+        "NESTABLELIST": "Liste imbriquée",
+        "SCROLLBAR": "Barre de défilement",
+        "SWIPER": "Glissière Curseur",
+        "RATINGS": "Notes",
+        "HIGHLIGHT": "Souligner",
+        "SCROLLSPY": "DéfilementEspion"
+      }
+    },
+    "CUSTOMUI": {
+      "TEXT": "Interface utilisateur personnalisée",
+      "BADGE": "Coutume",
+      "LIST": {
+        "RIBBONS": "Rubans",
+        "PROFILE": "Profil",
+        "COUNTER": "Comptoir"
+      }
+    },
+    "FORMS": {
+      "TEXT": "Formes",
+      "LIST": {
+        "ELEMENTS": "Éléments basiques",
+        "SELECT": "Sélection de formulaire",
+        "CHECKBOXES": "Cases à cocher et radios",
+        "PICKERS": "Cueilleurs",
+        "MASK": "Masque de saisie",
+        "ADVANCED": "Avancée",
+        "SLIDER": "Curseur de plage",
+        "VALIDATION": "Validation",
+        "WIZARD": "Magicien",
+        "EDITOR": "Éditrices",
+        "FILEUPLOAD": "Téléchargement de fichiers",
+        "LAYOUTS": "Dispositions de formulaire",
+        "TOMSELECT": "Sélectionnez Tom"
+      }
+    },
+    "MORE": {
+      "TEXT": "Plus"
+    },
+    "TABLES": {
+      "TEXT": "les tables",
+      "LIST": {
+        "BASIC": "Tableaux de base",
+        "GRIDJS": "Grille Js",
+        "LISTJS": "Liste J"
+      }
+    },
+    "APEXCHARTS": {
+      "TEXT": "Apexchart",
+      "LIST": {
+        "LINE": "doubler",
+        "AREA": "Zone",
+        "COLUMN": "Colonne",
+        "BAR": "Bar",
+        "MIXED": "Mixte",
+        "TIMELINE": "Calendrier",
+        "CANDLESTICK": "Chandelier",
+        "BOXPLOT": "Boîte à moustaches",
+        "BUBBLE": "Bulle",
+        "SCATTER": "Dispersion",
+        "HEATMAP": "Carte de chaleur",
+        "TREEMAP": "Treemap",
+        "PIE": "Tarte",
+        "RADIALBAR": "Barre radiale",
+        "RADAR": "Radar",
+        "POLARAREA": "Zone polaire"
+      }
+    },
+    "ICONS": {
+      "TEXT": "Icônes",
+      "LIST": {
+        "REMIX": "Remixer",
+        "BOXICONS": "Boxicons",
+        "MATERIALDESIGN": "Conception matérielle",
+        "BOOTSTRAP": "Amorcer",
+        "PHOSPHOR": "Phosphore"
+      }
+    },
+    "MAPS": {
+      "TEXT": "Plans",
+      "LIST": {
+        "GOOGLE": "Google",
+        "AMCHARTS": "Vecteur",
+        "LEAFLET": "Brochure"
+      }
+    },
+    "MULTILEVEL": {
+      "TEXT": "Multi-niveaux",
+      "LIST": {
+        "Level1": {
+          "1": "Niveau 1.1"
+        },
+        "Level2": {
+          "TEXT": "Niveau 1.2",
+          "1": "Niveau 2.1",
+          "2": "Niveau 2.2"
+        },
+        "Level3": {
+          "1": "Niveau 3.1",
+          "2": "Niveau 3.2"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "HEADER": {
+    "MORE": {
+      "TEXT": "Более"
+    }
+  },
+  "MENUITEMS": {
+    "MENU": {
+      "TEXT": "МЕНЮ"
+    },
+    "DASHBOARD": {
+      "TEXT": "Панель приборов",
+      "BADGE": "Горячий"
+    },
+    "PRODUCTS": {
+      "TEXT": "Продукты",
+      "LIST": {
+        "LISTVIEW": "Посмотреть список",
+        "GRIDVIEW": "Вид сетки",
+        "OVERVIEW": "Обзор",
+        "CREATEPRODUCT": "Создать продукт",
+        "CATEGORIES": "Категории",
+        "SUBCATEGORIES": "Подкатегории"
+      }
+    },
+    "ORDERS": {
+      "TEXT": "Заказы",
+      "LIST": {
+        "LISTVIEW": "Посмотреть список",
+        "OVERVIEW": "Обзор"
+      }
+    },
+    "CALENDER": {
+      "TEXT": "Календарь"
+    },
+    "SELLERS": {
+      "TEXT": "Продавцы",
+      "LIST": {
+        "LISTVIEW": "Посмотреть список",
+        "GRIDVIEW": "Вид сетки",
+        "OVERVIEW": "Обзор"
+      }
+    },
+    "INVOICE": {
+      "TEXT": "Счет",
+      "LIST": {
+        "LISTVIEW": "Посмотреть список",
+        "OVERVIEW": "Обзор",
+        "CREATEINVOICE": "Создать счет"
+      }
+    },
+    "USERLIST": {
+      "TEXT": "Список пользователей"
+    },
+    "SHIPPING": {
+      "TEXT": "Перевозки",
+      "LIST": {
+        "SHIPPINGLIST": "Список доставкиs",
+        "SHIPMENT": "Отгрузки"
+      }
+    },
+    "COUPONS": {
+      "TEXT": "купоны"
+    },
+    "REVIEWS&RATINGS": {
+      "TEXT": "Обзоры и рейтинги"
+    },
+    "BRANDS": {
+      "TEXT": "Бренды"
+    },
+    "STATISTICS": {
+      "TEXT": "Статистика"
+    },
+    "LOCALIZATION": {
+      "TEXT": "Локализация",
+      "LIST": {
+        "TRANSACTIONS": "Транзакции",
+        "CURRENCYRATES": "Курсы валют"
+      }
+    },
+    "ACCOUNTS": {
+      "TEXT": "Счета",
+      "LIST": {
+        "MYACCOUNT": "Мой счет",
+        "SETTINGS": "Настройки",
+        "SIGNUP": "Зарегистрироваться",
+        "SIGNIN": "Войти",
+        "PASSWORDRESET": "Восстановление пароля",
+        "PASSWORDCREATE": "Пароль Создать",
+        "SUCCESSMESSAGE": "Сообщение об успехе",
+        "TWOSTEPVERIFY": "Двухэтапная проверка",
+        "LOGOUT": "Выйти",
+        "ERROR404": "Ошибка 404",
+        "ERROR500": "Ошибка 500",
+        "COMINGSOON": "Вскоре"
+      }
+    },
+    "COMPONENTS": {
+      "TEXT": "Компоненты",
+      "BADGE": "v1.0"
+    },
+    "MULTILEVEL": {
+      "TEXT": "Многоуровневый",
+      "LIST": {
+        "LEVEL1": {
+          "1": "Уровень 1.1",
+          "2": "Уровень 1.2",
+          "LEVEL2": {
+            "1": "Уровень 2.1",
+            "2": "Уровень 2.2",
+            "LEVEL3": {
+              "1": "Уровень 3.1",
+              "2": "Уровень 3.2"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,486 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumb title="Grid Js" [breadcrumbItems]="breadCrumbItems"></app-breadcrumb>
+<!-- End Breadcrumbs -->
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0 flex-grow-1">Base Example</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <div class="" style="width: 100%;">
+                    <span class="p-input-icon-left mb-2">
+                        <i class="pi pi-search"></i>
+                        <input pInputText type="text" (input)="dt.filterGlobal($event.target.value, 'contains')"
+                            placeholder="Type a keyword..." class="p-inputtext p-component p-element" />
+                    </span>
+
+                    <p-table #dt [value]="tablelist" [paginator]="true" [rows]="5" (onPage)="onPageChange($event)"
+                        [globalFilterFields]="['name','email','position','company','country']"
+                        styleClass="p-datatable-gridlines">
+                        <ng-template pTemplate="header">
+                            <tr class="gridjs-tr">
+                                <th pSortableColumn="id" tabindex="0"
+                                    style="width: 80px;">
+                                    <div>ID<p-sortIcon field="id"></p-sortIcon></div>
+                                </th>
+                                <th pSortableColumn="name" tabindex="0"
+                                    style="width: 150px;">
+                                    <div>Name<p-sortIcon field="name"></p-sortIcon></div>
+                                </th>
+                                <th pSortableColumn="email" tabindex="0"
+                                    style="width: 220px;">
+                                    <div>Email<p-sortIcon field="email"></p-sortIcon>
+                                    </div>
+                                </th>
+                                <th pSortableColumn="position" tabindex="0"
+                                    style="width: 250px;">
+                                    <div>Position<p-sortIcon field="position"></p-sortIcon>
+                                    </div>
+                                </th>
+                                <th pSortableColumn="company" tabindex="0"
+                                    style="width: 180px;">
+                                    <div>Company<p-sortIcon field="company"></p-sortIcon>
+                                    </div>
+                                </th>
+                                <th pSortableColumn="country" tabindex="0"
+                                    style="width: 180px;">
+                                    <div>Country<p-sortIcon field="country"></p-sortIcon>
+                                    </div>
+                                </th>
+                                <th pSortableColumn="actions" tabindex="0"
+                                    style="width: 150px;">
+                                    <div>Actions<p-sortIcon field="actions"></p-sortIcon>
+                                    </div>
+                                </th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-product>
+                            <tr class="">
+                                <td><span><span class="fw-semibold">{{product.id}}</span></span></td>
+                                <td>{{product.name}}</td>
+                                <td><span><a href="">{{product.email}}</a></span></td>
+                                <td>{{product.position}}</td>
+                                <td>{{product.company}}</td>
+                                <td>{{product.country}}</td>
+                                <td><span><a href="javascript:void(0);" class="text-reset text-decoration-underline">Details</a></span>
+                                </td>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="paginatorleft" let-state>
+                            Showing {{first}} - {{endIndex}} of {{tablelist.length}} results
+                        </ng-template>
+                    </p-table>
+                </div>
+            </div><!-- end card-body -->
+        </div><!-- end card -->
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Card Table</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <div id="table-card" class="table-card">
+                    <p-table #dt [value]="tablelist" [paginator]="true" [rows]="5" (onPage)="onPageChange($event)"
+                        styleClass="p-datatable-gridlines">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th pSortableColumn="name" tabindex="0"
+                                    style="width: 150px;">
+                                    <div>Name<p-sortIcon field="name"></p-sortIcon></div>
+                                </th>
+                                <th pSortableColumn="email" tabindex="0"
+                                    style="width: 220px;">
+                                    <div>Email<p-sortIcon field="email"></p-sortIcon>
+                                    </div>
+                                </th>
+                                <th pSortableColumn="position" tabindex="0"
+                                    style="width: 250px;">
+                                    <div>Position<p-sortIcon field="position"></p-sortIcon>
+                                    </div>
+                                </th>
+                                <th pSortableColumn="company" tabindex="0"
+                                    style="width: 180px;">
+                                    <div>Company<p-sortIcon field="company"></p-sortIcon>
+                                    </div>
+                                </th>
+                                <th pSortableColumn="country" tabindex="0"
+                                    style="width: 180px;">
+                                    <div>Country<p-sortIcon field="country"></p-sortIcon>
+                                    </div>
+                                </th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-product>
+                            <tr>
+                                <td>{{product.name}}</td>
+                                <td>{{product.email}}</td>
+                                <td>{{product.position}}</td>
+                                <td>{{product.company}}</td>
+                                <td>{{product.country}}</td>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="paginatorleft" let-state>
+                            Showing {{first}} - {{endIndex}} of {{tablelist.length}} results
+                        </ng-template>
+                    </p-table>
+                </div>
+            </div><!-- end card-body -->
+        </div><!-- end card -->
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Pagination</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <div id="table-pagination">
+                    <div role="complementary" style="width: 100%;">
+                        <div style="height: auto;">
+                            <p-table #dt [value]="tablelist" [paginator]="true" [rows]="5"
+                                (onPage)="onPageChange($event)" styleClass="p-datatable-gridlines p-datatable-sm">
+                                <ng-template pTemplate="header">
+                                    <tr>
+                                        <th tabindex="0" style="width: 80px;">
+                                            <div>ID</div>
+                                        </th>
+                                        <th tabindex="0" style="width: 150px;">
+                                            <div>Name</div>
+                                        </th>
+                                        <th tabindex="0" style="width: 220px;">
+                                            <div>Date</div>
+                                        </th>
+                                        <th tabindex="0" style="width: 250px;">
+                                            <div>Total</div>
+                                        </th>
+                                        <th tabindex="0" style="width: 180px;">
+                                            <div>Status</div>
+                                        </th>
+                                        <th tabindex="0" style="width: 150px;">
+                                            <div>Actions</div>
+                                        </th>
+                                    </tr>
+                                </ng-template>
+                                <ng-template pTemplate="body" let-product>
+                                    <tr class="">
+                                        <td><span><a href="" class="fw-medium">{{product.orderid}}</a></span></td>
+                                        <td>{{product.name}}</td>
+                                        <td>{{product.date}}</td>
+                                        <td>{{product.total}}</td>
+                                        <td>{{product.status}}</td>
+                                        <td><span><button type="button"
+                                                    class="btn btn-sm btn-light">Details</button></span></td>
+                                    </tr>
+                                </ng-template>
+                                <ng-template pTemplate="paginatorleft" let-state>
+                                    Showing {{first}} - {{endIndex}} of {{tablelist.length}} results
+                                </ng-template>
+                            </p-table>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end card-body -->
+        </div><!-- end card -->
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Search</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <div role="complementary" style="width: 100%;">
+                    <!-- <div class="gridjs-head"> -->
+                    <span class="p-input-icon-left m-1">
+                        <i class="pi pi-search"></i>
+                        <input pInputText type="text" (input)="searchdt.filterGlobal($event.target.value, 'contains')"
+                            placeholder="Type a keyword..." class="p-inputtext p-component p-element" />
+                    </span>
+                    <p-table #searchdt [value]="tablelist" [paginator]="true" [rows]="5" (onPage)="onPageChange($event)"
+                        [globalFilterFields]="['name','email','position','company','country']"
+                        styleClass="p-datatable-gridlines p-datatable-sm">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th style="width: 150px;">
+                                    <div>Name</div>
+                                </th>
+                                <th style="width: 220px;">
+                                    <div>Email</div>
+                                </th>
+                                <th style="width: 250px;">
+                                    <div>Position</div>
+                                </th>
+                                <th style="width: 180px;">
+                                    <div>Company</div>
+                                </th>
+                                <th style="width: 150px;">
+                                    <div>Country</div>
+                                </th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-product>
+                            <tr>
+                                <td>{{product.name}}</td>
+                                <td>{{product.email}}</td>
+                                <td>{{product.position}}</td>
+                                <td>{{product.company}}</td>
+                                <td>{{product.country}}</td>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="paginatorleft" let-state>
+                            Showing {{first}} - {{endIndex}} of {{tablelist.length}} results
+                        </ng-template>
+                    </p-table>
+                </div>
+            </div><!-- end card-body -->
+        </div><!-- end card -->
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Sorting</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p-table [value]="tablelist" [paginator]="true" [rows]="5" (onPage)="onPageChange($event)"
+                    styleClass="p-datatable-gridlines">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th pSortableColumn="name" tabindex="0"
+                                style="width: 150px;">
+                                <div>Name<p-sortIcon field="name"></p-sortIcon></div>
+                            </th>
+                            <th pSortableColumn="email" tabindex="0"
+                                style="width: 220px;">
+                                <div>Email<p-sortIcon field="email"></p-sortIcon>
+                                </div>
+                            </th>
+                            <th pSortableColumn="position" tabindex="0"
+                                style="width: 250px;">
+                                <div>Position<p-sortIcon field="position"></p-sortIcon>
+                                </div>
+                            </th>
+                            <th pSortableColumn="company" tabindex="0"
+                                style="width: 180px;">
+                                <div>Company<p-sortIcon field="company"></p-sortIcon>
+                                </div>
+                            </th>
+                            <th pSortableColumn="country" tabindex="0"
+                                style="width: 180px;">
+                                <div>Country<p-sortIcon field="country"></p-sortIcon>
+                                </div>
+                            </th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-product>
+                        <tr>
+                            <td>{{product.name}}</td>
+                            <td>{{product.email}}</td>
+                            <td>{{product.position}}</td>
+                            <td>{{product.company}}</td>
+                            <td>{{product.country}}</td>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="paginatorleft" let-state>
+                        Showing {{first}} - {{endIndex}} of {{tablelist.length}} results
+                    </ng-template>
+                </p-table>
+            </div><!-- end card-body -->
+        </div><!-- end card -->
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Loading State</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p-table #dt [value]="tablelist" [paginator]="true" [rows]="5" [loading]="false" (onPage)="onPageChange($event)"
+                    styleClass="p-datatable-gridlines">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th pSortableColumn="name" tabindex="0"
+                                style="width: 150px;">
+                                <div>Name<p-sortIcon field="name"></p-sortIcon></div>
+                            </th>
+                            <th pSortableColumn="email" tabindex="0"
+                                style="width: 220px;">
+                                <div>Email<p-sortIcon field="email"></p-sortIcon>
+                                </div>
+                            </th>
+                            <th pSortableColumn="position" tabindex="0"
+                                style="width: 250px;">
+                                <div>Position<p-sortIcon field="position"></p-sortIcon>
+                                </div>
+                            </th>
+                            <th pSortableColumn="company" tabindex="0"
+                                style="width: 180px;">
+                                <div>Company<p-sortIcon field="company"></p-sortIcon>
+                                </div>
+                            </th>
+                            <th pSortableColumn="country" tabindex="0"
+                                style="width: 180px;">
+                                <div>Country<p-sortIcon field="country"></p-sortIcon>
+                                </div>
+                            </th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-product>
+                        <tr>
+                            <td>{{product.name}}</td>
+                            <td>{{product.email}}</td>
+                            <td>{{product.position}}</td>
+                            <td>{{product.company}}</td>
+                            <td>{{product.country}}</td>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="paginatorleft" let-state>
+                        Showing {{first}} - {{endIndex}} of {{tablelist.length}} results
+                    </ng-template>
+                </p-table>
+            </div><!-- end card-body -->
+        </div><!-- end card -->
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Fixed Header</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p-table #dt [value]="tablelist" [paginator]="true" [rows]="10" sortMode="single" [scrollable]="true"
+                    scrollHeight="330px" (onPage)="onPageChange($event)" styleClass="p-datatable-gridlines">
+                    <ng-template pTemplate="header" class="gridjs-thead">
+                        <tr class="gridjs-tr">
+                            <th pSortableColumn="name" tabindex="0"
+                                style="width: 150px;">
+                                <div>Name<p-sortIcon field="name"></p-sortIcon></div>
+                            </th>
+                            <th pSortableColumn="email" tabindex="0"
+                                style="width: 220px;">
+                                <div>Email<p-sortIcon field="email"></p-sortIcon>
+                                </div>
+                            </th>
+                            <th pSortableColumn="position" tabindex="0"
+                                style="width: 250px;">
+                                <div>Position<p-sortIcon field="position"></p-sortIcon>
+                                </div>
+                            </th>
+                            <th pSortableColumn="company" tabindex="0"
+                                style="width: 180px;">
+                                <div>Company<p-sortIcon field="company"></p-sortIcon>
+                                </div>
+                            </th>
+                            <th pSortableColumn="country" tabindex="0"
+                                style="width: 180px;">
+                                <div>Country<p-sortIcon field="country"></p-sortIcon>
+                                </div>
+                            </th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-product>
+                        <tr>
+                            <td>{{product.name}}</td>
+                            <td>{{product.email}}</td>
+                            <td>{{product.position}}</td>
+                            <td>{{product.company}}</td>
+                            <td>{{product.country}}</td>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="paginatorleft" let-state>
+                        Showing {{first}} - {{endIndex}} of {{tablelist.length}} results
+                    </ng-template>
+                </p-table>
+            </div><!-- end card-body -->
+        </div><!-- end card -->
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Hidden Columns</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p-table #dt [value]="tablelist" [paginator]="true" [rows]="5" sortMode="single" (onPage)="onPageChange($event)" styleClass="p-datatable-gridlines">
+                <ng-template pTemplate="header" class="gridjs-thead">
+                    <tr class="gridjs-tr">
+                        <th pSortableColumn="name" tabindex="0"
+                            style="width: 150px;">
+                            <div>Name<p-sortIcon field="name"></p-sortIcon></div>
+                        </th>
+                        <th pSortableColumn="email" tabindex="0"
+                            style="width: 220px;">
+                            <div>Email<p-sortIcon field="email"></p-sortIcon>
+                            </div>
+                        </th>
+                        <th pSortableColumn="position" tabindex="0"
+                            style="width: 250px;">
+                            <div>Position<p-sortIcon field="position"></p-sortIcon>
+                            </div>
+                        </th>
+                        <th pSortableColumn="company" tabindex="0"
+                            style="width: 180px;">
+                            <div>Company<p-sortIcon field="company"></p-sortIcon>
+                            </div>
+                        </th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-product>
+                    <tr>
+                        <td>{{product.name}}</td>
+                        <td>{{product.email}}</td>
+                        <td>{{product.position}}</td>
+                        <td>{{product.company}}</td>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="paginatorleft" let-state>
+                    Showing {{first}} - {{endIndex}} of {{tablelist.length}} results
+                </ng-template>
+            </p-table>
+            </div><!-- end card-body -->
+        </div><!-- end card -->
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->

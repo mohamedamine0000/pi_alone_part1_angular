@@ -1,0 +1,60 @@
+form {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  
+    label {
+      font-weight: bold;
+      color: #333;
+      font-size: 14px;
+    }
+  
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: border 0.3s;
+  
+      &:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+      }
+    }
+  
+    button {
+      background: #007bff;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+  
+      &:hover {
+        background: #0056b3;
+      }
+    }
+
+    select[multiple] {
+        height: auto;
+        min-height: 100px;
+        padding: 8px;
+        option {
+          padding: 8px;
+          &:hover {
+            background-color: #f0f0f0;
+          }
+        }
+      }
+  }
+  

@@ -1,0 +1,301 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumb title="Notifications" [breadcrumbItems]="breadCrumbItems"></app-breadcrumb>
+<!-- End Breadcrumbs -->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Toast Placement</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+
+                <p class="text-muted">Various example of <code>toast placement</code>.</p>
+                <div>
+                    <div class="mb-3">
+                        <select class="form-select mt-2" id="selectToastPlacement" [(ngModel)]="position"
+                            (change)="toatPosition()">
+                            <option value="" selected>Select a position...</option>
+                            <option value="tl">Top left</option>
+                            <option value="tc">Top center</option>
+                            <option value="tr">Top right</option>
+                            <option value="c">Middle center</option>
+                            <option value="bl">Bottom left</option>
+                            <option value="bc">Bottom center</option>
+                            <option value="br">Bottom right</option>
+                        </select>
+                    </div>
+                    <!-- <p-toast position="top-left" key="tl"></p-toast> -->
+                    <div aria-live="polite" aria-atomic="true" class="bd-example bg-light position-relative"
+                        style="height: 300px;">
+                        <p-toast position="top-left" key="tl"
+                            styleClass="toast-container position-absolute p-3"></p-toast>
+                        <p-toast position="top-center" key="tc"
+                            styleClass="toast-container position-absolute p-3"></p-toast>
+                        <p-toast position="top-right" key="tr"
+                            styleClass="toast-container position-absolute p-3"></p-toast>
+                        <p-toast position="top-center" key="c"
+                            styleClass="toast-container position-absolute p-3"></p-toast>
+                        <p-toast position="bottom-left" key="bl"
+                            styleClass="toast-container position-absolute p-3"></p-toast>
+                        <p-toast position="bottom-center" key="bc"
+                            styleClass="toast-container position-absolute p-3"></p-toast>
+                        <p-toast position="bottom-right" key="br"
+                            styleClass="toast-container position-absolute p-3"></p-toast>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 310px;"><code>&lt;!-- Toast placement --&gt;
+&lt;form&gt;
+    &lt;div class=&quot;mb-3&quot;&gt;
+        &lt;select class=&quot;form-select mt-2&quot; id=&quot;selectToastPlacement&quot;&gt;
+            &lt;option value=&quot;&quot; selected&gt;Select a position...&lt;/option&gt;
+            &lt;option value=&quot;top-0 start-0&quot;&gt;Top left&lt;/option&gt;
+            &lt;option value=&quot;top-0 start-50 translate-middle-x&quot;&gt;Top center&lt;/option&gt;
+            &lt;option value=&quot;top-0 end-0&quot;&gt;Top right&lt;/option&gt;
+            &lt;option value=&quot;top-50 start-0 translate-middle-y&quot;&gt;Middle left&lt;/option&gt;
+            &lt;option value=&quot;top-50 start-50 translate-middle&quot;&gt;Middle center&lt;/option&gt;
+            &lt;option value=&quot;top-50 end-0 translate-middle-y&quot;&gt;Middle right&lt;/option&gt;
+            &lt;option value=&quot;bottom-0 start-0&quot;&gt;Bottom left&lt;/option&gt;
+            &lt;option value=&quot;bottom-0 start-50 translate-middle-x&quot;&gt;Bottom center&lt;/option&gt;
+            &lt;option value=&quot;bottom-0 end-0&quot;&gt;Bottom right&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code>
+
+<code>&lt;div aria-live=&quot;polite&quot; aria-atomic=&quot;true&quot; class=&quot;bd-example bg-light position-relative&quot; style=&quot;height: 300px;&quot;&gt;
+    &lt;div class=&quot;toast-container position-absolute p-3&quot; id=&quot;toastPlacement&quot;&gt;
+        &lt;div class=&quot;toast&quot;&gt;
+            &lt;div class=&quot;toast-header&quot;&gt;
+                &lt;img src=&quot;assets/images/logo-sm.png&quot; class=&quot;rounded me-2&quot;
+                    alt=&quot;...&quot; height=&quot;20&quot;&gt;
+                &lt;strong class=&quot;me-auto&quot;&gt;Hybrix&lt;/strong&gt;
+                &lt;small&gt;11 mins ago&lt;/small&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn-close&quot; data-bs-dismiss=&quot;toast&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;toast-body&quot;&gt;
+                Hello, world! This is a toast message.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+    <!--end col-->
+</div>
+<!--end row-->
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Bordered with Icon Toast</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Use <code>toast-border-</code> with below-mentioned color variation to set a toast
+                    with border and icon.</p>
+                <div>
+
+                    <div class="position-relative">
+                        <div class="hstack flex-wrap gap-2">
+                            <button type="button" class="btn btn-primary" id="borderedToast1Btn"
+                                (click)="showToast('info','Your application was successfully sent.')">Primary
+                                Toast</button>
+                            <button type="button" class="btn btn-success" id="borderedToast2Btn"
+                                (click)="showToast('success','Yey! Everything worked!')">Success Toast</button>
+                            <button type="button" class="btn btn-warning" id="borderedTost3Btn"
+                                (click)="showToast('warn','Something went wrong, try again.')">Warning Toast</button>
+                            <button type="button" class="btn btn-danger" id="borderedToast4Btn"
+                                (click)="showToast('error','Something is very wrong! See detailed report.')">Danger
+                                Toast</button>
+                        </div>
+                        <div style="z-index: 11">
+                            <p-toast styleClass="toast-border-primary overflow-hidden mt-3"></p-toast>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 310px;"><code>&lt;!-- Bordered With Icon Toast --&gt;
+&lt;div class=&quot;hstack flex-wrap gap-2&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;borderedToast1Btn&quot;&gt;Primary toast&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot; id=&quot;borderedToast2Btn&quot;&gt;Success toast&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-warning&quot; id=&quot;borderedTost3Btn&quot;&gt;Warning toast&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot; id=&quot;borderedToast4Btn&quot;&gt;danger toast&lt;/button&gt;
+&lt;/div&gt;</code>
+
+<code>&lt;div style=&quot;z-index: 11&quot;&gt;
+    &lt;div id=&quot;borderedToast1&quot; class=&quot;toast toast-border-primary overflow-hidden mt-3&quot; role=&quot;alert&quot; aria-live=&quot;assertive&quot; aria-atomic=&quot;true&quot;&gt;
+        &lt;div class=&quot;toast-body&quot;&gt;
+            &lt;div class=&quot;d-flex align-items-center&quot;&gt;
+                &lt;div class=&quot;flex-shrink-0 me-2&quot;&gt;
+                    &lt;i class=&quot;ri-user-smile-line align-middle&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;flex-grow-1&quot;&gt;
+                    &lt;h6 class=&quot;mb-0&quot;&gt;Your application was successfully sent.&lt;/h6&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+
+<code>&lt;div style=&quot;z-index: 11&quot;&gt;
+    &lt;div id=&quot;borderedToast2&quot; class=&quot;toast toast-border-success overflow-hidden mt-3&quot; role=&quot;alert&quot; aria-live=&quot;assertive&quot; aria-atomic=&quot;true&quot;&gt;
+        &lt;div class=&quot;toast-body&quot;&gt;
+            &lt;div class=&quot;d-flex align-items-center&quot;&gt;
+                &lt;div class=&quot;flex-shrink-0 me-2&quot;&gt;
+                    &lt;i class=&quot;ri-checkbox-circle-fill align-middle&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;flex-grow-1&quot;&gt;
+                    &lt;h6 class=&quot;mb-0&quot;&gt;Yey! Everything worked!&lt;/h6&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+
+<code>&lt;div style=&quot;z-index: 11&quot;&gt;
+    &lt;div id=&quot;borderedTost3&quot; class=&quot;toast toast-border-warning overflow-hidden mt-3&quot; role=&quot;alert&quot; aria-live=&quot;assertive&quot; aria-atomic=&quot;true&quot;&gt;
+        &lt;div class=&quot;toast-body&quot;&gt;
+            &lt;div class=&quot;d-flex align-items-center&quot;&gt;
+                &lt;div class=&quot;flex-shrink-0 me-2&quot;&gt;
+                    &lt;i class=&quot;ri-notification-off-line align-middle&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;flex-grow-1&quot;&gt;
+                    &lt;h6 class=&quot;mb-0&quot;&gt;Something went wrong, try again.&lt;/h6&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+
+<code>&lt;div style=&quot;z-index: 11&quot;&gt;
+    &lt;div id=&quot;borderedToast4&quot; class=&quot;toast toast-border-danger overflow-hidden mt-3&quot; role=&quot;alert&quot; aria-live=&quot;assertive&quot; aria-atomic=&quot;true&quot;&gt;
+        &lt;div class=&quot;toast-body&quot;&gt;
+            &lt;div class=&quot;d-flex align-items-center&quot;&gt;
+                &lt;div class=&quot;flex-shrink-0 me-2&quot;&gt;
+                    &lt;i class=&quot;ri-alert-line align-middle&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;flex-grow-1&quot;&gt;
+                    &lt;h6 class=&quot;mb-0&quot;&gt;Something is very wrong!  &lt;a href=&quot;javascript:void(0);&quot; class=&quot;text-decoration-underline&quot;&gt;See detailed report.&lt;/a&gt;&lt;/h6&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+    <!--end col-->
+</div>
+<!--end row-->
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Toastify JS</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Use <code>data-toast</code> <code>data-toast-text=""</code>
+                    <code>data-toast-gravity=""</code> <code>data-toast-position=""</code>
+                    <code>data-toast-className=""</code> <code>data-toast-duration=""</code>
+                    <code>data-toast-close="close"</code> <code>data-toast-style="style"</code> as per your toast
+                    requirement.
+                </p>
+                <div>
+                    <div class="hstack flex-wrap gap-2">
+                        <button type="button" (click)="defaultToast('tlv','success')"
+                            class="btn btn-light w-xs ">Default</button>
+                        <button type="button" (click)="defaultToast('tcv','success')"
+                            class="btn btn-light w-xs">Success</button>
+                        <button type="button" (click)="defaultToast('tcv','warn')"
+                            class="btn btn-light w-xs">Warning</button>
+                        <button type="button" (click)="defaultToast('tcv','error')"
+                            class="btn btn-light w-xs">Error</button>
+                    </div>
+                    <p-toast position="top-right" key="tlv"></p-toast>
+                    <p-toast position="top-center" key="tcv"></p-toast>
+
+                    <div class="mt-4 pt-2">
+                        <h5 class="fs-14 mb-3">Display Position</h5>
+                        <div class="hstack flex-wrap gap-2">
+
+                            <button type="button" class="btn btn-light w-xs" (click)="displayToast('tlc','success')">Top
+                                Left</button>
+                            <button type="button" class="btn btn-light w-xs" (click)="displayToast('tcc','success')">Top
+                                Center</button>
+                            <button type="button" class="btn btn-light w-xs" (click)="displayToast('trc','success')">Top
+                                Right</button>
+                            <button type="button" class="btn btn-light w-xs"
+                                (click)="displayToast('blc','success')">Bottom Left</button>
+                            <button type="button" class="btn btn-light w-xs"
+                                (click)="displayToast('bcc','success')">Bottom Center</button>
+                            <button type="button" class="btn btn-light w-xs"
+                                (click)="displayToast('brc','success')">Bottom Right</button>
+                        </div>
+                        <p-toast position="top-left" key="tlc"></p-toast>
+                        <p-toast position="top-center" key="tcc"></p-toast>
+                        <p-toast position="top-right" key="trc"></p-toast>
+                        <p-toast position="bottom-left" key="blc"></p-toast>
+                        <p-toast position="bottom-center" key="bcc"></p-toast>
+                        <p-toast position="bottom-right" key="brc"></p-toast>
+                        <p-toast position="top-right" key="brcs" [showTransformOptions]="'translateX(100%)'"></p-toast>
+                        <p-toast position="top-right" ket="dt"></p-toast>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-lg-4">
+                            <div class="mt-4">
+                                <h5 class="fs-14 mb-3">Offset Position</h5>
+                                <div class="d-flex align-items-center flex-wrap gap-2">
+                                    <button type="button" class="btn btn-light w-xs"
+                                        (click)="displayToast('trc','success')">Click
+                                        Me</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end col-->
+                        <div class="col-lg-4">
+                            <div class="mt-4">
+                                <h5 class="fs-14 mb-3">Close icon Display</h5>
+                                <div class="d-flex align-items-center flex-wrap gap-2">
+                                    <button type="button" class="btn btn-light w-xs"
+                                        (click)="displayToast('brcs','success')">Click Me</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end col-->
+                        <div class="col-lg-4">
+                            <div class="mt-4">
+                                <h5 class="fs-14 mb-3">Duration</h5>
+                                <div class="d-flex align-items-center flex-wrap gap-2">
+                                    <button type="button" class="btn btn-light w-xs" (click)="duarationToast()">Click
+                                        Me</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end col-->
+                    </div>
+                    <!--end row-->
+                </div>
+            </div><!-- end card-body -->
+        </div><!-- end card -->
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->

@@ -1,0 +1,147 @@
+{
+  "MENUITEMS": {
+    "MENU": {
+      "TEXT": "COMPONENTES"
+    },
+    "OVERVIEW": {
+      "TEXT": "Resumen"
+    },
+    "BOOTSTRAPUI": {
+      "TEXT": "Interfaz de Bootstrap",
+      "LIST": {
+        "ALERTS": "Alertas",
+        "BADGES": "Insignias",
+        "BUTTONS": "Botones",
+        "COLORS": "Colores",
+        "CARDS": "Tarjetas",
+        "CAROUSEL": "Carrusel",
+        "DROPDOWNS": "Desplegables",
+        "GRID": "Cuadrícula",
+        "IMAGES": "Imágenes",
+        "TIMELINE": "Línea de tiempo",
+        "KNOB": "Perilla",
+        "SPLITTER": "Separador",
+        "SPEEDDIAL": "Marcación rápida",
+        "TABS": "Pestañas",
+        "ACCORDIAN": "Acordeón y Colapso",
+        "MODALS": "Modales",
+        "OFFCANVAS": "Fuera de lienzo",
+        "PLACEHOLDERS": "Marcadores de posición",
+        "PROGRESS": "Progreso",
+        "NOTIFICATION": "Notificaciones",
+        "MEDIA": "Objeto multimedia",
+        "VIDEO": "Insertar video",
+        "TYPOGRAPHY": "Tipografía",
+        "LISTS": "Listas",
+        "GENERAL": "General",
+        "UTILITIES": "Utilidades"
+      }
+    },
+    "ADVANCEUI": {
+      "TEXT": "Interfaz Avanzada",
+      "LIST": {
+        "SWEETALERT": "Alertas Dulces",
+        "NESTABLELIST": "Lista Anidada",
+        "SCROLLBAR": "Barra de Desplazamiento",
+        "SWIPER": "Slider Swiper",
+        "RATINGS": "Calificaciones",
+        "HIGHLIGHT": "Resaltado",
+        "SCROLLSPY": "ScrollSpy"
+      }
+    },
+    "CUSTOMUI": {
+      "TEXT": "Interfaz Personalizada",
+      "BADGE": "Personalizado",
+      "LIST": {
+        "RIBBONS": "Cintas",
+        "PROFILE": "Perfil",
+        "COUNTER": "Contador"
+      }
+    },
+    "FORMS": {
+      "TEXT": "Formularios",
+      "LIST": {
+        "ELEMENTS": "Elementos Básicos",
+        "SELECT": "Selección de Formulario",
+        "CHECKBOXES": "Casillas de Verificación y Radios",
+        "PICKERS": "Selectores",
+        "MASK": "Máscara de Entrada",
+        "ADVANCED": "Avanzado",
+        "SLIDER": "Control Deslizante de Rango",
+        "VALIDATION": "Validación",
+        "WIZARD": "Asistente",
+        "EDITOR": "Editores",
+        "FILEUPLOAD": "Carga de Archivos",
+        "LAYOUTS": "Diseños de Formulario",
+        "TOMSELECT": "Tom Select"
+      }
+    },
+    "MORE": {
+      "TEXT": "Más"
+    },
+    "TABLES": {
+      "TEXT": "Tablas",
+      "LIST": {
+        "BASIC": "Tablas Básicas",
+        "GRIDJS": "Grid Js",
+        "LISTJS": "List Js"
+      }
+    },
+    "APEXCHARTS": {
+      "TEXT": "Apexcharts",
+      "LIST": {
+        "LINE": "Línea",
+        "AREA": "Área",
+        "COLUMN": "Columna",
+        "BAR": "Barra",
+        "MIXED": "Mixto",
+        "TIMELINE": "Línea de Tiempo",
+        "CANDLESTICK": "Candlestick",
+        "BOXPLOT": "Boxplot",
+        "BUBBLE": "Burbuja",
+        "SCATTER": "Dispersión",
+        "HEATMAP": "Mapa de Calor",
+        "TREEMAP": "Treemap",
+        "PIE": "Pastel",
+        "RADIALBAR": "Barra Radial",
+        "RADAR": "Radar",
+        "POLARAREA": "Área Polar"
+      }
+    },
+    "ICONS": {
+      "TEXT": "Iconos",
+      "LIST": {
+        "REMIX": "Remix",
+        "BOXICONS": "Boxicons",
+        "MATERIALDESIGN": "Material Design",
+        "BOOTSTRAP": "Bootstrap",
+        "PHOSPHOR": "Phosphor"
+      }
+    },
+    "MAPS": {
+      "TEXT": "Mapas",
+      "LIST": {
+        "GOOGLE": "Google",
+        "AMCHARTS": "Vector",
+        "LEAFLET": "Leaflet"
+      }
+    },
+    "MULTILEVEL": {
+      "TEXT": "Multinivel",
+      "LIST": {
+        "Level1": {
+          "1": "Nivel 1.1"
+        },
+        "Level2": {
+          "TEXT": "Nivel 1.2",
+          "1": "Nivel 2.1",
+          "2": "Nivel 2.2"
+        },
+        "Level3": {
+          "1": "Nivel 3.1",
+          "2": "Nivel 3.2"
+        }
+      }
+    }
+  }
+}

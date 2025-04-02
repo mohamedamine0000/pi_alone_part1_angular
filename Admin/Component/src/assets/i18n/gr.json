@@ -1,0 +1,147 @@
+{
+  "MENUITEMS": {
+    "MENU": {
+      "TEXT": "KOMPONENTEN"
+    },
+    "OVERVIEW": {
+      "TEXT": "Überblick"
+    },
+    "BOOTSTRAPUI": {
+      "TEXT": "Bootstrap-Benutzeroberfläche",
+      "LIST": {
+        "ALERTS": "Warnungen",
+        "BADGES": "Abzeichen",
+        "BUTTONS": "Tasten",
+        "COLORS": "Farben",
+        "CARDS": "Karten",
+        "CAROUSEL": "Karussell",
+        "DROPDOWNS": "Dropdowns",
+        "GRID": "Netz",
+        "IMAGES": "Bilder",
+        "TIMELINE": "Zeitleiste",
+        "KNOB": "Knopf",
+        "SPLITTER": "Splitter",
+        "SPEEDDIAL": "Kurzwahl",
+        "TABS": "Registerkarten",
+        "ACCORDIAN": "Akkordeon & Zusammenbruch",
+        "MODALS": "Modale",
+        "OFFCANVAS": "Leinwand",
+        "PLACEHOLDERS": "Platzhalter",
+        "PROGRESS": "Fortschritt",
+        "NOTIFICATION": "Benachrichtigungen",
+        "MEDIA": "Medienobjekt",
+        "VIDEO": "Video einbetten",
+        "TYPOGRAPHY": "Typografie",
+        "LISTS": "Listen",
+        "GENERAL": "Allgemein",
+        "UTILITIES": "Dienstprogramme"
+      }
+    },
+    "ADVANCEUI": {
+      "TEXT": "Erweiterte Benutzeroberfläche",
+      "LIST": {
+        "SWEETALERT": "Süße Warnungen",
+        "NESTABLELIST": "Verschachtelbare Liste",
+        "SCROLLBAR": "Scrollleiste",
+        "SWIPER": "Swiper-Schieberegler",
+        "RATINGS": "Bewertungen",
+        "HIGHLIGHT": "Markieren",
+        "SCROLLSPY": "ScrollSpy"
+      }
+    },
+    "CUSTOMUI": {
+      "TEXT": "Benutzerdefinierte Benutzeroberfläche",
+      "BADGE": "Brauch",
+      "LIST": {
+        "RIBBONS": "Bänder",
+        "PROFILE": "Profil",
+        "COUNTER": "Schalter"
+      }
+    },
+    "FORMS": {
+      "TEXT": "Formen",
+      "LIST": {
+        "ELEMENTS": "Grundelemente",
+        "SELECT": "Formularauswahl",
+        "CHECKBOXES": "Kontrollkästchen und Radios",
+        "PICKERS": "Pflücker",
+        "MASK": "Eingabemaske",
+        "ADVANCED": "Fortschrittlich",
+        "SLIDER": "Bereichsschieberegler",
+        "VALIDATION": "Validierung",
+        "WIZARD": "Magier",
+        "EDITOR": "Herausgeber",
+        "FILEUPLOAD": "Datei-Upload",
+        "LAYOUTS": "Formularlayouts",
+        "TOMSELECT": "Tom Select"
+      }
+    },
+    "MORE": {
+      "TEXT": "Mehr"
+    },
+    "TABLES": {
+      "TEXT": "Tische",
+      "LIST": {
+        "BASIC": "Grundlegende Tabellen",
+        "GRIDJS": "Gitter Js",
+        "LISTJS": "Liste Js"
+      }
+    },
+    "APEXCHARTS": {
+      "TEXT": "Apexcharts",
+      "LIST": {
+        "LINE": "Linie",
+        "AREA": "Bereich",
+        "COLUMN": "Spalte",
+        "BAR": "Bar",
+        "MIXED": "Gemischt",
+        "TIMELINE": "Zeitleiste",
+        "CANDLESTICK": "Leuchter",
+        "BOXPLOT": "Box-Plot",
+        "BUBBLE": "Blase",
+        "SCATTER": "Streuen",
+        "HEATMAP": "Heatmap",
+        "TREEMAP": "Baumkarte",
+        "PIE": "Kuchen",
+        "RADIALBAR": "Radialbar",
+        "RADAR": "Radar",
+        "POLARAREA": "Polargebiet"
+      }
+    },
+    "ICONS": {
+      "TEXT": "Symbole",
+      "LIST": {
+        "REMIX": "Remix",
+        "BOXICONS": "Boxicons",
+        "MATERIALDESIGN": "Material Design",
+        "BOOTSTRAP": "Bootstrap",
+        "PHOSPHOR": "Phosphor"
+      }
+    },
+    "MAPS": {
+      "TEXT": "Karten",
+      "LIST": {
+        "GOOGLE": "Google",
+        "AMCHARTS": "Vektor",
+        "LEAFLET": "Flugblatt"
+      }
+    },
+    "MULTILEVEL": {
+      "TEXT": "Mehrstufig",
+      "LIST": {
+        "Level1": {
+          "1": "Stufe 1.1"
+        },
+        "Level2": {
+          "TEXT": "Stufe 1.2",
+          "1": "Stufe 2.1",
+          "2": "Stufe 2.2"
+        },
+        "Level3": {
+          "1": "Stufe 3.1",
+          "2": "Stufe 3.2"
+        }
+      }
+    }
+  }
+}

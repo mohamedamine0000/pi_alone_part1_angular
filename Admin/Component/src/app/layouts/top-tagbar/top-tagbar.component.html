@@ -1,0 +1,41 @@
+<div class="top-tagbar">
+    <div class="container-fluid">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-md-4 col-9">
+                <div class="fs-14 fw-medium">
+                    <i class="bi bi-clock align-middle me-2"></i> <span id="current-time"></span>
+                </div>
+            </div>
+            <div class="col-md-4 col-6 d-none d-xxl-block">
+                <div class="d-flex align-items-center justify-content-center gap-3 fs-14 fw-medium">
+                    <div>
+                        <i class="bi bi-envelope align-middle me-2"></i> support&#64;themesbrand.com
+                    </div>
+                    <div>
+                        <i class="bi bi-globe align-middle me-2"></i> www.themesbrand.com
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-3">
+                <div class="d-flex align-items-center justify-content-end gap-3 fs-14">
+                    <a href="javascript:void(0);" class="text-reset fw-normal d-none d-lg-block">
+                        Balance: <span class="fw-semibold">$8451.36</span>
+                    </a>
+                    <hr class="vr d-none d-lg-block">
+                    <p-dropdown [options]="country" [(ngModel)]="selectedCountry" optionLabel="label" optionValue="code" id="select" styleClass="dropdown topbar-head-dropdown topbar-tag-dropdown justify-content-end" (onChange)="setLanguage($event.value)">
+                        <ng-template let-data pTemplate="selectedItem" class="btn btn-icon btn-topbar text-reset rounded-circle fs-14 fw-medium">
+                            @if(selectedCountry){
+                            <img id="header-lang-img" src="{{selectedCountry.value}}" height="16" class="rounded-circle me-2" />
+                            <span id="lang-name">{{selectedCountry.label}}</span>
+                            }
+                        </ng-template>
+                        <ng-template let-country pTemplate="item">
+                            <img src="{{country.value}}" alt="user-image" class="me-2 rounded-circle" height="18" />
+                            <span class="align-middle">{{country.label}}</span>
+                        </ng-template>
+                    </p-dropdown>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,147 @@
+{
+  "MENUITEMS": {
+    "MENU": {
+      "TEXT": "عناصر"
+    },
+    "OVERVIEW": {
+      "TEXT": "ملخص"
+    },
+    "BOOTSTRAPUI": {
+      "TEXT": "Bootstrap UI",
+      "LIST": {
+        "ALERTS": "تنبيهات",
+        "BADGES": "شارات",
+        "BUTTONS": "أزرار",
+        "COLORS": "الألوان",
+        "CARDS": "البطاقات",
+        "CAROUSEL": "دائري",
+        "DROPDOWNS": "هبوط قطرة",
+        "GRID": "شبكة",
+        "IMAGES": "الصور",
+        "TIMELINE": "الجدول الزمني",
+        "KNOB": "مقبض الباب",
+        "SPLITTER": "الفاصل",
+        "SPEEDDIAL": "اتصال سريع",
+        "TABS": "نوافذ التبويب",
+        "ACCORDIAN": "الأكورديون والانهيار",
+        "MODALS": "الوسائط",
+        "OFFCANVAS": "أوفاكانفاس",
+        "PLACEHOLDERS": "العناصر النائبة",
+        "PROGRESS": "تقدم",
+        "NOTIFICATION": "إشعارات",
+        "MEDIA": "كائن الوسائط",
+        "VIDEO": "تضمين الفيديو",
+        "TYPOGRAPHY": "الطباعة",
+        "LISTS": "القوائم",
+        "GENERAL": "عام",
+        "UTILITIES": "خدمات"
+      }
+    },
+    "ADVANCEUI": {
+      "TEXT": "واجهة المستخدم المتقدمة",
+      "LIST": {
+        "SWEETALERT": "تنبيهات حلوة",
+        "NESTABLELIST": "قائمة عش",
+        "SCROLLBAR": "شريط التمرير",
+        "SWIPER": "سويبر سلايدر",
+        "RATINGS": "التقييمات",
+        "HIGHLIGHT": "سليط الضوء",
+        "SCROLLSPY": "ScrollSpy"
+      }
+    },
+    "CUSTOMUI": {
+      "TEXT": "واجهة مستخدم مخصصة",
+      "BADGE": "مخصص",
+      "LIST": {
+        "RIBBONS": "شرائط",
+        "PROFILE": "حساب تعريفي",
+        "COUNTER": "عداد"
+      }
+    },
+    "FORMS": {
+      "TEXT": "نماذج",
+      "LIST": {
+        "ELEMENTS": "العناصر الأساسية",
+        "SELECT": "حدد النموذج",
+        "CHECKBOXES": "مربعات الاختيار وأجهزة الراديو",
+        "PICKERS": "جامعي",
+        "MASK": "قناع الإدخال",
+        "ADVANCED": "متقدم",
+        "SLIDER": "نطاق المنزلق",
+        "VALIDATION": "تصديق",
+        "WIZARD": "ساحر",
+        "EDITOR": "المحررين",
+        "FILEUPLOAD": "تحميل الملف",
+        "LAYOUTS": "تخطيطات النموذج",
+        "TOMSELECT": "توم سيليكت"
+      }
+    },
+    "MORE": {
+      "TEXT": "أكثر"
+    },
+    "TABLES": {
+      "TEXT": "الجداول",
+      "LIST": {
+        "BASIC": "الجداول الأساسية",
+        "GRIDJS": "شبكة شبيبة",
+        "LISTJS": "قائمة شبيبة"
+      }
+    },
+    "APEXCHARTS": {
+      "TEXT": "أبكسشارتس",
+      "LIST": {
+        "LINE": "خط",
+        "AREA": "منطقة",
+        "COLUMN": "عمود",
+        "BAR": "حاجِز",
+        "MIXED": "مختلط",
+        "TIMELINE": "الجدول الزمني",
+        "CANDLESTICK": "شمعدان",
+        "BOXPLOT": "مربع مؤامرة",
+        "BUBBLE": "فقاعة",
+        "SCATTER": "مبعثر",
+        "HEATMAP": "خريطة الحرارة",
+        "TREEMAP": "مخطط Treemap",
+        "PIE": "فطيرة",
+        "RADIALBAR": "شعاعي",
+        "RADAR": "رادار",
+        "POLARAREA": "القطبية"
+      }
+    },
+    "ICONS": {
+      "TEXT": "أيقونات",
+      "LIST": {
+        "REMIX": "ريمكس",
+        "BOXICONS": "بوكسيكونس",
+        "MATERIALDESIGN": "تصميم المواد",
+        "BOOTSTRAP": "التمهيد",
+        "PHOSPHOR": "الفوسفور"
+      }
+    },
+    "MAPS": {
+      "TEXT": "خرائط",
+      "LIST": {
+        "GOOGLE": "جوجل",
+        "AMCHARTS": "المتجه",
+        "LEAFLET": "منشور"
+      }
+    },
+    "MULTILEVEL": {
+      "TEXT": "متعدد المستويات",
+      "LIST": {
+        "Level1": {
+          "1": "المستوى 1.1"
+        },
+        "Level2": {
+          "TEXT": "المستوى 1.2",
+          "1": "المستوى2.1",
+          "2": "المستوى 2.2"
+        },
+        "Level3": {
+          "1": "المستوى 3.1",
+          "2": "المستوى 3.2"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,170 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumb title="Timeline" [breadcrumbItems]="breadCrumbItems"></app-breadcrumb>
+<!-- End Breadcrumbs -->
+
+
+<div class="row">
+    <div class="col-xxl-6">
+        <h5 class="mb-3">Basic</h5>
+        <div class="card">
+            <div class="card-body">
+                <p-timeline [value]="events">
+                    <ng-template pTemplate="content" let-event>
+                        {{ event.status }}
+                    </ng-template>
+                </p-timeline>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 240px;"><code>&lt;!-- Basic --&gt;</code>
+&lt;p-timeline [value]=&quot;events&quot;&gt;
+&lt;ng-template pTemplate=&quot;content&quot; let-event&gt;event.status 
+&lt;/ng-template&gt;
+&lt;/p-timeline&gt;</pre>
+            </div><!-- end card -->
+        </div>
+        <!--end col-->
+    </div>
+
+    <div class="col-xxl-6">
+        <h5 class="mb-3">Opposite</h5>
+        <div class="card">
+            <div class="card-body">
+                <p-timeline [value]="events">
+                    <ng-template pTemplate="content" let-event>
+                        <small class="p-text-secondary">{{ event.date }}</small>
+                    </ng-template>
+                    <ng-template pTemplate="opposite" let-event>
+                        {{ event.status }}
+                    </ng-template>
+                </p-timeline>
+            </div>
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 240px;"><code>&lt;!-- Basic --&gt;</code>
+&lt;p-timeline [value]=&quot;events&quot;&gt;
+&lt;ng-template pTemplate=&quot;content&quot; let-event&gt;
+    &lt;small class=&quot;p-text-secondary&quot;&gt; event.date &lt;/small&gt;
+&lt;/ng-template&gt;
+&lt;ng-template pTemplate=&quot;opposite&quot; let-event&gt;
+     event.status 
+&lt;/ng-template&gt;
+&lt;/p-timeline&gt;</pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-xxl-6">
+        <h5 class="mb-3">Template</h5>
+        <div class="card">
+            <div class="card-body">
+                <p-timeline [value]="events1" align="alternate" styleClass="customized-timeline">
+                    <ng-template pTemplate="marker" let-event>
+                        <span class="custom-marker shadow-2" [style.backgroundColor]="event.color">
+                            <i [ngClass]="event.icon"></i>
+                        </span>
+                    </ng-template>
+                    <ng-template pTemplate="content" let-event>
+                        <p-card [header]="event.status" [subheader]="event.date">
+                            @if(event.image){
+                            <img [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + event.image" [alt]="event.name" width="200" class="shadow-2" />
+                            }
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur
+                                error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam
+                                nobis,
+                                culpa ratione quam perferendis esse, cupiditate
+                                neque quas!
+                            </p>
+                            <button pButton label="Read more" class="p-button-text"></button>
+                        </p-card>
+                    </ng-template>
+                </p-timeline>
+
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 240px;"><code>&lt;!-- Template --&gt;</code>
+                &lt;p-timeline [value]=&quot;events1&quot; align=&quot;alternate&quot; styleClass=&quot;customized-timeline&quot;&gt;
+                &lt;ng-template pTemplate=&quot;marker&quot; let-event&gt;
+                    &lt;span class=&quot;custom-marker shadow-2&quot; [style.backgroundColor]=&quot;event.color&quot;&gt;
+                        &lt;i [ngClass]=&quot;event.icon&quot;&gt;&lt;/i&gt;
+                    &lt;/span&gt;
+                &lt;/ng-template&gt;
+                &lt;ng-template pTemplate=&quot;content&quot; let-event&gt;
+                    &lt;p-card [header]=&quot;event.status&quot; [subheader]=&quot;event.date&quot;&gt;
+                        &lt;img *ngIf=&quot;event.image&quot;
+                            [src]=&quot;'https://primefaces.org/cdn/primeng/images/demo/product/' + event.image&quot;
+                            [alt]=&quot;event.name&quot; width=&quot;200&quot; class=&quot;shadow-2&quot; /&gt;
+                        &lt;p&gt;
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur
+                            error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam
+                            nobis,
+                            culpa ratione quam perferendis esse, cupiditate
+                            neque quas!
+                        &lt;/p&gt;
+                        &lt;button pButton label=&quot;Read more&quot; class=&quot;p-button-text&quot;&gt;&lt;/button&gt;
+                    &lt;/p-card&gt;
+                &lt;/ng-template&gt;
+            &lt;/p-timeline&gt;</pre>
+            </div>
+        </div>
+    </div><!-- end card -->
+
+    <!--end col-->
+
+    <div class="col-xxl-6">
+        <h5 class="mb-3">Horizontal</h5>
+        <div class="card">
+            <div class="card-body">
+                <p-timeline [value]="events2" layout="horizontal" align="top">
+                    <ng-template pTemplate="content" let-event>
+                        {{ event }}
+                    </ng-template>
+                </p-timeline>
+
+                <p-timeline [value]="events2" layout="horizontal" align="bottom">
+                    <ng-template pTemplate="content" let-event>
+                        {{ event }}
+                    </ng-template>
+                </p-timeline>
+
+                <p-timeline [value]="events2" layout="horizontal" align="alternate">
+                    <ng-template pTemplate="content" let-event>
+                        {{ event }}
+                    </ng-template>
+                    <ng-template pTemplate="opposite" let-event><span>&nbsp;</span></ng-template>
+                </p-timeline>
+            </div>
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 240px;"><code>&lt;!-- Template --&gt;</code>
+&lt;p-timeline [value]=&quot;events2&quot; layout=&quot;horizontal&quot; align=&quot;top&quot;&gt;
+&lt;ng-template pTemplate=&quot;content&quot; let-event&gt; event 
+&lt;/ng-template&gt;
+&lt;/p-timeline&gt;
+
+&lt;p-timeline [value]=&quot;events2&quot; layout=&quot;horizontal&quot; align=&quot;bottom&quot;&gt;
+&lt;ng-template pTemplate=&quot;content&quot; let-event&gt; event
+&lt;/ng-template&gt;
+&lt;/p-timeline&gt;
+
+&lt;p-timeline [value]=&quot;events2&quot; layout=&quot;horizontal&quot; align=&quot;alternate&quot;&gt;
+&lt;ng-template pTemplate=&quot;content&quot; let-event&gt; event
+&lt;/ng-template&gt;
+&lt;ng-template pTemplate=&quot;opposite&quot; let-event&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/ng-template&gt;
+&lt;/p-timeline&gt;</pre>
+            </div>
+        </div>
+    </div>

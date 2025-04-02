@@ -1,0 +1,74 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "primeflex/primeflex.scss";
+
+[data-bs-theme="dark"] {
+    .fc.fc-theme-standard {
+        .fc-view-harness {
+            .fc-view {
+                background: #0c192c;
+            }
+
+            th {
+                background: #132846;
+                border-color: #132846;
+                color: #d0d0d0;
+            }
+
+            td {
+                border-color: #132846;
+                color: #d0d0d0;
+            }
+
+            .fc-cell-shaded {
+                background: #132846;
+            }
+        }
+
+        a {
+            color: #d0d0d0;
+        }
+
+        .fc-list {
+            border-color: #132846;
+        }
+
+        .fc-toolbar {
+            .fc-button {
+                background: #132846;
+                border-color: #132846;
+                color: #d0d0d0;
+
+                &:hover {
+                    background: #132846;
+                    border-color: #132846;
+                    color: #d0d0d0;
+                }
+
+                &:focus {
+                    box-shadow: 0 0 0 0.2rem #132846;
+                }
+            }
+        }
+    }
+
+    .ql-toolbar.ql-snow {
+        border-color: #132846 !important;
+    }
+
+    .ql-container.ql-snow {
+        border-color: #132846 !important;
+    }
+
+    .border-bottom-dashed {
+        border-color: #132846 !important;
+    }
+}
+
+.dropdown-menu.show {
+    transform: translate(0px, 68px) !important;
+}
+
+.p-sidebar-header {
+    padding: 0px !important;
+}

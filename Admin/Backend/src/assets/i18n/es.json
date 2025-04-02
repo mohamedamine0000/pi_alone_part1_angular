@@ -1,0 +1,120 @@
+{
+  "HEADER": {
+    "MORE": {
+      "TEXT": "Más"
+    }
+  },
+  "MENUITEMS": {
+    "MENU": {
+      "TEXT": "MENÚ"
+    },
+    "DASHBOARD": {
+      "TEXT": "Panel",
+      "BADGE": "Caliente"
+    },
+    "PRODUCTS": {
+      "TEXT": "productos",
+      "LIST": {
+        "LISTVIEW": "Vista de la lista",
+        "GRIDVIEW": "Vista en cuadrícula",
+        "OVERVIEW": "Descripción general",
+        "CREATEPRODUCT": "Crear producto",
+        "CATEGORIES": "Categorías",
+        "SUBCATEGORIES": "Subcategorías"
+      }
+    },
+    "ORDERS": {
+      "TEXT": "Pedidos",
+      "LIST": {
+        "LISTVIEW": "Vista de la lista",
+        "OVERVIEW": "Descripción general"
+      }
+    },
+    "CALENDER": {
+      "TEXT": "Calendario"
+    },
+    "SELLERS": {
+      "TEXT": "Vendedoras",
+      "LIST": {
+        "LISTVIEW": "Vista de la lista",
+        "GRIDVIEW": "Vista en cuadrícula",
+        "OVERVIEW": "Descripción general"
+      }
+    },
+    "INVOICE": {
+      "TEXT": "Factura",
+      "LIST": {
+        "LISTVIEW": "Vista de la lista",
+        "OVERVIEW": "Descripción general",
+        "CREATEINVOICE": "Crear factura"
+      }
+    },
+    "USERLIST": {
+      "TEXT": "Lista de usuarios"
+    },
+    "SHIPPING": {
+      "TEXT": "Envío",
+      "LIST": {
+        "SHIPPINGLIST": "Lista de embarque",
+        "SHIPMENT": "Envíos"
+      }
+    },
+    "COUPONS": {
+      "TEXT": "cupones"
+    },
+    "REVIEWS&RATINGS": {
+      "TEXT": "Reseñas y calificaciones"
+    },
+    "BRANDS": {
+      "TEXT": " Marcas"
+    },
+    "STATISTICS": {
+      "TEXT": "Estadísticas"
+    },
+    "LOCALIZATION": {
+      "TEXT": "Localización",
+      "LIST": {
+        "TRANSACTIONS": "Actas",
+        "CURRENCYRATES": "Tipos de cambio"
+      }
+    },
+    "ACCOUNTS": {
+      "TEXT": "cuentas",
+      "LIST": {
+        "MYACCOUNT": "Mi cuenta",
+        "SETTINGS": "Ajustes",
+        "SIGNUP": "Inscribirse",
+        "SIGNIN": "Iniciar sesión",
+        "PASSWORDRESET": "Restablecimiento de contraseña",
+        "PASSWORDCREATE": "Crear contraseña",
+        "SUCCESSMESSAGE": "Mensaje de éxito",
+        "TWOSTEPVERIFY": "Verificación de dos pasos",
+        "LOGOUT": "Cerrar sesión",
+        "ERROR404": "error 404",
+        "ERROR500": "error 500",
+        "COMINGSOON": "Muy pronto"
+      }
+    },
+    "COMPONENTS": {
+      "TEXT": "Componentes",
+      "BADGE": "v1.0"
+    },
+    "MULTILEVEL": {
+      "TEXT": "Multi nivel",
+      "LIST": {
+        "LEVEL1": {
+          "1": "Nivel 1.1",
+          "2": "Nivel 1.2",
+          "LEVEL2": {
+            "1": "Nivel 2.1",
+            "2": "Nivel 2.2",
+            "LEVEL3": {
+              "1": "Nivel 3.1",
+              "2": "Nivel 3.2"
+            }
+          }
+        }
+      }
+    }
+  }
+}

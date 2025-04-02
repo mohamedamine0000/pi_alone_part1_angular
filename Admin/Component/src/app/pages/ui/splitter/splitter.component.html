@@ -1,0 +1,176 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumb title="Splitter" [breadcrumbItems]="breadCrumbItems"></app-breadcrumb>
+<!-- End Breadcrumbs -->
+<div class="row">
+    <div class="col-xxl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Horizontal SplitterPanel </h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p-splitter [style]="{ height: '300px' }" styleClass="mb-5">
+                    <ng-template pTemplate>
+                        <div>Panel 1</div>
+                    </ng-template>
+                    <ng-template pTemplate>
+                        <div>Panel 2</div>
+                    </ng-template>
+                </p-splitter>
+            </div>
+            <!-- card body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 240px;"><code>&lt;!-- Horizontal SplitterPanel --&gt;</code>
+&lt;p-splitter [style]=&quot;height: '300px' &quot; styleClass=&quot;mb-5&quot;&gt;
+&lt;ng-template pTemplate&gt;
+&lt;div&gt;Panel 1&lt;/div&gt;
+&lt;/ng-template&gt;
+&lt;ng-template pTemplate&gt;
+&lt;div&gt;Panel 2&lt;/div&gt;
+&lt;/ng-template&gt;
+&lt;/p-splitter&gt;</pre>
+            </div>
+        </div>
+    </div>
+    <div class="col-xxl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Size SplitterPanel </h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p-splitter [panelSizes]="[25, 75]" [style]="{ height: '300px' }" styleClass="mb-5">
+                    <ng-template pTemplate>
+                        <div>Panel 1</div>
+                    </ng-template>
+                    <ng-template pTemplate>
+                        <div>Panel 2</div>
+                    </ng-template>
+                </p-splitter>
+            </div>
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 240px;"><code>&lt;!-- Size SplitterPanel --&gt;</code>
+&lt;p-splitter [panelSizes]=&quot;[25, 75]&quot; [style]=&quot; height: '300px' &quot; styleClass=&quot;mb-5&quot;&gt;
+&lt;ng-template pTemplate&gt;
+    &lt;div&gt;Panel 1&lt;/div&gt;
+&lt;/ng-template&gt;
+&lt;ng-template pTemplate&gt;
+    &lt;div&gt;Panel 2&lt;/div&gt;
+&lt;/ng-template&gt;
+&lt;/p-splitter&gt;</pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xxl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Vertical SplitterPanel </h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p-splitter [style]="{ height: '300px' }" styleClass="mb-5" layout="vertical">
+                    <ng-template pTemplate>
+                        <div>Panel 1</div>
+                    </ng-template>
+                    <ng-template pTemplate>
+                        <div>Panel 2</div>
+                    </ng-template>
+                </p-splitter>
+            </div>
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 240px;"><code>&lt;!-- Vertical SplitterPanel --&gt;</code>
+&lt;p-splitter [style]=&quot; height: '300px' &quot; styleClass=&quot;mb-5&quot; layout=&quot;vertical&quot;&gt;
+&lt;ng-template pTemplate&gt;
+    &lt;div&gt;Panel 1&lt;/div&gt;
+&lt;/ng-template&gt;
+&lt;ng-template pTemplate&gt;
+    &lt;div&gt;Panel 2&lt;/div&gt;
+&lt;/ng-template&gt;
+&lt;/p-splitter&gt;;</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xxl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Nested SplitterPanel </h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p-splitter [style]="{ height: '300px' }" [panelSizes]="[20, 80]" [minSizes]="[10, 0]"
+                    styleClass="mb-5">
+                    <ng-template pTemplate>
+                        <div class="col flex align-items-center justify-content-center">Panel 1</div>
+                    </ng-template>
+                    <ng-template pTemplate>
+                        <p-splitter layout="vertical" [panelSizes]="[15, 85]">
+                            <ng-template pTemplate>
+                                <div style="flex-grow: 1;" class="flex align-items-center justify-content-center">
+                                    Panel
+                                    2</div>
+                            </ng-template>
+                            <ng-template pTemplate>
+                                <p-splitter [panelSizes]="[20, 80]">
+                                    <ng-template pTemplate>
+                                        <div class="col flex align-items-center justify-content-center">Panel 3
+                                        </div>
+                                    </ng-template>
+                                    <ng-template pTemplate>
+                                        <div class="col flex align-items-center justify-content-center">Panel 4
+                                        </div>
+                                    </ng-template>
+                                </p-splitter>
+                            </ng-template>
+                        </p-splitter>
+                    </ng-template>
+                </p-splitter>
+            </div>
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 240px;"><code>&lt;!-- Vertical SplitterPanel --&gt;</code>
+                    &lt;p-splitter [style]=&quot; height: '300px' &quot; [panelSizes]=&quot;[20, 80]&quot; [minSizes]=&quot;[10, 0]&quot;
+                    styleClass=&quot;mb-5&quot;&gt;
+                    &lt;ng-template pTemplate&gt;
+                        &lt;div class=&quot;col flex align-items-center justify-content-center&quot;&gt;Panel 1&lt;/div&gt;
+                    &lt;/ng-template&gt;
+                    &lt;ng-template pTemplate&gt;
+                        &lt;p-splitter layout=&quot;vertical&quot; [panelSizes]=&quot;[15, 85]&quot;&gt;
+                            &lt;ng-template pTemplate&gt;
+                                &lt;div style=&quot;flex-grow: 1;&quot; class=&quot;flex align-items-center justify-content-center&quot;&gt;
+                                    Panel
+                                    2&lt;/div&gt;
+                            &lt;/ng-template&gt;
+                            &lt;ng-template pTemplate&gt;
+                                &lt;p-splitter [panelSizes]=&quot;[20, 80]&quot;&gt;
+                                    &lt;ng-template pTemplate&gt;
+                                        &lt;div class=&quot;col flex align-items-center justify-content-center&quot;&gt;Panel 3
+                                        &lt;/div&gt;
+                                    &lt;/ng-template&gt;
+                                    &lt;ng-template pTemplate&gt;
+                                        &lt;div class=&quot;col flex align-items-center justify-content-center&quot;&gt;Panel 4
+                                        &lt;/div&gt;
+                                    &lt;/ng-template&gt;
+                                &lt;/p-splitter&gt;
+                            &lt;/ng-template&gt;
+                        &lt;/p-splitter&gt;
+                    &lt;/ng-template&gt;
+                &lt;/p-splitter&gt;</pre>s
+            </div>
+        </div>
+    </div>
+</div>

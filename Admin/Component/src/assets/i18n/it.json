@@ -1,0 +1,147 @@
+{
+  "MENUITEMS": {
+    "MENU": {
+      "TEXT": "COMPONENTI"
+    },
+    "OVERVIEW": {
+      "TEXT": "Panoramica"
+    },
+    "BOOTSTRAPUI": {
+      "TEXT": "Interfaccia utente Bootstrap",
+      "LIST": {
+        "ALERTS": "Avvisi",
+        "BADGES": "Distintivi",
+        "BUTTONS": "Bottoni",
+        "COLORS": "Colori",
+        "CARDS": "Carte",
+        "CAROUSEL": "Giostra",
+        "DROPDOWNS": "menu a discesa",
+        "GRID": "Griglia",
+        "IMAGES": "immagini",
+        "TIMELINE": "Sequenza temporale",
+        "KNOB": "Pomello",
+        "SPLITTER": "Divisore",
+        "SPEEDDIAL": "Chiamata rapida",
+        "TABS": "Schede",
+        "ACCORDIAN": "Fisarmonica e collasso",
+        "MODALS": "Modali",
+        "OFFCANVAS": "Fuori tela",
+        "PLACEHOLDERS": "Segnaposto",
+        "PROGRESS": "Progresso",
+        "NOTIFICATION": "Notifiche",
+        "MEDIA": "Oggetto multimediale",
+        "VIDEO": "Incorpora video",
+        "TYPOGRAPHY": "Tipografia",
+        "LISTS": "Liste",
+        "GENERAL": "Generale",
+        "UTILITIES": "Utilità"
+      }
+    },
+    "ADVANCEUI": {
+      "TEXT": "Interfaccia utente avanzata",
+      "LIST": {
+        "SWEETALERT": "Dolci avvisi",
+        "NESTABLELIST": "Elenco annidabile",
+        "SCROLLBAR": "Barra di scorrimento",
+        "SWIPER": "Cursore a scorrimento",
+        "RATINGS": "Giudizi",
+        "HIGHLIGHT": "Evidenziare",
+        "SCROLLSPY": "ScrollSpy"
+      }
+    },
+    "CUSTOMUI": {
+      "TEXT": "Interfaccia utente personalizzata",
+      "BADGE": "Costume",
+      "LIST": {
+        "RIBBONS": "Nastri",
+        "PROFILE": "Profilo",
+        "COUNTER": "Contatrice"
+      }
+    },
+    "FORMS": {
+      "TEXT": "Forme",
+      "LIST": {
+        "ELEMENTS": "Elementi basici",
+        "SELECT": "Seleziona modulo",
+        "CHECKBOXES": "Caselle di controllo e radio",
+        "PICKERS": "Raccoglitrici",
+        "MASK": "Maschera di input",
+        "ADVANCED": "Avanzate",
+        "SLIDER": "Dispositivo di scorrimento dell'intervallo",
+        "VALIDATION": "Convalida",
+        "WIZARD": "Procedura guidata",
+        "EDITOR": "Editrici",
+        "FILEUPLOAD": "Upload di file",
+        "LAYOUTS": "Layout del modulo",
+        "TOMSELECT": "Tom Seleziona"
+      }
+    },
+    "MORE": {
+      "TEXT": "Di più"
+    },
+    "TABLES": {
+      "TEXT": "Tabelle",
+      "LIST": {
+        "BASIC": "Tabelle di base",
+        "GRIDJS": "Griglia J",
+        "LISTJS": "Elenco J"
+      }
+    },
+    "APEXCHARTS": {
+      "TEXT": "Apexcharts",
+      "LIST": {
+        "LINE": "linea",
+        "AREA": "La zona",
+        "COLUMN": "Colonna",
+        "BAR": "Sbarra",
+        "MIXED": "Mista",
+        "TIMELINE": "Sequenza temporale",
+        "CANDLESTICK": "Candeliere",
+        "BOXPLOT": "Grafico a scatola",
+        "BUBBLE": "Bolla",
+        "SCATTER": "Disperdere",
+        "HEATMAP": "Mappa di calore",
+        "TREEMAP": "Mappa ad albero",
+        "PIE": "Torta",
+        "RADIALBAR": "Barra radiale",
+        "RADAR": "Radar",
+        "POLARAREA": "Area polare"
+      }
+    },
+    "ICONS": {
+      "TEXT": "Icone",
+      "LIST": {
+        "REMIX": "Remixa",
+        "BOXICONS": "Icone della scatola",
+        "MATERIALDESIGN": "Progettazione materiale",
+        "BOOTSTRAP": "Bootstrap",
+        "PHOSPHOR": "Fosforo"
+      }
+    },
+    "MAPS": {
+      "TEXT": "Mappe",
+      "LIST": {
+        "GOOGLE": "Google",
+        "AMCHARTS": "Vettore",
+        "LEAFLET": "Volantino"
+      }
+    },
+    "MULTILEVEL": {
+      "TEXT": "Multilivello",
+      "LIST": {
+        "Level1": {
+          "1": "Livello 1.1"
+        },
+        "Level2": {
+          "TEXT": "Livello 1.2",
+          "1": "Livello 2.1",
+          "2": "Livello 2.2"
+        },
+        "Level3": {
+          "1": "Livello 3.1",
+          "2": "Livello 3.2"
+        }
+      }
+    }
+  }
+}

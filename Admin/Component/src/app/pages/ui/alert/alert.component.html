@@ -1,0 +1,291 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumb title="Alerts" [breadcrumbItems]="breadCrumbItems"></app-breadcrumb>
+<!-- End Breadcrumbs -->
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Default Alerts</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Use the <code>p-message </code>tag to show a default alert.</p>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div>
+                            <h6>Success Alert</h6>
+                            <p-message severity="success" text=" Mind Your Step! A simple light alert —check it out!">
+                            </p-message>
+                        </div>
+                        <div>
+                            <h6>Warning Alert</h6>
+                            <p-message severity="warn"
+                                text="Something is very wrong! A simple danger alert —check it out!">
+                            </p-message>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div>
+                            <h6>Info Alert</h6>
+                            <p-message severity="info"
+                                text="Don't forget' it ! A simple info alert  —check it out!"></p-message>
+                        </div>
+                        <div>
+                            <h6>Danger Alert</h6>
+                            <p-message severity="error"
+                                text="Uh oh, something went wrong  A simple warning alert —check it out!">
+                            </p-message>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end card-body -->
+
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 310px">
+<code>&lt;p-message severity=&quot;primary&quot; text=&quot; Hi! A simple Primary alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+
+<code>&lt;p-message severity=&quot;secondary&quot; text=&quot; How are you! A simple secondary alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+    
+<code>&lt;p-message severity=&quot;success&quot; text=&quot;Yey! Everything worked! A simple success alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+
+<code>&lt;p-message severity=&quot;danger&quot; text=&quot;Something is very wrong! A simple danger alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+
+<code>&lt;p-message severity=&quot;warning&quot; text=&quot;Uh oh, something went wrong  A simple warning alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+
+<code>&lt;p-message severity=&quot;info&quot; text=&quot;Don't forget' it ! A simple info alert  &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+
+<code>&lt;p-message severity=&quot;light&quot; text=&quot; Mind Your Step! A simple light alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+
+<code>&lt;p-message severity=&quot;dark&quot; text=&quot;  Did you know? A simple dark alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div><!--end col-->
+</div><!--end row-->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Borderless Alerts</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Use the <code>border-0</code> styleClass to set alert without border.</p>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div>
+                            <h6>Success Alert</h6>
+                            <p-message severity="success" styleClass="border-0"
+                                text=" Mind Your Step! A simple light alert —check it out!">
+                            </p-message>
+                        </div>
+                        <div>
+                            <h6>Warning Alert</h6>
+                            <p-message severity="warn" styleClass="border-0"
+                                text="Something is very wrong! A simple danger alert —check it out!">
+                            </p-message>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div>
+                            <h6>Info Alert</h6>
+                            <p-message severity="info" styleClass="border-0"
+                                text="Don't forget' it ! A simple info alert  —check it out!"></p-message>
+                        </div>
+                        <div>
+                            <h6>Danger Alert</h6>
+                            <p-message severity="error" styleClass="border-0"
+                                text="Uh oh, something went wrong  A simple warning alert —check it out!">
+                            </p-message>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end card-body -->
+
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 310px">
+<code>&lt;p-message severity=&quot;primary&quot; styleClass=&quot;border-0&quot; text=&quot; Hi! A simple Primary alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+
+<code>&lt;p-message severity=&quot;secondary&quot; styleClass=&quot;border-0&quot; text=&quot; How are you! A simple secondary alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+    
+<code>&lt;p-message severity=&quot;success&quot; styleClass=&quot;border-0&quot; text=&quot;Yey! Everything worked! A simple success alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+
+<code>&lt;p-message severity=&quot;danger&quot; styleClass=&quot;border-0&quot; text=&quot;Something is very wrong! A simple danger alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+
+<code>&lt;p-message severity=&quot;warning&quot; styleClass=&quot;border-0&quot; text=&quot;Uh oh, something went wrong  A simple warning alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+
+<code>&lt;p-message severity=&quot;info&quot; styleClass=&quot;border-0&quot; text=&quot;Don't forget' it ! A simple info alert  &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+
+<code>&lt;p-message severity=&quot;light&quot; styleClass=&quot;border-0&quot; text=&quot; Mind Your Step! A simple light alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+
+<code>&lt;p-message severity=&quot;dark&quot; styleClass=&quot;border-0&quot; text=&quot;  Did you know? A simple dark alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div><!--end col-->
+</div><!--end row-->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Live Alert Example</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Click the Show live alert button to show an alert on button click.</p>
+                <p-messages></p-messages>
+                <button type="button" class="btn btn-primary" id="liveAlertBtn" (click)="showViaService()">Show live
+                    alert</button>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="max-height: 260px;">
+<code>&lt;p-messages&gt;&lt;/p-messages&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;liveAlertBtn&quot; (click)=&quot;showViaService()&quot;&gt;Show live alert&lt;/button&gt;
+</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div><!--end col-->
+</div><!--end row-->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Outline Alerts</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Use the <code>bg-body-secondary</code> styleClass to set an alert with outline.
+                </p>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div>
+                            <h6>Success Alert</h6>
+                            <p-message severity="success" styleClass="bg-body-secondary"
+                                text=" Mind Your Step! A simple light alert —check it out!">
+                            </p-message>
+                        </div>
+                        <div>
+                            <h6>Warning Alert</h6>
+                            <p-message severity="warn" styleClass="bg-body-secondary"
+                                text="Something is very wrong! A simple danger alert —check it out!">
+                            </p-message>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div>
+                            <h6>Info Alert</h6>
+                            <p-message severity="info" styleClass="bg-body-secondary"
+                                text="Don't forget' it ! A simple info alert  —check it out!"></p-message>
+                        </div>
+                        <div>
+                            <h6>Danger Alert</h6>
+                            <p-message severity="error" styleClass="bg-body-secondary"
+                                text="Uh oh, something went wrong  A simple warning alert —check it out!">
+                            </p-message>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 310px">
+<code>&lt;p-message severity=&quot;primary&quot; styleClass=&quot;bg-body-secondary&quot; text=&quot; Hi! A simple Primary alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+
+<code>&lt;p-message severity=&quot;secondary&quot; styleClass=&quot;bg-body-secondary&quot; text=&quot; How are you! A simple secondary alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+    
+<code>&lt;p-message severity=&quot;success&quot; styleClass=&quot;bg-body-secondary&quot; text=&quot;Yey! Everything worked! A simple success alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+
+<code>&lt;p-message severity=&quot;danger&quot; styleClass=&quot;bg-body-secondary&quot; text=&quot;Something is very wrong! A simple danger alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+
+<code>&lt;p-message severity=&quot;warning&quot; styleClass=&quot;bg-body-secondary&quot; text=&quot;Uh oh, something went wrong  A simple warning alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+
+<code>&lt;p-message severity=&quot;info&quot; styleClass=&quot;bg-body-secondary&quot; text=&quot;Don't forget' it ! A simple info alert  &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+
+<code>&lt;p-message severity=&quot;light&quot; styleClass=&quot;bg-body-secondary&quot; text=&quot; Mind Your Step! A simple light alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+
+<code>&lt;p-message severity=&quot;dark&quot; styleClass=&quot;bg-body-secondary&quot; text=&quot;  Did you know? A simple dark alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div><!--end col-->
+</div><!--end row-->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Left Border Alerts</h4>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <p class="text-muted">Use the <code>alert-border-left </code> styleClass to set an alert with the left
+                    border
+                    & outline.</p>
+
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div>
+                            <h6>Success Alert</h6>
+                            <p-message severity="success" styleClass="alert-border-left"
+                                text=" Mind Your Step! A simple light alert —check it out!">
+                            </p-message>
+                        </div>
+                        <div>
+                            <h6>Warning Alert</h6>
+                            <p-message severity="warn" styleClass="alert-border-left"
+                                text="Something is very wrong! A simple danger alert —check it out!">
+                            </p-message>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div>
+                            <h6>Info Alert</h6>
+                            <p-message severity="info" styleClass="alert-border-left"
+                                text="Don't forget' it ! A simple info alert  —check it out!"></p-message>
+                        </div>
+                        <div>
+                            <h6>Danger Alert</h6>
+                            <p-message severity="error" styleClass="alert-border-left"
+                                text="Uh oh, something went wrong  A simple warning alert —check it out!">
+                            </p-message>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 310px">
+<code>&lt;p-message severity=&quot;primary&quot; styleClass=&quot;alert-border-left&quot; text=&quot; Hi! A simple Primary alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+
+<code>&lt;p-message severity=&quot;secondary&quot; styleClass=&quot;alert-border-left&quot; text=&quot; How are you! A simple secondary alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+    
+<code>&lt;p-message severity=&quot;success&quot; styleClass=&quot;alert-border-left&quot; text=&quot;Yey! Everything worked! A simple success alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+
+<code>&lt;p-message severity=&quot;danger&quot; styleClass=&quot;alert-border-left&quot; text=&quot;Something is very wrong! A simple danger alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+
+<code>&lt;p-message severity=&quot;warning&quot; styleClass=&quot;alert-border-left&quot; text=&quot;Uh oh, something went wrong  A simple warning alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+
+<code>&lt;p-message severity=&quot;info&quot; styleClass=&quot;alert-border-left&quot; text=&quot;Don't forget' it ! A simple info alert  &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+
+<code>&lt;p-message severity=&quot;light&quot; styleClass=&quot;alert-border-left&quot; text=&quot; Mind Your Step! A simple light alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code>
+
+<code>&lt;p-message severity=&quot;dark&quot; styleClass=&quot;alert-border-left&quot; text=&quot;  Did you know? A simple dark alert &mdash;check it out!&quot;&gt;&lt;/p-message&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+</div><!--end row-->

@@ -1,0 +1,117 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumb title="Splitter" [breadcrumbItems]="breadCrumbItems"></app-breadcrumb>
+<!-- End Breadcrumbs -->
+
+<div class="row">
+    <div class="col-xxl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Speed Dial </h4>
+            </div><!-- end card header -->
+
+            <div class="card-body" [style]="{ height: '370px' }">
+                <p-speedDial [model]="items" direction="up"></p-speedDial>
+            </div>
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 70px;"><code>&lt;!-- Speed Dial --&gt;</code>
+&lt;p-speedDial [model]=&quot;items&quot; direction=&quot;up&quot;&gt;&lt;/p-speedDial&gt;
+</pre>
+            </div>
+        </div>
+    </div>
+    <div class="col-xxl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Circle</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body" [style]="{ height: '350px' }"
+                class="d-flex justify-content-center align-items-center">
+                <p-speedDial [model]="items" type="circle" [radius]="80"
+                    buttonClassName="p-button-warning"></p-speedDial>
+            </div>
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 70px;"><code>&lt;!-- Circle --&gt;</code>
+                    &lt;p-speedDial [model]=&quot;items&quot; type=&quot;circle&quot; [radius]=&quot;80&quot;
+                    buttonClassName=&quot;p-button-warning&quot;&gt;&lt;/p-speedDial&gt;</pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xxl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Semi Circle</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body" [style]="{ height: '350px' }"
+                class="d-flex justify-content-center align-items-center">
+                <p-speedDial [model]="items" direction="up" [radius]="80" type="semi-circle"></p-speedDial>
+            </div>
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 70px;"><code>&lt;!-- Semi Circle --&gt;</code>
+                    &lt;p-speedDial [model]=&quot;items&quot; type=&quot;circle&quot; [radius]=&quot;80&quot;
+buttonClassName=&quot;p-button-warning&quot;&gt;&lt;/p-speedDial&gt;</pre>
+            </div>
+        </div>
+    </div>
+    <div class="col-xxl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Mask</h4>
+            </div><!-- end card header -->
+            <div class="card-body" [style]="{ height: '350px' }" class="d-flex justify-content-center ">
+                <p-toast></p-toast>
+                <p-speedDial [model]="items" direction="up" [mask]="true"></p-speedDial>
+            </div>
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 70px;"><code>&lt;!-- Mask --&gt;</code>
+&lt;div class=&quot;card-body&quot; [style]=&quot; height: '350px' &quot; class=&quot;d-flex justify-content-center &quot;&gt;
+&lt;p-toast&gt;&lt;/p-toast&gt;
+&lt;p-speedDial [model]=&quot;items&quot; direction=&quot;up&quot; [mask]=&quot;true&quot;&gt;&lt;/p-speedDial&gt;
+&lt;/div&gt;</pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xxl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Custom</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body" [style]="{ height: '350px' }" class="d-flex justify-content-center">
+                <p-toast></p-toast>
+                <p-speedDial [model]="items" direction="up" showIcon="pi pi-bars" hideIcon="pi pi-times"
+                    buttonClassName="p-button-outlined"></p-speedDial>
+            </div>
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 70px;"><code>&lt;!-- Custom --&gt;</code>
+&lt;div class=&quot;card-body&quot; [style]=&quot;height: '350px'&quot; class=&quot;d-flex justify-content-center&quot;&gt;
+&lt;p-toast&gt;&lt;/p-toast&gt;
+&lt;p-speedDial [model]=&quot;items&quot; direction=&quot;up&quot; showIcon=&quot;pi pi-bars&quot; hideIcon=&quot;pi pi-times&quot;
+    buttonClassName=&quot;p-button-outlined&quot;&gt;&lt;/p-speedDial&gt;
+&lt;/div&gt;</pre>
+            </div>
+        </div>
+    </div>
+</div>

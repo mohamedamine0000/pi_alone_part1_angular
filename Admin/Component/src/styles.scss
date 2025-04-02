@@ -1,0 +1,279 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+// vertocal tab
+.verticaltab {
+	display: flex;
+}
+
+.verticaltab .p-tabview-panel {
+	width: 830px;
+}
+
+.verticaltab .p-tabview-nav-content {
+	border: 1px solid gray;
+}
+
+.verticaltab .p-tabview-nav-container {
+	width: 500px;
+}
+
+.verticaltab .p-tabview-nav-container {
+	flex: 2;
+}
+
+.verticaltab .p-tabview-nav {
+	flex-direction: column;
+}
+
+// tab
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+	background: #3B82F6;
+	border-color: #3B82F6;
+	color: #ffffff;
+}
+
+// modal
+.custommodal .p-dialog .p-dialog-content {
+	padding: 0
+}
+
+// scrollbar
+.p-scrollpanel-content {
+	padding: 0 15px !important;
+}
+
+.p-scrollpanel .p-scrollpanel-bar {
+	background: var(--tb-gray-400);
+	width: 6px;
+}
+
+// Rating
+.p-rating .p-rating-icon.pi-star-fill {
+	color: var(--tb-yellow);
+	margin: 0;
+	font-size: 16px;
+}
+
+tfoot {
+	border-style: solid !important;
+	border-color: #e9ebec !important;
+}
+
+.p-rating .p-rating-icon {
+	color: var(--tb-gray-400);
+	margin: 0;
+	font-size: 16px;
+}
+
+// form elements clorpicker
+.p-colorpicker-preview {
+	width: 100%;
+}
+
+// Auto Complete Text box
+.autoCompleteText .p-inputtext {
+	border: 1px solid rgb(133, 133, 133);
+	border-radius: 0px;
+	padding: 0;
+}
+
+// table color variant
+.p-datatable {
+	.p-datatable-tbody {
+		tr {
+			background: var(--tb-table-bg);
+		}
+	}
+}
+
+.custom-marker {
+	display: flex !important;
+	height: 30px !important;
+	width: 30px !important;
+	align-items: center !important;
+	justify-content: center !important;
+	border-radius: 50% !important;
+}
+
+
+.progress-nav {
+	.stepper {
+		.stepper-body[_ngcontent-ng-c625643793] {
+			margin: 0;
+		}
+
+		.completed {
+			.nav-link {
+				color: #fff;
+				background-color: var(--tb-primary);
+			}
+		}
+
+		.step[_ngcontent-ng-c2910186469] {
+			.nav-link {
+				z-index: 1;
+				position: relative;
+			}
+
+			&:after {
+				z-index: 0;
+				height: 1px;
+				background-color: var(--tb-border-color);
+				left: -100%;
+			}
+		}
+
+		.step.completed[_ngcontent-ng-c2910186469]+.step[_ngcontent-ng-c2910186469]:after {
+			background-color: var(--tb-primary);
+		}
+	}
+}
+
+
+.step-arrow-nav {
+	.stepper {
+		.stepper-body[_ngcontent-ng-c625643793] {
+			margin: 0;
+		}
+
+		.completed {
+			.nav-link {
+				color: var(--tb-primary);
+			}
+
+			background-color: rgba(var(--tb-primary-rgb), .15);
+		}
+
+		.active {
+			.nav-link {
+				color: var(--tb-primary);
+			}
+		}
+
+		.step[_ngcontent-ng-c625643793] {
+			.nav-link {
+				z-index: 1;
+				position: relative;
+			}
+		}
+	}
+}
+
+.vertical-wizard {
+	.stepper {
+		.stepper-body[_ngcontent-ng-c625643793] {
+			margin: 0;
+			overflow: hidden;
+		}
+
+		.step-title {
+			// display: none;
+			position: relative !important;
+			bottom: 0 !important;
+
+			i {
+				color: var(--tb-danger);
+			}
+		}
+
+		.steps {
+			gap: 8px;
+
+			.step {
+				background-color: rgba(var(--tb-light-rgb), .4) !important;
+				border: 1px solid var(--tb-border-color);
+				border-radius: 0.25rem;
+
+				&.active {
+					.nav-link {
+						.step-title {
+							i {
+								color: var(--tb-primary);
+							}
+						}
+
+						color: var(--tb-primary);
+					}
+
+					border-color: rgba(var(--tb-primary-rgb), 1);
+				}
+
+				&.completed {
+					.nav-link {
+						.step-title {
+							i {
+								color: var(--tb-success);
+							}
+						}
+
+						color: var(--tb-success);
+					}
+
+					border-color: rgba(var(--tb-success-rgb), 1);
+				}
+			}
+		}
+
+	}
+}
+
+// Swiper
+.coverflowslide .slide {
+	position: relative;
+	transition: transform 0.3s;
+}
+
+.coverflowslide .slick-list {
+	overflow: hidden !important;
+}
+
+.coverflowslide .slick-center {
+	transform: scale(1.2); // Adjust the scale factor for the "Coverflow" effect
+	z-index: 1;
+}
+
+.coverflowslide .carousel {
+	width: 100%;
+	max-width: 600px; // Adjust the carousel width as needed
+	margin: 0 auto;
+}
+
+.space .slick-slide {
+	margin: 25px;
+}
+
+.vertical-swiper {
+	.slick-list {
+		height: 318px !important;
+	}
+}
+
+.cart {
+	.p-scrollpanel-wrapper {
+		float: none !important;
+	}
+}
+
+[data-bs-theme="dark"] {
+
+	.ql-toolbar.ql-snow {
+		border-color: #132846 !important;
+	}
+
+	.ql-container.ql-snow {
+		border-color: #132846 !important;
+	}
+
+	.border-bottom-dashed {
+		border-color: #132846 !important;
+	}
+}
+
+.dropdown-menu.show {
+	transform: translate(0px, 68px) !important;
+}
+
+.p-sidebar-header {
+	padding: 0px !important
+}

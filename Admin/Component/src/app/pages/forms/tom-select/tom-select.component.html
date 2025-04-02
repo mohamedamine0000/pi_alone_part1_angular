@@ -1,0 +1,337 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumb title="Tom Select" [breadcrumbItems]="breadCrumbItems"></app-breadcrumb>
+<!-- End Breadcrumbs -->
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-lg-0">Custom Option and Item HTML</h4>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <p class="text-muted">This example provides a simple demonstration of how to override the default
+                    templates for options and items along with proper use of the <code>escape()</code> method.</p>
+                <div>
+                    <p-treeSelect [(ngModel)]="selected" [options]="nodes" display="chip" selectionMode="checkbox" placeholder="Pick some links...." styleClass="form-control" [selectable]="false"></p-treeSelect>
+                </div>
+            </div>
+            <div class="row g-0">
+                <div class="col-lg-12">
+                    <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                        <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+                    </div>
+                    <div class="card-body">
+                        <pre class="language-markup"
+                            style="height: 30px;"><code>&lt;p-treeSelect id=&quot;select-links&quot; multiple placeholder=&quot;Pick some links...&quot;&gt;&lt;/p-treeSelect&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end col -->
+</div>
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-lg-0">Email Contacts</h4>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <p class="text-muted">An example showing how you might go about creating contact
+                    selector like those used in Email apps.</p>
+                <div>
+                    <p-treeSelect [(ngModel)]="selected1" [options]="nodes1" display="chip" [metaKeySelection]="false" selectionMode="checkbox" placeholder="Pick some links...." class="contacts"></p-treeSelect>
+                </div>
+            </div>
+            <div class="row g-0">
+                <div class="col-lg-12">
+                    <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                        <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+                    </div>
+                    <div class="card-body">
+                        <pre class="language-markup"
+                        style="height: 30px;"><code>&lt;p-treeSelect  [(ngModel)]=&quot;selected1&quot; [options]=&quot;nodes1&quot; display=&quot;chip&quot; [metaKeySelection]=&quot;false&quot; selectionMode=&quot;checkbox&quot; class=&quot;contacts&quot; placeholder=&quot;Pick some people...&quot;&gt;&lt;/p-treeSelect&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end col -->
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-lg-0">Browser Defaults Validation</h4>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <p class="text-muted">Browsers will prevent users from submitting this form unless
+                    the <code>&lt;select required&gt;</code> field has a value. Your browser may
+                    display a message along the lines of "Please fill out this field" when trying to
+                    submit the form.</p>
+                <div>
+                    <p-treeSelect [(ngModel)]="selected1" [options]="nodes1" display="chip" [metaKeySelection]="false" selectionMode="checkbox" placeholder="Pick some links...." class="contacts"></p-treeSelect>
+                </div>
+            </div>
+            <div class="row g-0">
+                <div class="col-lg-12">
+                    <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                        <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+                    </div>
+                    <div class="card-body">
+                        <pre class="language-markup" style="height: 250px;"><code>&lt;form&gt;
+    &lt;select id=&quot;select-person&quot; placeholder=&quot;Select a person...&quot; required&gt;
+        &lt;option value=&quot;&quot;&gt;Select a person...&lt;/option&gt;
+        &lt;option value=&quot;4&quot;&gt;Thomas Edison&lt;/option&gt;
+        &lt;option value=&quot;1&quot;&gt;Nikola&lt;/option&gt;
+        &lt;option value=&quot;3&quot;&gt;Nikola Tesla&lt;/option&gt;
+        &lt;option value=&quot;5&quot;&gt;Arnold Schwarzenegger&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;div class=&quot;py-3&quot;&gt;
+        &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end col -->
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-lg-0">Bootstrap Validation</h4>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <p class="text-muted">With a few changes, you can enhance your communication with
+                    features provided by frameworks like Bootstrap.</p>
+                <div>
+                    <form id="bootstrap-form" novalidate (ngSubmit)="onSubmit()" [formGroup]="validationform">
+                        <select class="form-select" id="select-bootstrap" required formControlName="selected" [ngClass]="{'is-invalid': submitted && form['selected'].errors}" placeholder="Select a person..." name="beast">
+                            <option value="">Select a person...</option>
+                            <option value="4">Thomas Edison</option>
+                            <option value="1">Nikola</option>
+                            <option value="3">Nikola Tesla</option>
+                            <option value="5">Arnold Schwarzenegger</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select a person
+                        </div>
+                        <div class="py-3">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row g-0">
+                <div class="col-lg-12">
+                    <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                        <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+                    </div>
+                    <div class="card-body">
+                        <pre class="language-markup" style="height: 250px;"><code>&lt;form id=&quot;bootstrap-form&quot; novalidate (ngSubmit)=&quot;onSubmit()&quot; [formGroup]=&quot;validationform&quot;&gt;
+    &lt;select class=&quot;form-select&quot; id=&quot;select-bootstrap&quot; required  formControlName=&quot;selected&quot; [ngClass]=&quot;&#0123;'is-invalid': submitted &amp;&amp; form['selected'].errors&#0125;&quot; placeholder=&quot;Select a person...&quot;
+        name=&quot;beast&quot;&gt;
+        &lt;option value=&quot;&quot;&gt;Select a person...&lt;/option&gt;
+        &lt;option value=&quot;4&quot;&gt;Thomas Edison&lt;/option&gt;
+        &lt;option value=&quot;1&quot;&gt;Nikola&lt;/option&gt;
+        &lt;option value=&quot;3&quot;&gt;Nikola Tesla&lt;/option&gt;
+        &lt;option value=&quot;5&quot;&gt;Arnold Schwarzenegger&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;div class=&quot;invalid-feedback&quot;&gt;
+        Please select a person
+    &lt;/div&gt;
+    &lt;div class=&quot;py-3&quot;&gt;
+        &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end col -->
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-lg-0">Data-* Attributes</h4>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <p class="text-muted">Images can be added to option and item elements with custom
+                    render templates and data-* attributes</p>
+                <div>
+                    <p-dropdown [options]="browserlist" [(ngModel)]="selected" optionLabel="label" [filter]="true" filterBy="label" placeholder="Select a Country" styleClass="form-control">
+                        <ng-template pTemplate="selectedItem">
+                            @if(selected){
+                            <div class="country-item country-item-value d-flex">
+                                <li class="dropdown-item d-flex">
+                                    <div class="flex-shrink-0 me-2">
+                                        <img src="{{selected.url}}" alt="country flag" class="options-flagimg" height="20">
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div class="d-flex">
+                                            <div class="country-name me-1">{{selected.label}}</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div>}
+                        </ng-template>
+                        <ng-template let-country pTemplate="item">
+                            <div class="country-item">
+                                <li class="dropdown-item d-flex">
+                                    <div class="flex-shrink-0 me-2">
+                                        <img src="{{country.url}}" alt="country flag" class="options-flagimg" height="20">
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div class="d-flex">
+                                            <div class="country-name me-1">{{country.label}}</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div>
+                        </ng-template>
+                    </p-dropdown>
+                </div>
+            </div>
+            <div class="row g-0">
+                <div class="col-lg-12">
+                    <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                        <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+                    </div>
+                    <div class="card-body">
+                        <pre class="language-markup" style="height: 250px;"><code>&lt;p-dropdown [options]=&quot;browserlist&quot; [(ngModel)]=&quot;selected&quot; optionLabel=&quot;label&quot; [filter]=&quot;true&quot;
+filterBy=&quot;label&quot; placeholder=&quot;Select a Country&quot; styleClass=&quot;form-control&quot;&gt;
+&lt;ng-template pTemplate=&quot;selectedItem&quot;&gt;
+    &lt;div class=&quot;country-item country-item-value d-flex&quot; *ngIf=&quot;selected&quot;&gt;
+        &lt;li class=&quot;dropdown-item d-flex&quot;&gt;
+            &lt;div class=&quot;flex-shrink-0 me-2&quot;&gt;
+                &lt;img src=&quot;selected image&quot; alt=&quot;country flag&quot; class=&quot;options-flagimg&quot;
+                    height=&quot;20&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex-grow-1&quot;&gt;
+                &lt;div class=&quot;d-flex&quot;&gt;
+                    &lt;div class=&quot;country-name me-1&quot;&gt;selected label&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/div&gt;
+&lt;/ng-template&gt;
+&lt;ng-template let-country pTemplate=&quot;item&quot;&gt;
+    &lt;div class=&quot;country-item&quot;&gt;
+        &lt;li class=&quot;dropdown-item d-flex&quot;&gt;
+            &lt;div class=&quot;flex-shrink-0 me-2&quot;&gt;
+                &lt;img src=&quot;your image&quot; alt=&quot;country flag&quot; class=&quot;options-flagimg&quot;
+                    height=&quot;20&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex-grow-1&quot;&gt;
+                &lt;div class=&quot;d-flex&quot;&gt;
+                    &lt;div class=&quot;country-name me-1&quot;&gt;your label&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/div&gt;
+&lt;/ng-template&gt;
+&lt;/p-dropdown&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end col -->
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-lg-0">Flag Lists</h4>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <p class="text-muted">*Images can be added to option and item elements with custom
+                    render templates and data-* attributes</p>
+                <div>
+                    <p-dropdown [options]="flaglist" [(ngModel)]="selected" optionLabel="label" [filter]="true" filterBy="label" placeholder="Select a Country" styleClass="form-control">
+                        <ng-template pTemplate="selectedItem">
+                            @if(selected){
+                            <div class="country-item country-item-value d-flex">
+                                <li class="dropdown-item d-flex">
+                                    <div class="flex-shrink-0 me-2">
+                                        <img src="{{selected.imgsrc}}" alt="country flag" class="options-flagimg" height="20">
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div class="d-flex">
+                                            <div class="country-name me-1">{{selected.label}}</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div>}
+                        </ng-template>
+                        <ng-template let-country pTemplate="item">
+                            <div class="country-item">
+                                <li class="dropdown-item d-flex">
+                                    <div class="flex-shrink-0 me-2">
+                                        <img src="{{country.imgsrc}}" alt="country flag" class="options-flagimg" height="20">
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div class="d-flex">
+                                            <div class="country-name me-1">{{country.label}}</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div>
+                        </ng-template>
+                    </p-dropdown>
+                </div>
+            </div>
+            <div class="row g-0">
+                <div class="col-lg-12">
+                    <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                        <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+                    </div>
+                    <div class="card-body">
+                        <pre class="language-markup" style="height: 250px;"><code>&lt;p-dropdown [options]=&quot;flaglist&quot; [(ngModel)]=&quot;selected&quot; optionLabel=&quot;label&quot; [filter]=&quot;true&quot;
+filterBy=&quot;label&quot; placeholder=&quot;Select a Country&quot; styleClass=&quot;form-control&quot;&gt;
+&lt;ng-template pTemplate=&quot;selectedItem&quot;&gt;
+    &lt;div class=&quot;country-item country-item-value d-flex&quot; *ngIf=&quot;selected&quot;&gt;
+        &lt;li class=&quot;dropdown-item d-flex&quot;&gt;
+            &lt;div class=&quot;flex-shrink-0 me-2&quot;&gt;
+                &lt;img src=&quot;selected image&quot; alt=&quot;country flag&quot; class=&quot;options-flagimg&quot;
+                    height=&quot;20&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex-grow-1&quot;&gt;
+                &lt;div class=&quot;d-flex&quot;&gt;
+                    &lt;div class=&quot;country-name me-1&quot;&gt;selected label&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/div&gt;
+&lt;/ng-template&gt;
+&lt;ng-template let-country pTemplate=&quot;item&quot;&gt;
+    &lt;div class=&quot;country-item&quot;&gt;
+        &lt;li class=&quot;dropdown-item d-flex&quot;&gt;
+            &lt;div class=&quot;flex-shrink-0 me-2&quot;&gt;
+                &lt;img src=&quot;your image&quot; alt=&quot;country flag&quot; class=&quot;options-flagimg&quot;
+                    height=&quot;20&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;flex-grow-1&quot;&gt;
+                &lt;div class=&quot;d-flex&quot;&gt;
+                    &lt;div class=&quot;country-name me-1&quot;&gt;your label&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/div&gt;
+&lt;/ng-template&gt;
+&lt;/p-dropdown&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end col -->
+</div>

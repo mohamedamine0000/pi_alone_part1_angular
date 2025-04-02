@@ -1,0 +1,232 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumb title="Progress" [breadcrumbItems]="breadCrumbItems"></app-breadcrumb>
+<!-- End Breadcrumbs -->
+
+<div class="row">
+    <div class="col-xxl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Default Progress</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Use <code>progress</code> class to show default progress.</p>
+
+                <div>
+                    <div class="mb-4">
+                        <p-progressBar [value]="0" [style]="{'height': '10px'}"></p-progressBar>
+                    </div>
+                    <div class="mb-4">
+                        <p-progressBar [value]="25" [style]="{'height': '10px'}" [showValue]="false"></p-progressBar>
+                    </div>
+                    <div class="mb-4">
+                        <p-progressBar [value]="50" [style]="{'height': '10px'}" [showValue]="false"></p-progressBar>
+                    </div>
+                    <div class="mb-4">
+                        <p-progressBar [value]="75" [style]="{'height': '10px'}" [showValue]="false"></p-progressBar>
+                    </div>
+                    <div>
+                        <p-progressBar [value]="100" [style]="{'height': '10px'}" [showValue]="false"></p-progressBar>
+                    </div>
+                </div>
+
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 240px;"><code>&lt;!-- Base Examples --&gt;
+&lt;div class=&quot;mb-4&quot;&gt;
+    &lt;p-progressBar [value]=&quot;0&quot; [style]=&quot;height: 10px&quot; [showValue]=&quot;false&quot;&gt;&lt;/p-progressBar&gt;
+&lt;/div&gt;</code>
+
+<code>&lt;div class=&quot;mb-4&quot;&gt;
+    &lt;p-progressBar [value]=&quot;25&quot; [style]=&quot;height: 10px&quot; [showValue]=&quot;false&quot;&gt;&lt;/p-progressBar&gt;
+&lt;/div&gt;</code>
+
+<code>&lt;div class=&quot;mb-4&quot;&gt;
+    &lt;p-progressBar [value]=&quot;50&quot; [style]=&quot;height: 10px&quot; [showValue]=&quot;false&quot;&gt;&lt;/p-progressBar&gt;
+&lt;/div&gt;</code>
+
+<code>&lt;div class=&quot;mb-4&quot;&gt;
+    &lt;p-progressBar [value]=&quot;75&quot; [style]=&quot;height: 10px&quot; [showValue]=&quot;false&quot;&gt;&lt;/p-progressBar&gt;
+&lt;/div&gt;</code>
+
+<code>&lt;div &gt;
+    &lt;p-progressBar [value]=&quot;100&quot; [style]=&quot;height: 10px&quot; [showValue]=&quot;false&quot;&gt;&lt;/p-progressBar&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+    <!-- end col -->
+
+    <div class="col-xxl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Progress with background color</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+
+                <p class="text-muted">Use <code> color="var(--tb-primary)"</code> to progress bar class with the
+                    below-mentioned color
+                    variation to set the background color progress bar.</p>
+
+                <div>
+                    <div class="mb-4">
+                        <p-progressBar [value]="15" color="var(--tb-primary)" [style]="{'height': '10px'}"
+                            [showValue]="false"></p-progressBar>
+                    </div>
+                    <div class="mb-4">
+                        <p-progressBar [value]="25" color="var(--tb-success)" [style]="{'height': '10px'}"
+                            [showValue]="false"></p-progressBar>
+                    </div>
+                    <div class="mb-4">
+                        <p-progressBar [value]="50" color="var(--tb-info)" [style]="{'height': '10px'}"
+                            [showValue]="false"></p-progressBar>
+                    </div>
+                    <div class="mb-4">
+                        <p-progressBar [value]="75" color="var(--tb-warning)" [style]="{'height': '10px'}"
+                            [showValue]="false"></p-progressBar>
+                    </div>
+                    <div>
+                        <p-progressBar [value]="100" color="var(--tb-danger)" [style]="{'height': '10px'}"
+                            [showValue]="false"></p-progressBar>
+                    </div>
+                </div>
+
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 240px;">
+<code>&lt;!-- Progress with background color --&gt;
+&lt;div class=&quot;mb-4&quot;&gt;
+    &lt;p-progressBar [value]=&quot;15&quot; color=&quot;var(--tb-primary)&quot; [style]=&quot;height: 10px&quot; [showValue]=&quot;false&quot;&gt;&lt;/p-progressBar&gt;
+&lt;/div&gt;</code>
+
+<code>&lt;div class=&quot;mb-4&quot;&gt;
+    &lt;p-progressBar [value]=&quot;25&quot; color=&quot;var(--tb-success)&quot; [style]=&quot;height: 10px&quot; [showValue]=&quot;false&quot;&gt;&lt;/p-progressBar&gt;
+&lt;/div&gt;</code>
+
+<code>&lt;div class=&quot;mb-4&quot;&gt;
+    &lt;p-progressBar [value]=&quot;50&quot; color=&quot;var(--tb-info)&quot; [style]=&quot;height: 10px&quot; [showValue]=&quot;false&quot;&gt;&lt;/p-progressBar&gt;
+&lt;/div&gt;</code>
+
+<code>&lt;div class=&quot;mb-4&quot;&gt;
+    &lt;p-progressBar [value]=&quot;75&quot; color=&quot;var(--tb-warning)&quot; [style]=&quot;height: 10px&quot; [showValue]=&quot;false&quot;&gt;&lt;/p-progressBar&gt;
+&lt;/div&gt;</code>
+
+<code>&lt;div &gt;
+    &lt;p-progressBar [value]=&quot;100&quot; color=&quot;var(--tb-danger)&quot; [style]=&quot;height: 10px&quot; [showValue]=&quot;false&quot;&gt;&lt;/p-progressBar&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->
+
+<div class="row">
+    <div class="col-xxl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Progress with label</h4>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <p class="text-muted">Add labels to your progress bars by placing text within the progress-bar.</p>
+                <div>
+                    <p-progressBar [value]="25" [style]="{'height': '10px','font-size':'0.6rem'}"></p-progressBar>
+                </div>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup">
+    <code>&lt;!-- Labels Example --&gt; 
+    &lt;div&gt;
+    &lt;p-progressBar [value]=&quot;25&quot; [style]=&quot;&#123;'height': '10px','font-size':'0.6rem'&#125;&quot;&gt;&lt;/p-progressBar&gt;
+    &lt;/div&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+    <!-- end col -->
+    <div class="col-xxl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Indeterminate</h4>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <p class="text-muted">For progresses with no value to track, set the mode property to indeterminate.</p>
+                <div>
+                    <p-progressBar mode="indeterminate" [style]="{ height: '6px' }"></p-progressBar>
+                </div>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup">
+<code>&lt;!-- Labels Example --&gt; 
+&lt;p-progressBar mode=&quot;indeterminate&quot; [style]=&quot;height: '6px'&quot;&gt;&lt;/p-progressBar&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xxl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Height</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+
+                <p class="text-muted">Use <code>progress-sm</code>, <code>progress-lg</code>, or
+                    <code>progress-xl</code> class to set the different heights of progress.
+                </p>
+                <div>
+                    <div class="mb-4">
+                        <h5 class="fs-13">Small Progress</h5>
+                        <!-- Prgress sm -->
+                        <p-progressBar [value]="25" [style]="{'height': '5px'}" [showValue]="false"></p-progressBar>
+                    </div>
+                    <div class="mb-4">
+                        <h5 class="fs-13">Default Progress </h5>
+                        <!-- Prgress md -->
+                        <p-progressBar [value]="40" color="var(--tb-success)" [style]="{'height': '10px'}"
+                            [showValue]="false"></p-progressBar>
+                    </div>
+                    <div class="mb-4">
+                        <h5 class="fs-13">Large Progress</h5>
+                        <!-- Prgress lg -->
+                        <p-progressBar [value]="50" color="var(--tb-warning)" [style]="{'height': '15px'}"
+                            [showValue]="false"></p-progressBar>
+                    </div>
+                    <div>
+                        <h5 class="fs-13">Extra Large Progress</h5>
+                        <!-- Prgress xl -->
+                        <p-progressBar [value]="70" color="var(--tb-danger)" [style]="{'height': '18px'}"
+                            [showValue]="false"></p-progressBar>
+                    </div>
+                </div>
+
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 310px;">
+<code>&lt;!-- Prgress sm --&gt;
+  &lt;p-progressBar [value]=&quot;25&quot; [style]=&quot;&#123;'height': '5px'&#125;&quot; [showValue]=&quot;false&quot;&gt;&lt;/p-progressBar&gt;
+</code>
+<code>&lt;!-- Prgress Default --&gt;
+  &lt;p-progressBar [value]=&quot;40&quot; color=&quot;var(--tb-success)&quot; [style]=&quot;&#123;'height': '10px'&#125;&quot; [showValue]=&quot;false&quot;&gt;&lt;/p-progressBar&gt;
+</code>
+<code>&lt;!-- Prgress lg --&gt;
+  &lt;p-progressBar [value]=&quot;50&quot; color=&quot;var(--tb-warning)&quot; [style]=&quot;&#123;'height': '15px'&#125;&quot; [showValue]=&quot;false&quot;&gt;&lt;/p-progressBar&gt;
+</code>
+<code>&lt;!-- Prgress xl --&gt;
+  &lt;p-progressBar [value]=&quot;75&quot; color=&quot;var(--tb-danger)&quot; [style]=&quot;&#123;'height': '18px'&#125;&quot; [showValue]=&quot;false&quot;&gt;&lt;/p-progressBar&gt;
+</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>

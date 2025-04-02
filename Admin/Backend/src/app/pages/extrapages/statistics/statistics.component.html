@@ -1,0 +1,86 @@
+<!-- app breadcrumb -->
+<app-breadcrumbs title="Statistics" [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Sales / Purchase</h5>
+            </div>
+            <div class="card-body">
+                <apx-chart [series]="lineWithDataLabelsChart.series" [chart]="lineWithDataLabelsChart.chart"
+                    [dataLabels]="lineWithDataLabelsChart.dataLabels" [stroke]="lineWithDataLabelsChart.stroke"
+                    [colors]="lineWithDataLabelsChart.colors" [grid]="lineWithDataLabelsChart.grid"
+                    [xaxis]="lineWithDataLabelsChart.xaxis" [markers]="lineWithDataLabelsChart.markers"
+                    [responsive]="lineWithDataLabelsChart.responsive" dir="ltr"></apx-chart>
+
+            </div>
+        </div>
+    </div><!--end col-->
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Income Statistics</h5>
+            </div>
+            <div class="card-body">
+                <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart"
+                    [dataLabels]="chartOptions.dataLabels" [plotOptions]="chartOptions.plotOptions"
+                    [grid]="chartOptions.grid" [stroke]="chartOptions.stroke" [xaxis]="chartOptions.xaxis"
+                    [fill]="chartOptions.fill" [tooltip]="chartOptions.tooltip" [yaxis]="chartOptions.yaxis"
+                    [colors]="chartOptions.colors"></apx-chart>
+            </div>
+        </div>
+    </div><!--end col-->
+</div><!--end row-->
+
+<div class="row">
+    <div class="col-xxl-8">
+        <div class="card">
+            <div class="card-header d-sm-flex align-items-center">
+                <h5 class="card-title mb-3 mb-sm-0 flex-grow-1">Top Selling Product</h5>
+                <div class="flex-shrink-0">
+                    <button type="button" class="btn btn-soft-secondary btn-sm">
+                        ALL
+                    </button>
+                    <button type="button" class="btn btn-soft-secondary btn-sm">
+                        1M
+                    </button>
+                    <button type="button" class="btn btn-soft-secondary btn-sm">
+                        6M
+                    </button>
+                    <button type="button" class="btn btn-soft-primary btn-sm">
+                        1Y
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <apx-chart [series]="stackedcolumn.series" [chart]="stackedcolumn.chart" [fill]="stackedcolumn.fill"
+                    [responsive]="stackedcolumn.responsive" [xaxis]="stackedcolumn.xaxis" [yaxis]="stackedcolumn.yaxis"
+                    [legend]="stackedcolumn.legend" [colors]="stackedcolumn.colors"></apx-chart>
+            </div>
+        </div>
+    </div><!--end col-->
+    <div class="col-xxl-4">
+        <div class="card">
+            <div class="card-header align-items-center d-sm-flex">
+                <h4 class="card-title mb-3 mb-sm-0 flex-grow-1">Orders by Countries</h4>
+                <div>
+                    <button type="button" class="btn btn-soft-secondary btn-sm">
+                        ALL
+                    </button>
+                    <button type="button" class="btn btn-soft-primary btn-sm">
+                        1M
+                    </button>
+                    <button type="button" class="btn btn-soft-secondary btn-sm">
+                        6M
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <apx-chart [series]="incomeChart.series" [chart]="incomeChart.chart" [grid]="incomeChart.grid"
+                    [dataLabels]="incomeChart.dataLabels" [plotOptions]="incomeChart.plotOptions"
+                    [legend]="incomeChart.legend" [xaxis]="incomeChart.xaxis" [colors]="incomeChart.colors"></apx-chart>
+            </div>
+        </div>
+    </div><!--end col-->
+</div><!--end row-->

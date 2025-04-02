@@ -1,0 +1,120 @@
+{
+  "HEADER": {
+    "MORE": {
+      "TEXT": "更多的"
+    }
+  },
+  "MENUITEMS": {
+    "MENU": {
+      "TEXT": "菜单"
+    },
+    "DASHBOARD": {
+      "TEXT": "仪表板",
+      "BADGE": "热的"
+    },
+    "PRODUCTS": {
+      "TEXT": "产品",
+      "LIST": {
+        "LISTVIEW": "列表显示",
+        "GRIDVIEW": "网格视图",
+        "OVERVIEW": "概述",
+        "CREATEPRODUCT": "创建产品",
+        "CATEGORIES": "类别",
+        "SUBCATEGORIES": "子类别"
+      }
+    },
+    "ORDERS": {
+      "TEXT": "命令",
+      "LIST": {
+        "LISTVIEW": "列表显示",
+        "OVERVIEW": "概述"
+      }
+    },
+    "CALENDER": {
+      "TEXT": "日历"
+    },
+    "SELLERS": {
+      "TEXT": "卖家",
+      "LIST": {
+        "LISTVIEW": "列表显示",
+        "GRIDVIEW": "网格视图",
+        "OVERVIEW": "概述"
+      }
+    },
+    "INVOICE": {
+      "TEXT": "发票",
+      "LIST": {
+        "LISTVIEW": "列表显示",
+        "OVERVIEW": "概述",
+        "CREATEINVOICE": "创建发票"
+      }
+    },
+    "USERLIST": {
+      "TEXT": "用户列表"
+    },
+    "SHIPPING": {
+      "TEXT": "船运",
+      "LIST": {
+        "SHIPPINGLIST": "货单",
+        "SHIPMENT": "出货量"
+      }
+    },
+    "COUPONS": {
+      "TEXT": "优惠券"
+    },
+    "REVIEWS&RATINGS": {
+      "TEXT": "评论和评级"
+    },
+    "BRANDS": {
+      "TEXT": "品牌"
+    },
+    "STATISTICS": {
+      "TEXT": "统计数据"
+    },
+    "LOCALIZATION": {
+      "TEXT": "本土化",
+      "LIST": {
+        "TRANSACTIONS": "交易",
+        "CURRENCYRATES": "汇率"
+      }
+    },
+    "ACCOUNTS": {
+      "TEXT": "帐户",
+      "LIST": {
+        "MYACCOUNT": "我的账户",
+        "SETTINGS": "设置",
+        "SIGNUP": "报名",
+        "SIGNIN": "登入",
+        "PASSWORDRESET": "重设密码",
+        "PASSWORDCREATE": "密码创建",
+        "SUCCESSMESSAGE": "成功讯息",
+        "TWOSTEPVERIFY": "两步验证",
+        "LOGOUT": "登出",
+        "ERROR404": "错误404",
+        "ERROR500": "错误 500",
+        "COMINGSOON": "即将推出"
+      }
+    },
+    "COMPONENTS": {
+      "TEXT": "成分",
+      "BADGE": "v1.0"
+    },
+    "MULTILEVEL": {
+      "TEXT": "多层次",
+      "LIST": {
+        "LEVEL1": {
+          "1": "1.1级",
+          "2": "1.2级",
+          "LEVEL2": {
+            "1": "2.1级",
+            "2": "2.2级",
+            "LEVEL3": {
+              "1": "3.1级",
+              "2": "3.2级"
+            }
+          }
+        }
+      }
+    }
+  }
+}

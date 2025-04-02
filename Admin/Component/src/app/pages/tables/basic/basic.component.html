@@ -1,0 +1,1576 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumb title="Basic Tables" [breadcrumbItems]="breadCrumbItems"></app-breadcrumb>
+<!-- End Breadcrumbs -->
+
+
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Default Table</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Use <code>table</code> class to show bootstrap-based default table.</p>
+                <p-table [value]="defaulttable" [tableStyle]="{'min-width': '40rem'}">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Customer</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Invoice</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-jokes>
+                        <tr>
+                            <td scope="row"><a href="javascript:void(0);" class="fw-medium">{{jokes.id}}</a></td>
+                            <td>{{jokes.Customer}}</td>
+                            <td>{{jokes.Date}}</td>
+                            <td>{{jokes.Invoice}}</td>
+                            <td><a href="javascript:void(0);" class="link-success">View More <i class="ri-arrow-right-line align-middle"></i></a></td>
+                        </tr>
+
+                    </ng-template>
+                </p-table>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 275px;"><code> &lt;p-table [value]=&quot;jokes&quot; [tableStyle]=&quot;&#0123;'min-width': '40rem'&#0125;&quot;&gt;
+&lt;ng-template pTemplate=&quot;header&quot;&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;col&quot;&gt;ID&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Customer&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Date&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Invoice&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Action&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;ng-template pTemplate=&quot;body&quot; let-jokes&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;row&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;fw-medium&quot;&gt;s&lt;/a&gt;&lt;/th&gt;
+        &lt;td&gt;Customer name&lt;/td&gt;
+        &lt;td&gt;Date&lt;/td&gt;
+        &lt;td&gt;Invoice&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;javascript:void(0);&quot; class=&quot;link-success&quot;&gt;View More &lt;i class=&quot;ri-arrow-right-line align-middle&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;/p-table&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+    <!-- end col -->
+
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Striped Rows</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Use <code>table-striped</code> class to add zebra-striping to any table row within
+                    the &lt;tbody&gt;.</p>
+                <p-table [value]="product" styleClass="p-datatable-striped p-datatable-sm" [tableStyle]="{'min-width': '40rem'}">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Customer</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Invoice</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-product>
+                        <tr>
+                            <td class="fw-medium">{{product.id}}</td>
+                            <td>{{product.Customer}}</td>
+                            <td>{{product.Date}}</td>
+                            <td>{{product.Invoice}}</td>
+                            <td><span [class]="'product-badge product-' + product.status">{{product.status}}</span></td>
+
+                        </tr>
+                    </ng-template>
+                </p-table>
+
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 275px;"><code>&lt;!-- Striped Rows --&gt;
+&lt;p-table [value]=&quot;product&quot; styleClass=&quot;p-datatable-striped&quot; [tableStyle]=&quot;&#0123;'min-width': '40rem'&#0125;&quot;&gt;
+&lt;ng-template pTemplate=&quot;header&quot;&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;col&quot;&gt;ID&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Customer&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Date&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Invoice&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Action&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;ng-template pTemplate=&quot;body&quot; let-product&gt;
+    &lt;tr&gt;
+        &lt;td class=&quot;fw-medium&quot;&gt;product ids&lt;/td&gt;
+        &lt;td&gt;product customer&lt;/td&gt;
+        &lt;td&gt;product date&lt;/td&gt;
+        &lt;td&gt;product invoice&lt;/td&gt;
+        &lt;td&gt;&lt;span [class]=&quot;'product-badge product-' + product.status&quot;&gt;product status&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;/p-table&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->
+
+<div class="row">
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Striped columns</h4>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <p class="text-muted mb-4">Use .<code>table-striped-columns</code> to add zebra-striping to any table
+                    column.</p>
+                <p-table [value]="caption" styleClass="p-datatable-striped" [tableStyle]="{'min-width': '90rem'}">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="cardtableCheck">
+                                    <label class="form-check-label" for="cardtableCheck"></label>
+                                </div>
+                            </th>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Date</th>
+                            <th>Total</th>
+                            <th>Status </th>
+                            <th>Action</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-creative>
+                        <tr>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="cardtableCheck01">
+                                    <label class="form-check-label" for="cardtableCheck01"></label>
+                                </div>
+                            </td>
+                            <td><a href="javascript:void(0);" class="fw-medium">{{creative.id}}</a></td>
+                            <td>{{creative.name}}</td>
+                            <td>{{creative.date}}</td>
+                            <td>{{creative.total}}</td>
+                            <td><span class="badge bg-success">{{creative.status}}</span></td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-light">Details</button>
+                            </td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25 mt-3">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 275px;"><code>&lt;p-table [value]=&quot;caption&quot; styleClass=&quot;p-datatable-striped&quot; [tableStyle]=&quot;&#0123;'min-width': '90rem'&#0125;&quot;&gt;
+&lt;ng-template pTemplate=&quot;header&quot;&gt;
+    &lt;tr&gt;
+        &lt;th&gt;
+            &lt;div class=&quot;form-check&quot;&gt;
+                &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;cardtableCheck&quot;&gt;
+                &lt;label class=&quot;form-check-label&quot; for=&quot;cardtableCheck&quot;&gt;&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/th&gt;
+        &lt;th&gt;ID&lt;/th&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Date&lt;/th&gt;
+        &lt;th&gt;Total&lt;/th&gt;
+        &lt;th&gt;Status &lt;/th&gt;
+        &lt;th&gt;Action&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;ng-template pTemplate=&quot;body&quot; let-creative&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+            &lt;div class=&quot;form-check&quot;&gt;
+                &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;cardtableCheck01&quot;&gt;
+                &lt;label class=&quot;form-check-label&quot; for=&quot;cardtableCheck01&quot;&gt;&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;fw-medium&quot;&gt;product id&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;product customer&lt;/td&gt;
+        &lt;td&gt;product date&lt;/td&gt;
+        &lt;td&gt;product total&lt;/td&gt;
+        &lt;td&gt;&lt;span class=&quot;badge bg-success&quot;&gt;product status&lt;/span&gt;&lt;/td&gt;
+        &lt;td&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-sm btn-light&quot;&gt;Details&lt;/button&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;/p-table&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div><!-- end col -->
+</div><!-- end row -->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Tables Colors</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Use <code>table-dark</code> class to set dark color table body and
+                    <code>table-success</code> class to set success color table body respectively. use
+                    <code>table-</code> class with different color variation to set required table body color.
+                </p>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <p-table [value]="darktable" styleClass="p-datatable-sm table-dark">
+                            <ng-template pTemplate="header">
+                                <tr class="png-table">
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Customer</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Invoice</th>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-product>
+                                <tr>
+                                    <td class="fw-medium">{{product.id}}</td>
+                                    <td>{{product.customer}}</td>
+                                    <td>{{product.date}}</td>
+                                    <td>{{product.invoice}}</td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-xl-6">
+                        <p-table [value]="colortable" styleClass="p-datatable-striped table-responsive p-datatable-sm table-success mt-4 mt-xl-0">
+                            <ng-template pTemplate="header">
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Invoice</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-product>
+                                <tr>
+                                    <td class="fw-medium">{{product.id}}</td>
+                                    <td>{{product.invoice}}</td>
+                                    <td>{{product.amount}}</td>
+                                    <td>{{product.date}}</td>
+                                    <td><i class="align-middle" [ngClass]="{'ri-checkbox-circle-line text-success': product.status == 'Subscribed',
+                                        'ri-close-circle-line text-danger': product.status == 'Unsubscribed'}"></i>
+                                        {{product.status}}
+                                    </td>
+                                    <td>
+                                        <div class="hstack gap-3 flex-wrap">
+                                            <a href="javascript:void(0);" class="link-success fs-15"><i class="ri-edit-2-line"></i></a>
+                                            <a href="javascript:void(0);" class="link-danger fs-15"><i class="ri-delete-bin-line"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+                    </div>
+                    <!--end col-->
+                </div>
+                <!--end row-->
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 275px;"><code> &lt;p-table [value]=&quot;darktable&quot; styleClass=&quot;p-datatable-sm&quot;&gt;
+&lt;ng-template pTemplate=&quot;header&quot;&gt;
+    &lt;tr class=&quot;png-table&quot; style=&quot;background:black&quot;&gt;
+        &lt;th scope=&quot;col&quot;&gt;ID&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Customer&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Date&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Invoice&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;ng-template pTemplate=&quot;body&quot; let-product&gt;
+    &lt;tr style=&quot;background:black;color:#fff;&quot;&gt;
+        &lt;td class=&quot;fw-medium&quot;&gt;{{product.id}}&lt;/td&gt;
+        &lt;td&gt;{{product.customer}}&lt;/td&gt;
+        &lt;td&gt;{{product.date}}&lt;/td&gt;
+        &lt;td&gt;{{product.invoice}}&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;/p-table&gt;</code>
+
+<code> &lt;p-table [value]=&quot;colortable&quot;
+styleClass=&quot;p-datatable-striped table-responsive p-datatable-sm mt-4 mt-xl-0&quot;&gt;
+&lt;ng-template pTemplate=&quot;header&quot;&gt;
+    &lt;tr style=&quot;background:#cdf7ec&quot;&gt;
+        &lt;th scope=&quot;col&quot;&gt;ID&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Invoice&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Amount&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Date&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Status&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Action&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;ng-template pTemplate=&quot;body&quot; let-product&gt;
+    &lt;tr style=&quot;background: #cdf7ec;&quot;&gt;
+        &lt;td class=&quot;fw-medium&quot;&gt;{{product.id}}&lt;/td&gt;
+        &lt;td&gt;{{product.invoice}}&lt;/td&gt;
+        &lt;td&gt;{{product.amount}}&lt;/td&gt;
+        &lt;td&gt;{{product.date}}&lt;/td&gt;
+        &lt;td&gt;&lt;i class=&quot;align-middle&quot; [ngClass]=&quot;&#0123;'ri-checkbox-circle-line text-success': product status == 'Subscribed',
+        'ri-close-circle-line text-danger': product status == 'Unsubscribed'&#0125;&quot;&gt;&lt;/i&gt;
+        product status
+        &lt;/td&gt;
+        &lt;td&gt;
+                &lt;div class=&quot;hstack gap-3 flex-wrap&quot;&gt;
+                &lt;a href=&quot;javascript:void(0);&quot; class=&quot;link-success fs-15&quot;&gt;&lt;i
+                        class=&quot;ri-edit-2-line&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;a href=&quot;javascript:void(0);&quot; class=&quot;link-danger fs-15&quot;&gt;&lt;i
+                    class=&quot;ri-delete-bin-line&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;/p-table&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+    <!-- end col -->
+</div>
+<!--end row-->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Hoverable Rows</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Set <code>rowHover = true</code> attribute to enable a hover state on table rows
+                    within a
+                    &lt;tbody&gt;.</p>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <p-table [value]="hovertable" styleClass="p-datatable-sm table-responsive" [rowHover]="true">
+                            <ng-template pTemplate="header">
+                                <tr>
+                                    <th scope="col" style="width: 25px;">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="checkAll" value="option1">
+                                        </div>
+                                    </th>
+                                    <th scope="col">Order ID</th>
+                                    <th scope="col">Shop</th>
+                                    <th scope="col">Customer</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-product>
+                                <tr>
+                                    <th scope="row">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option1">
+                                        </div>
+                                    </th>
+                                    <td>{{product.id}}</td>
+                                    <td>{{product.shop}}</td>
+                                    <td>{{product.customer}}</td>
+                                    <td>{{product.amount}}</td>
+                                    <td><a href="javascript:void(0);"><i class="ri-download-2-line fs-17 lh-1 align-middle"></i></a></td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-xl-6">
+                        <p-table [value]="colortable" styleClass="p-datatable-striped table-responsive p-datatable-sm mt-4 mt-xl-0" [rowHover]="true">
+                            <ng-template pTemplate="header">
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Invoice</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-product>
+                                <tr>
+                                    <td class="fw-medium">{{product.id}}</td>
+                                    <td>{{product.invoice}}</td>
+                                    <td>{{product.amount}}</td>
+                                    <td>{{product.date}}</td>
+                                    <td><i class="ri-checkbox-circle-line align-middle text-success"></i>
+                                        {{product.status}}
+                                    </td>
+                                    <td>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck1">
+                                            <label class="form-check-label ms-2" for="SwitchCheck1">Yes/No</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+                    </div>
+                    <!--end col-->
+                </div>
+                <!--end row-->
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 275px;"><code>&lt;p-table [value]=&quot;hovertable&quot; styleClass=&quot;p-datatable-sm table-responsive&quot; [rowHover]=&quot;true&quot;&gt;
+&lt;ng-template pTemplate=&quot;header&quot;&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;col&quot; style=&quot;width: 25px;&quot;&gt;
+            &lt;div class=&quot;form-check&quot;&gt;
+                &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;checkAll&quot;
+                    value=&quot;option1&quot;&gt;
+            &lt;/div&gt;
+        &lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Order ID&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Shop&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Customer&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Price&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Action&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;ng-template pTemplate=&quot;body&quot; let-product&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;row&quot;&gt;
+            &lt;div class=&quot;form-check&quot;&gt;
+                &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;inlineCheckbox2&quot;
+                    value=&quot;option1&quot;&gt;
+            &lt;/div&gt;
+        &lt;/th&gt;
+        &lt;td&gt;{{product.id}}&lt;/td&gt;
+        &lt;td&gt;{{product.shop}}&lt;/td&gt;
+        &lt;td&gt;{{product.customer}}&lt;/td&gt;
+        &lt;td&gt;{{product.amount}}&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;javascript:void(0);&quot;&gt;&lt;i
+                    class=&quot;ri-download-2-line fs-17 lh-1 align-middle&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;/p-table&gt;</code>
+
+<code>&lt;p-table [value]=&quot;colortable&quot;
+styleClass=&quot;p-datatable-striped table-responsive p-datatable-sm mt-4 mt-xl-0&quot;
+[rowHover]=&quot;true&quot;&gt;
+&lt;ng-template pTemplate=&quot;header&quot;&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;col&quot;&gt;ID&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Invoice&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Amount&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Date&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Status&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Action&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;ng-template pTemplate=&quot;body&quot; let-product&gt;
+    &lt;tr&gt;
+        &lt;td class=&quot;fw-medium&quot;&gt;{{product.id}}&lt;/td&gt;
+        &lt;td&gt;{{product.invoice}}&lt;/td&gt;
+        &lt;td&gt;{{product.amount}}&lt;/td&gt;
+        &lt;td&gt;{{product.date}}&lt;/td&gt;
+        &lt;td&gt;&lt;i class=&quot;ri-checkbox-circle-line align-middle text-success&quot;&gt;&lt;/i&gt;
+            {{product.status}}
+        &lt;/td&gt;
+        &lt;td&gt;
+            &lt;div class=&quot;form-check form-switch&quot;&gt;
+                &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; role=&quot;switch&quot;
+                    id=&quot;SwitchCheck1&quot;&gt;
+                &lt;label class=&quot;form-check-label ms-2&quot; for=&quot;SwitchCheck1&quot;&gt;Yes/No&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;/p-table&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+    <!-- end col -->
+</div>
+<!--end row-->
+
+<div class="row">
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Card Tables</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted mb-4">Use <code>table-card</code> class to show card-based table within a
+                    &lt;tbody&gt;.</p>
+                <p-table [value]="caption" styleClass="table-responsive table-card p-datatable-sm mt-4 mt-xl-0" [rowHover]="true">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th scope="col" style="width: 46px;">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="cardtableCheck">
+                                    <label class="form-check-label" for="cardtableCheck"></label>
+                                </div>
+                            </th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Status</th>
+                            <th scope="col" style="width: 150px;">Action</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-product>
+                        <tr>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="cardtableCheck01">
+                                    <label class="form-check-label" for="cardtableCheck01"></label>
+                                </div>
+                            </td>
+                            <td><a href="javascript:void(0);" class="fw-medium">{{product.id}}</a></td>
+                            <td>{{product.name}}</td>
+                            <td>{{product.date}}</td>
+                            <td>{{product.total}}</td>
+                            <td><span class="badge" [ngClass]="{'bg-success':product.status == 'Paid','bg-danger':product.status == 'Refund'}">{{product.status}}</span>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-light">Details</button>
+                            </td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25 mt-3">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 275px;"><code>&lt;p-table [value]=&quot;caption&quot; styleClass=&quot;table-responsive table-card p-datatable-sm mt-4 mt-xl-0&quot;
+[rowHover]=&quot;true&quot;&gt;
+&lt;ng-template pTemplate=&quot;header&quot;&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;col&quot; style=&quot;width: 46px;&quot;&gt;
+            &lt;div class=&quot;form-check&quot;&gt;
+                &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;cardtableCheck&quot;&gt;
+                &lt;label class=&quot;form-check-label&quot; for=&quot;cardtableCheck&quot;&gt;&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;ID&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Name&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Date&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Total&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Status&lt;/th&gt;
+        &lt;th scope=&quot;col&quot; style=&quot;width: 150px;&quot;&gt;Action&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;ng-template pTemplate=&quot;body&quot; let-product&gt;
+    &lt;tr&gt;
+        &lt;td&gt;
+            &lt;div class=&quot;form-check&quot;&gt;
+                &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;cardtableCheck01&quot;&gt;
+                &lt;label class=&quot;form-check-label&quot; for=&quot;cardtableCheck01&quot;&gt;&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;fw-medium&quot;&gt;{{product.id}}&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;{{product.name}}&lt;/td&gt;
+        &lt;td&gt;{{product.date}}&lt;/td&gt;
+        &lt;td&gt;{{product.total}}lt;/td&gt;
+        &lt;td&gt;&lt;span class=&quot;badge&quot;
+                [ngClass]=&quot;&#0123;'bg-success':product status == 'Paid','bg-danger':product status == 'Refund'&#0125;&quot;&gt;{{product.status}}&lt;/span&gt;
+        &lt;/td&gt;
+        &lt;td&gt;
+            &lt;button type=&quot;button&quot; class=&quot;btn btn-sm btn-light&quot;&gt;Details&lt;/button&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;/p-table&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div><!-- end col -->
+</div><!-- end row -->
+
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Active Tables</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Use <code>table-active</code> class to highlight a table row or cell.</p>
+                <p-table [value]="hovertable" styleClass="table-responsive p-datatable-sm" [rowHover]="true">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th scope="col" style="width: 42px;">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="activetableCheck">
+                                    <label class="form-check-label" for="activetableCheck"></label>
+                                </div>
+                            </th>
+                            <th scope="col">Order ID</th>
+                            <th scope="col">Shop</th>
+                            <th scope="col">Customer</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-product>
+                        <tr>
+                            <th scope="row">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="activetableCheck01" checked>
+                                    <label class="form-check-label" for="activetableCheck01"></label>
+                                </div>
+                            </th>
+                            <td>{{product.id}}</td>
+                            <td>{{product.shop}}</td>
+                            <td>{{product.customer}}</td>
+                            <td>{{product.amount}}</td>
+                            <td><a href="javascript:void(0);"><i class="ri-download-2-line fs-17 lh-1 align-middle"></i></a></td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 275px;"><code>&lt;p-table [value]=&quot;hovertable&quot; styleClass=&quot;table-responsive p-datatable-sm&quot; [rowHover]=&quot;true&quot;&gt;
+&lt;ng-template pTemplate=&quot;header&quot;&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;col&quot; style=&quot;width: 42px;&quot;&gt;
+            &lt;div class=&quot;form-check&quot;&gt;
+                &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;activetableCheck&quot;&gt;
+                &lt;label class=&quot;form-check-label&quot; for=&quot;activetableCheck&quot;&gt;&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Order ID&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Shop&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Customer&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Price&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Action&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;ng-template pTemplate=&quot;body&quot; let-product&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;row&quot;&gt;
+            &lt;div class=&quot;form-check&quot;&gt;
+                &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot; id=&quot;activetableCheck01&quot;
+                    checked&gt;
+                &lt;label class=&quot;form-check-label&quot; for=&quot;activetableCheck01&quot;&gt;&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/th&gt;
+        &lt;td&gt;{{product.id}}&lt;/td&gt;
+        &lt;td&gt;{{product.shop}}&lt;/td&gt;
+        &lt;td&gt;{{product.customer}}&lt;/td&gt;
+        &lt;td&gt;{{product.amount}}&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;javascript:void(0);&quot;&gt;&lt;i
+                    class=&quot;ri-download-2-line fs-17 lh-1 align-middle&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;/p-table&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+    <!-- end col -->
+
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Bordered Tables</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Use <code>table-bordered</code> class to show borders on all sides of the table
+                    and cells.</p>
+
+                <p-table [value]="borderdtable" styleClass="table-responsive p-datatable-gridlines p-datatable-sm" [rowHover]="true">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Assignee</th>
+                            <th scope="col">Price</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-product>
+                        <tr>
+                            <td class="fw-medium">{{product.id}}</td>
+                            <td>{{product.title}}</td>
+                            <td><span class="badge" [ngClass]="{'bg-primary-subtle text-primary': product.status == 'Backlog','bg-secondary-subtle text-secondary': product.status == 'In Progress','bg-success-subtle text-success': product.status == 'Done'}">{{product.status}}</span>
+                            </td>
+                            <td>{{product.assignee}}</td>
+                            <td>{{product.price}}</td>
+                            <td>
+                                <div class="dropdown">
+                                    <a href="javascript:void(0);" role="button" id="dropdownMenuLink1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="ri-more-2-fill"></i>
+                                    </a>
+
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+                                        <li><a class="dropdown-item" href="javascript:void(0);">View</a></li>
+                                        <li><a class="dropdown-item" href="javascript:void(0);">Edit</a></li>
+                                        <li><a class="dropdown-item" href="javascript:void(0);">Delete</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 275px;"><code>&lt;p-table [value]=&quot;borderdtable&quot; styleClass=&quot;table-responsive p-datatable-gridlines p-datatable-sm&quot;
+[rowHover]=&quot;true&quot;&gt;
+&lt;ng-template pTemplate=&quot;header&quot;&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;col&quot;&gt;ID&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Title&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Status&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Assignee&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Price&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;ng-template pTemplate=&quot;body&quot; let-product&gt;
+    &lt;tr&gt;
+        &lt;td class=&quot;fw-medium&quot;&gt;{{product.id}}&lt;/td&gt;
+        &lt;td&gt;{{product.title}}&lt;/td&gt;
+        &lt;td&gt;&lt;span class=&quot;badge&quot;
+                [ngClass]=&quot;&#0123;'bg-primary-subtle text-primary': product status == 'Backlog','bg-secondary-subtle text-secondary': product status == 'In Progress','bg-success-subtle text-success': product status == 'Done'&#0125;&quot;&gt;{{product.status}}&lt;/span&gt;
+        &lt;/td&gt;
+        &lt;td&gt;{{product.assignee}}&lt;/td&gt;
+        &lt;td&gt;{{product.price}}&lt;/td&gt;
+        &lt;td&gt;
+            &lt;div class=&quot;dropdown&quot;&gt;
+                &lt;a href=&quot;#&quot; role=&quot;button&quot; id=&quot;dropdownMenuLink1&quot; data-bs-toggle=&quot;dropdown&quot;
+                    aria-expanded=&quot;false&quot;&gt;
+                    &lt;i class=&quot;ri-more-2-fill&quot;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+
+                &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenuLink1&quot;&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;View&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Delete&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;/p-table&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div><!-- end col -->
+</div>
+<!--end row-->
+
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Tables Border Colors</h4>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <p class="text-muted">Use <code>border-</code> class with color variation class to set table border
+                    color.</p>
+
+                <p-table [value]="borderdtable" styleClass="table-responsive border-secondary p-datatable-gridlines p-datatable-sm">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Assignee</th>
+                            <th scope="col">Price</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-product>
+                        <tr>
+                            <td class="fw-medium">{{product.id}}</td>
+                            <td>{{product.title}}</td>
+                            <td><span class="badge" [ngClass]="{'bg-primary-subtle text-primary': product.status == 'Backlog','bg-secondary-subtle text-secondary': product.status == 'In Progress','bg-success-subtle text-success': product.status == 'Done'}">{{product.status}}</span>
+                            </td>
+                            <td>{{product.assignee}}</td>
+                            <td>{{product.price}}</td>
+                            <td>
+                                <div class="dropdown">
+                                    <a href="javascript:void(0);" role="button" id="dropdownMenuLink1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="ri-more-2-fill"></i>
+                                    </a>
+
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+                                        <li><a class="dropdown-item" href="javascript:void(0);">View</a></li>
+                                        <li><a class="dropdown-item" href="javascript:void(0);">Edit</a></li>
+                                        <li><a class="dropdown-item" href="javascript:void(0);">Delete</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 275px;"><code>&lt;p-table [value]=&quot;borderdtable&quot;
+styleClass=&quot;table-responsive border-secondary p-datatable-gridlines p-datatable-sm&quot;&gt;
+&lt;ng-template pTemplate=&quot;header&quot;&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;col&quot;&gt;ID&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Title&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Status&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Assignee&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Price&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;ng-template pTemplate=&quot;body&quot; let-product&gt;
+    &lt;tr&gt;
+        &lt;td class=&quot;fw-medium&quot;&gt;{{product.id}}&lt;/td&gt;
+        &lt;td&gt;{{product.title}}&lt;/td&gt;
+        &lt;td&gt;&lt;span class=&quot;badge&quot;
+                [ngClass]=&quot;&#0123;'bg-primary-subtle text-primary': product status == 'Backlog','bg-secondary-subtle text-secondary': product status == 'In Progress','bg-success-subtle text-success': product status == 'Done'&#0125;&quot;&gt;{{product.status}}&lt;/span&gt;
+        &lt;/td&gt;
+        &lt;td&gt;{{product.assignee}}&lt;/td&gt;
+        &lt;td&gt;{{product.price}}&lt;/td&gt;
+        &lt;td&gt;
+            &lt;div class=&quot;dropdown&quot;&gt;
+                &lt;a href=&quot;#&quot; role=&quot;button&quot; id=&quot;dropdownMenuLink1&quot; data-bs-toggle=&quot;dropdown&quot;
+                    aria-expanded=&quot;false&quot;&gt;
+                    &lt;i class=&quot;ri-more-2-fill&quot;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+
+                &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenuLink1&quot;&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;View&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Delete&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;/p-table&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div><!-- end col -->
+
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0 flex-grow-1">Tables Without Borders</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Use <code>table-borderless</code> to set a table without borders.</p>
+
+                <p-table [value]="borderdtable" styleClass="table-responsive border-secondary p-datatable-sm">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Assignee</th>
+                            <th scope="col">Price</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-product>
+                        <tr>
+                            <td class="fw-medium">{{product.id}}</td>
+                            <td>{{product.title}}</td>
+                            <td><span class="badge" [ngClass]="{'bg-primary-subtle text-primary': product.status == 'Backlog','bg-secondary-subtle text-secondary': product.status == 'In Progress','bg-success-subtle text-success': product.status == 'Done'}">{{product.status}}</span>
+                            </td>
+                            <td>{{product.assignee}}</td>
+                            <td>{{product.price}}</td>
+                            <td>
+                                <div class="dropdown">
+                                    <a href="javascript:void(0);" role="button" id="dropdownMenuLink1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="ri-more-2-fill"></i>
+                                    </a>
+
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+                                        <li><a class="dropdown-item" href="javascript:void(0);">View</a></li>
+                                        <li><a class="dropdown-item" href="javascript:void(0);">Edit</a></li>
+                                        <li><a class="dropdown-item" href="javascript:void(0);">Delete</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 275px;"><code>&lt;p-table [value]=&quot;borderdtable&quot; styleClass=&quot;table-responsive border-secondary p-datatable-sm&quot;&gt;
+&lt;ng-template pTemplate=&quot;header&quot;&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;col&quot;&gt;ID&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Title&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Status&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Assignee&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Price&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;ng-template pTemplate=&quot;body&quot; let-product&gt;
+    &lt;tr&gt;
+        &lt;td class=&quot;fw-medium&quot;&gt;{{product.id}}&lt;/td&gt;
+        &lt;td&gt;{{product.title}}&lt;/td&gt;
+        &lt;td&gt;&lt;span class=&quot;badge&quot;
+                [ngClass]=&quot;&#0123;'bg-primary-subtle text-primary': product status == 'Backlog','bg-secondary-subtle text-secondary': product status == 'In Progress','bg-success-subtle text-success': product status == 'Done'&#0125;&quot;&gt;{{product.status}}&lt;/span&gt;
+        &lt;/td&gt;
+        &lt;td&gt;{{product.assignee}}&lt;/td&gt;
+        &lt;td&gt;{{product.price}}&lt;/td&gt;
+        &lt;td&gt;
+            &lt;div class=&quot;dropdown&quot;&gt;
+                &lt;a href=&quot;#&quot; role=&quot;button&quot; id=&quot;dropdownMenuLink1&quot; data-bs-toggle=&quot;dropdown&quot;
+                    aria-expanded=&quot;false&quot;&gt;
+                    &lt;i class=&quot;ri-more-2-fill&quot;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+
+                &lt;ul class=&quot;dropdown-menu&quot; aria-labelledby=&quot;dropdownMenuLink1&quot;&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;View&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Edit&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Delete&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;/p-table&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div><!-- end col -->
+</div>
+<!--end row-->
+
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Small Tables</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Use <code>p-datatable-sm</code> class to create any table more compact by cutting
+                    all
+                    cell padding in half.</p>
+
+                <p-table [value]="borderdtable" styleClass="p-datatable-sm">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Assignee</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-product>
+                        <tr>
+                            <td class="fw-medium">{{product.id}}</td>
+                            <td>{{product.title}}</td>
+                            <td><span class="badge" [ngClass]="{'bg-primary-subtle text-primary': product.status == 'Backlog','bg-secondary-subtle text-secondary': product.status == 'In Progress','bg-success-subtle text-success': product.status == 'Done'}">{{product.status}}</span>
+                            </td>
+                            <td>{{product.assignee}}</td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 275px;"><code>&lt;p-table [value]=&quot;borderdtable&quot; styleClass=&quot;p-datatable-sm&quot; &gt;
+&lt;ng-template pTemplate=&quot;header&quot;&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;col&quot;&gt;ID&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Title&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Status&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Assignee&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;ng-template pTemplate=&quot;body&quot; let-product&gt;
+    &lt;tr&gt;
+        &lt;td class=&quot;fw-medium&quot;&gt;{{product.id}}&lt;/td&gt;
+        &lt;td&gt;{{product.title}}&lt;/td&gt;
+        &lt;td&gt;&lt;span class=&quot;badge&quot;
+                [ngClass]=&quot;&#0123;'bg-primary-subtle text-primary': product status == 'Backlog','bg-secondary-subtle text-secondary': product status == 'In Progress','bg-success-subtle text-success': product status == 'Done'&#0125;&quot;&gt;{{product.status}}&lt;/span&gt;
+        &lt;/td&gt;
+        &lt;td&gt;{{product.assignee}}&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;/p-table&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+    <!-- end col -->
+
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Table Head</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Use <code>table-light</code> or <code>table-dark</code> class to create
+                    &lt;thead&gt; appear light or dark.</p>
+
+                <p-table [value]="headtable" styleClass="table-responsive p-datatable-sm">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th scope="col">Student</th>
+                            <th scope="col">Course</th>
+                            <th scope="col">Author</th>
+                            <th scope="col">Payment</th>
+                            <th scope="col">Process</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-product>
+                        <tr>
+                            <td>{{product.student}}</td>
+                            <td>{{product.course}}</td>
+                            <td>{{product.author}}</td>
+                            <td>{{product.payment}}</td>
+                            <td>
+                                <p-progressBar [value]="product.progress" [showValue]="false" color="var(--tb-{{product.color}})" [style]="{'height': '6px'}"></p-progressBar>
+                            </td>
+                            <td><a href="javascript:void(0);" class="link-{{product.color}}">{{product.status}}</a></td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 275px;"><code> &lt;p-table [value]=&quot;headtable&quot; styleClass=&quot;table-responsive p-datatable-sm&quot;&gt;
+&lt;ng-template pTemplate=&quot;header&quot;&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;col&quot;&gt;Student&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Course&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Author&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Payment&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Process&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Status&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;ng-template pTemplate=&quot;body&quot; let-product&gt;
+    &lt;tr&gt;
+        &lt;td&gt;{{product.student}}&lt;/td&gt;
+        &lt;td&gt;{{product.course}}&lt;/td&gt;
+        &lt;td&gt;{{product.author}}&lt;/td&gt;
+        &lt;td&gt;{{product.payment}}&lt;/td&gt;
+        &lt;td&gt;
+            &lt;p-progressBar [value]=&quot;product progress&quot; [showValue]=&quot;false&quot;
+                color=&quot;var(--tb-product color)&quot; [style]=&quot;&#0123;'height': '6px'&#0125;&quot;&gt;&lt;/p-progressBar&gt;
+        &lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;javascript:void(0);&quot; class=&quot;link-product color&quot;&gt;{{product.status}}&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;/p-table&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div><!-- end col -->
+</div>
+<!--end row-->
+
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Table Foot</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Add <code>&lt;tbody&gt;</code> attribute to group footer content in an HTML table.
+                </p>
+
+                <p-table [value]="footertable" styleClass="table table-nowrap mb-0 p-datatable-sm">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Job Title</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Payment</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-product>
+                        <tr>
+                            <td class="fw-medium">{{product.id}}</td>
+                            <td>{{product.name}}</td>
+                            <td>{{product.title}}</td>
+                            <td>{{product.date}}</td>
+                            <td>{{product.payment}}</td>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="footer">
+                        <tr class="bg-light p-2">
+                            <td colspan="4">Total</td>
+                            <td>$940</td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 275px;"><code>&lt;p-table [value]=&quot;footertable&quot; styleClass=&quot;table table-nowrap mb-0 p-datatable-sm&quot;&gt;
+&lt;ng-template pTemplate=&quot;header&quot;&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;col&quot;&gt;ID&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Name&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Job Title&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Date&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Payment&lt;/th&gt;
+        &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;ng-template pTemplate=&quot;body&quot; let-product&gt;
+    &lt;tr&gt;
+        &lt;td class=&quot;fw-medium&quot;&gt;{{product.id}}&lt;/td&gt;
+        &lt;td&gt;{{product.name}}&lt;/td&gt;
+        &lt;td&gt;{{product.title}}&lt;/td&gt;
+        &lt;td&gt;{{product.date}}&lt;/td&gt;
+        &lt;td&gt;{{product.payment}}&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;ng-template pTemplate=&quot;footer&quot;&gt;
+    &lt;tr&gt;
+        &lt;td colspan=&quot;4&quot;&gt;Total&lt;/td&gt;
+        &lt;td&gt;$940&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;/p-table&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div><!-- end col -->
+
+
+</div>
+<!--end row-->
+
+<div class="row">
+
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Table Nesting</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Example of basic table nesting. Border styles, active styles, and table variants
+                    are not inherited by nested tables.</p>
+
+                <p-table [value]="nestingtable" styleClass="table table-nowrap mb-0 p-datatable-sm">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Job Title</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Payment</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-product>
+                        <tr>
+                            <td class="fw-medium">{{product.id}}</td>
+                            <td>{{product.name}}</td>
+                            <td>{{product.title}}</td>
+                            <td>{{product.date}}</td>
+                            <td>{{product.payment}}</td>
+                        </tr>
+                        @if(product.subtable){
+                        <tr>
+                            <td colspan="5">
+                                <table class="table table-nowrap mb-0">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Student</th>
+                                            <th scope="col">Course</th>
+                                            <th scope="col">Author</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="fw-medium">I</td>
+                                            <td>Milana Scot</td>
+                                            <td>3d Animation</td>
+                                            <td>James Black</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-medium">II</td>
+                                            <td>Juston Eichmann</td>
+                                            <td>Design syntax</td>
+                                            <td>Olimpia Jordan</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>}
+                    </ng-template>
+                </p-table>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 275px;"><code>&lt;!-- Table Nesting --&gt;
+&lt;p-table [value]=&quot;nestingtable&quot; styleClass=&quot;table table-nowrap mb-0 p-datatable-sm&quot;&gt;
+&lt;ng-template pTemplate=&quot;header&quot;&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;col&quot;&gt;ID&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Name&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Job Title&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Date&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Payment&lt;/th&gt;
+        &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;ng-template pTemplate=&quot;body&quot; let-product&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;fw-medium&quot;&gt;{{product.id}}&lt;/td&gt;
+            &lt;td&gt;{{product.name}}&lt;/td&gt;
+            &lt;td&gt;{{product.title}}&lt;/td&gt;
+            &lt;td&gt;{{product.date}}&lt;/td&gt;
+            &lt;td&gt;{{product.payment}}&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr *ngIf=&quot;product.subtable&quot; &gt;
+            &lt;td colspan=&quot;5&quot;&gt;
+                &lt;table class=&quot;table table-nowrap mb-0&quot;&gt;
+                    &lt;thead class=&quot;table-light&quot;&gt;
+                        &lt;tr&gt;
+                            &lt;th scope=&quot;col&quot;&gt;ID&lt;/th&gt;
+                            &lt;th scope=&quot;col&quot;&gt;Student&lt;/th&gt;
+                            &lt;th scope=&quot;col&quot;&gt;Course&lt;/th&gt;
+                            &lt;th scope=&quot;col&quot;&gt;Author&lt;/th&gt;
+                        &lt;/tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td class=&quot;fw-medium&quot;&gt;I&lt;/td&gt;
+                            &lt;td&gt;Milana Scot&lt;/td&gt;
+                            &lt;td&gt;3d Animation&lt;/td&gt;
+                            &lt;td&gt;James Black&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td class=&quot;fw-medium&quot;&gt;II&lt;/td&gt;
+                            &lt;td&gt;Juston Eichmann&lt;/td&gt;
+                            &lt;td&gt;Design syntax&lt;/td&gt;
+                            &lt;td&gt;Olimpia Jordan&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;/p-table&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div><!-- end col -->
+
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Variants</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Use <code>table-</code> class with below-mentioned color variation class within
+                    &lt;tr&gt; to set color on table row.</p>
+                <div class="table-responsive">
+                    <p-table [value]="tablevariant" styleClass="table table-nowrap mb-0">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Position</th>
+                                <th scope="col">Department</th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-product>
+                            <tr>
+                                <td>{{product.color}}</td>
+                                <td>{{product.name}}</td>
+                                <td>{{product.position}}</td>
+                                <td>{{product.department}}</td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+                </div>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 275px;"><code>&lt;!-- Variants --&gt;
+&lt;p-table [value]=&quot;tablevariant&quot; styleClass=&quot;table table-nowrap mb-0&quot;&gt;
+&lt;ng-template pTemplate=&quot;header&quot;&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;col&quot;&gt;#&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Name&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Position&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Department&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;ng-template pTemplate=&quot;body&quot; let-product&gt;
+    &lt;tr&gt;
+        &lt;td&gt;{{product.color}}&lt;/td&gt;
+        &lt;td&gt;{{product.name}}&lt;/td&gt;
+        &lt;td&gt;{{product.position}}&lt;/td&gt;
+        &lt;td&gt;{{product.department}}&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;/p-table&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div><!-- end col -->
+</div>
+<!--end row-->
+
+<div class="row">
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Vertical alignment</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+
+                <p class="text-muted">Table cells of <code>&lt;thead&gt;</code> are always vertical aligned to the
+                    bottom. Table cells in <code>&lt;tbody&gt;</code> inherit their alignment from
+                    <code>&lt;table&gt;</code> and are aligned to the the top by default. Use the vertical align classes
+                    to re-align where needed.
+                </p>
+                <div class="table-responsive table-nowrap">
+                    <table class="table align-middle">
+                        <thead>
+                            <tr>
+                                <th>Heading</th>
+                                <th>Heading</th>
+                                <th>Heading</th>
+                                <th>Heading</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>This cell inherits <code>vertical-align: middle;</code> from the table</td>
+                                <td>This cell inherits <code>vertical-align: middle;</code> from the table</td>
+                                <td>This cell inherits <code>vertical-align: middle;</code> from the table</td>
+                                <td>This here is some placeholder text, intended to take up quite a bit of vertical
+                                    space, to demonstrate how the vertical alignment works in the preceding cells. Use
+                                    the vertical align classes to re-align where needed. inherit their alignment from
+                                    and are aligned to the the top by default.</td>
+                            </tr>
+                            <tr class="align-bottom">
+                                <td>This cell inherits <code>vertical-align: bottom;</code> from the table row</td>
+                                <td>This cell inherits <code>vertical-align: bottom;</code> from the table row</td>
+                                <td>This cell inherits <code>vertical-align: bottom;</code> from the table row</td>
+                                <td>This here is some placeholder text, intended to take up quite a bit of vertical
+                                    space, to demonstrate how the vertical alignment works in the preceding cells. Use
+                                    the vertical align classes to re-align where needed. inherit their alignment from
+                                    and are aligned to the the top by default.</td>
+                            </tr>
+                            <tr>
+                                <td>This cell inherits <code>vertical-align: middle;</code> from the table</td>
+                                <td>This cell inherits <code>vertical-align: middle;</code> from the table</td>
+                                <td class="align-top">This cell is aligned to the top.</td>
+                                <td>This here is some placeholder text, intended to take up quite a bit of vertical
+                                    space, to demonstrate how the vertical alignment works in the preceding cells. Use
+                                    the vertical align classes to re-align where needed. inherit their alignment from
+                                    and are aligned to the the top by default.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 275px;"><code>&lt;!-- Vertical alignment --&gt;
+&lt;div class=&quot;table-responsive&quot;&gt;
+    &lt;table class=&quot;table align-middle&quot;&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                ...
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                ...
+            &lt;/tr&gt;
+            &lt;tr class=&quot;align-bottom&quot;&gt;
+                ...
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;...&lt;/td&gt;
+                &lt;td&gt;...&lt;/td&gt;
+                &lt;td class=&quot;align-top&quot;&gt;This cell is aligned to the top.&lt;/td&gt;
+                &lt;td&gt;...&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div><!-- end col -->
+</div>
+<!--end row-->
+
+<div class="row">
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Responsive Tables</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Use <code>table-responsive</code> class to make any table responsive across all
+                    viewports. Responsive tables allow tables to be scrolled horizontally with ease.</p>
+
+                <p-table [value]="responsive" styleClass="table-responsive table table-nowrap mb-0">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th scope="col" style="width: 42px;">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="responsivetableCheck">
+                                    <label class="form-check-label" for="responsivetableCheck"></label>
+                                </div>
+                            </th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Customer</th>
+                            <th scope="col">Purchased</th>
+                            <th scope="col">Revenue</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-product>
+                        <tr>
+                            <td scope="row">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="responsivetableCheck01">
+                                    <label class="form-check-label" for="responsivetableCheck01"></label>
+                                </div>
+                            </td>
+                            <td><a href="javascript:void(0);" class="fw-medium">{{product.id}}</a></td>
+                            <td>{{product.date}}</td>
+                            <td class="text-success"><i class="ri-checkbox-circle-line fs-17 align-middle"></i>
+                                {{product.status}}
+                            </td>
+                            <td>
+                                <div class="d-flex gap-2 align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <img src="{{product.profile}}" alt="" class="avatar-xs rounded-circle" />
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        {{product.customer}}
+                                    </div>
+                                </div>
+                            </td>
+                            <td>{{product.purchase}}</td>
+                            <td>{{product.revenue}}</td>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="footer">
+                        <tr class="bg-light">
+                            <td colspan="6" class="p-2">Total</td>
+                            <td class="p-2">$947.55</td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+                <!-- end table responsive -->
+            </div><!-- end card-body -->
+            <div class=" card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 275px;"><code>&lt;p-table [value]=&quot;responsive&quot; styleClass=&quot;table-responsive table table-nowrap mb-0&quot;&gt;
+&lt;ng-template pTemplate=&quot;header&quot;&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;col&quot; style=&quot;width: 42px;&quot;&gt;
+            &lt;div class=&quot;form-check&quot;&gt;
+                &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot;
+                    id=&quot;responsivetableCheck&quot;&gt;
+                &lt;label class=&quot;form-check-label&quot; for=&quot;responsivetableCheck&quot;&gt;&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;ID&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Date&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Status&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Customer&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Purchased&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Revenue&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;ng-template pTemplate=&quot;body&quot; let-product&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;row&quot;&gt;
+            &lt;div class=&quot;form-check&quot;&gt;
+                &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;&quot;
+                    id=&quot;responsivetableCheck01&quot;&gt;
+                &lt;label class=&quot;form-check-label&quot; for=&quot;responsivetableCheck01&quot;&gt;&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/th&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot; class=&quot;fw-medium&quot;&gt;{{product.id}}&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;{{product.date}}&lt;/td&gt;
+        &lt;td class=&quot;text-success&quot;&gt;&lt;i class=&quot;ri-checkbox-circle-line fs-17 align-middle&quot;&gt;&lt;/i&gt; {{product.status}}
+        &lt;/td&gt;
+        &lt;td&gt;
+            &lt;div class=&quot;d-flex gap-2 align-items-center&quot;&gt;
+                &lt;div class=&quot;flex-shrink-0&quot;&gt;
+                    &lt;img src=&quot;{{product.profile}}&quot; alt=&quot;&quot;
+                        class=&quot;avatar-xs rounded-circle&quot; /&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;flex-grow-1&quot;&gt;
+                    {{product.customer}}
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td&gt;{{product.purchase}}&lt;/td&gt;
+        &lt;td&gt;{{product.revenue}}&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;ng-template pTemplate=&quot;footer&quot;&gt;
+    &lt;tr&gt;
+        &lt;td colspan=&quot;6&quot;&gt;Total&lt;/td&gt;
+        &lt;td&gt;$947.55&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/ng-template&gt;
+&lt;/p-table&gt;
+    &lt;!-- end table --&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div><!-- end col -->
+</div>
+<!--end row-->

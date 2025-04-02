@@ -1,0 +1,508 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumb title="Badges" [breadcrumbItems]="breadCrumbItems"></app-breadcrumb>
+<!-- End Breadcrumbs -->
+
+<div class="row">
+    <div class="col-xxl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Default Badges</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Use the <code>badge</code> class to set a default badge.</p>
+
+                <div class="d-flex flex-wrap gap-2">
+                    <p-badge value="Primary"></p-badge>
+                    <p-badge value="Secondary" styleClass="text-bg-secondary"></p-badge>
+                    <p-badge value="Success" styleClass="text-bg-success" severity="success"></p-badge>
+                    <p-badge value="Info" styleClass="text-bg-info"></p-badge>
+                    <p-badge value="Warning" styleClass="text-bg-warning"></p-badge>
+                    <p-badge value="Danger" styleClass="text-bg-danger"></p-badge>
+                    <p-badge value="Dark" styleClass="text-bg-dark"></p-badge>
+                    <p-badge value="Light" styleClass="text-bg-light text-body"></p-badge>
+                </div>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 175px;">
+<code>&lt;span class=&quot;badge text-bg-primary&quot;&gt;Primary&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge text-bg-secondary&quot;&gt;Secondary&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge text-bg-success&quot;&gt;Success&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge text-bg-info&quot;&gt;Info&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge text-bg-warning&quot;&gt;Warning&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge text-bg-danger&quot;&gt;Danger&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge text-bg-dark&quot;&gt;Dark&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge text-bg-light&quot;&gt;Light&lt;/span&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+
+    <div class="col-xxl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Soft Badges </h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Use the <code>badge-soft-</code> class with the below-mentioned variation to
+                    create a softer badge. </p>
+                <div class="d-flex flex-wrap gap-2">
+                    <p-badge value="Primary" styleClass="bg-primary-subtle text-primary"></p-badge>
+                    <p-badge value="Secondary" styleClass="bg-secondary-subtle text-secondary"></p-badge>
+                    <p-badge value="Success" styleClass="bg-success-subtle text-success"></p-badge>
+                    <p-badge value="Info" styleClass="bg-info-subtle text-info"></p-badge>
+                    <p-badge value="Warning" styleClass="bg-warning-subtle text-warning "></p-badge>
+                    <p-badge value="Danger" styleClass="bg-danger-subtle text-danger"></p-badge>
+                    <p-badge value="Dark" styleClass="bg-dark-subtle text-body"></p-badge>
+                    <p-badge value="Light" styleClass="bg-light-subtle text-body"></p-badge>
+                </div>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 175px;">
+<code>&lt;span class=&quot;badge bg-primary-subtle text-primary&quot;&gt;Primary&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge bg-secondary-subtle text-secondary&quot;&gt;Secondary&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge bg-success-subtle text-success&quot;&gt;Success&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge bg-info-subtle text-info&quot;&gt;Info&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge bg-warning-subtle text-warning &quot;&gt;Warning&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge bg-danger-subtle text-danger&quot;&gt;Danger&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge bg-dark-subtle text-body&quot;&gt;Dark&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge bg-light-subtle&quot;&gt;Light&lt;/span&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xxl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Outline Badges </h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Use the <code>badge-outline-</code> class with the below-mentioned variation to
+                    create a badge with the outline. </p>
+                <div class="d-flex flex-wrap gap-2">
+                    <p-badge value="Primary" styleClass="badge-outline-primary"></p-badge>
+                    <p-badge value="Secondary" styleClass="badge-outline-secondary"></p-badge>
+                    <p-badge value="Success" styleClass="badge-outline-success"></p-badge>
+                    <p-badge value="Info" styleClass="badge-outline-info"></p-badge>
+                    <p-badge value="Warning" styleClass="badge-outline-warning"></p-badge>
+                    <p-badge value="Danger" styleClass="badge-outline-danger"></p-badge>
+                    <p-badge value="Dark" styleClass="badge-outline-dark text-body"></p-badge>
+                    <p-badge value="Light" styleClass="badge-outline-light text-body"></p-badge>
+                </div>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 175px;">
+<code>&lt;span class=&quot;badge badge-outline-primary&quot;&gt;Primary&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge badge-outline-secondary&quot;&gt;Secondary&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge badge-outline-success&quot;&gt;Success&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge badge-outline-info&quot;&gt;Info&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge badge-outline-warning&quot;&gt;Warning&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge badge-outline-danger&quot;&gt;Danger&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge badge-outline-dark text-body&quot;&gt;Dark&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge badge-outline-light&quot;&gt;Light&lt;/span&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+
+    <div class="col-xxl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Rounded Pill Badges </h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Use the <code>rounded-pill</code> class to make badges more rounded with a larger
+                    border-radius.</p>
+                <div class="d-flex flex-wrap gap-2">
+                    <p-badge value="Primary" styleClass="rounded-pill text-bg-primary"></p-badge>
+                    <p-badge value="Secondary" styleClass="rounded-pill text-bg-secondary"></p-badge>
+                    <p-badge value="Success" styleClass="rounded-pill text-bg-success"></p-badge>
+                    <p-badge value="Info" styleClass="rounded-pill text-bg-info"></p-badge>
+                    <p-badge value="Warning" styleClass="rounded-pill text-bg-warning"></p-badge>
+                    <p-badge value="Danger" styleClass="rounded-pill text-bg-danger"></p-badge>
+                    <p-badge value="Dark" styleClass="rounded-pill text-bg-dark"></p-badge>
+                    <p-badge value="Light" styleClass="rounded-pill text-bg-light text-body"></p-badge>
+                </div>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 175px;">
+<code>&lt;span class=&quot;badge rounded-pill text-bg-primary&quot;&gt;Primary&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge rounded-pill text-bg-secondary&quot;&gt;Secondary&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge rounded-pill text-bg-success&quot;&gt;Success&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge rounded-pill text-bg-info&quot;&gt;Info&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge rounded-pill text-bg-warning&quot;&gt;Warning&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge rounded-pill text-bg-danger&quot;&gt;Danger&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge rounded-pill text-bg-dark&quot;&gt;Dark&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge rounded-pill text-bg-light&quot;&gt;Light&lt;/span&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xxl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Rounded Pill Badges with soft effect </h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Use the <code>rounded-pill badge-soft-</code> class with the below-mentioned
+                    variation to create a badge more rounded with a soft background.</p>
+                <div class="d-flex flex-wrap gap-2">
+                    <p-badge value="Primary" styleClass="rounded-pill bg-primary-subtle text-primary"></p-badge>
+                    <p-badge value="Secondary" styleClass="rounded-pill bg-secondary-subtle text-secondary"></p-badge>
+                    <p-badge value="Success" styleClass="rounded-pill bg-success-subtle text-success"></p-badge>
+                    <p-badge value="Info" styleClass="rounded-pill bg-info-subtle text-info"></p-badge>
+                    <p-badge value="Warning" styleClass="rounded-pill bg-warning-subtle text-warning "></p-badge>
+                    <p-badge value="Danger" styleClass="rounded-pill bg-danger-subtle text-danger"></p-badge>
+                    <p-badge value="Dark" styleClass="rounded-pill bg-dark-subtle text-body"></p-badge>
+                    <p-badge value="Light" styleClass="rounded-pill bg-light-subtle text-body"></p-badge>
+                </div>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 175px;">
+<code>&lt;span class=&quot;badge rounded-pill bg-primary-subtle text-primary&quot;&gt;Primary&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge rounded-pill bg-secondary-subtle text-secondary&quot;&gt;Secondary&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge rounded-pill bg-success-subtle text-success&quot;&gt;Success&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge rounded-pill bg-info-subtle text-info&quot;&gt;Info&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge rounded-pill bg-warning-subtle text-warning &quot;&gt;Warning&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge rounded-pill bg-danger-subtle text-danger&quot;&gt;Danger&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge rounded-pill bg-dark-subtle text-body&quot;&gt;Dark&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge rounded-pill bg-light-subtle&quot;&gt;Light&lt;/span&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+
+    <div class="col-xxl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Soft Border Badges</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">
+                    Use the <code>badge-border</code> and <code>badge-soft-</code> with below
+                    mentioned modifier classes to make badges with border & soft backgorund.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                    <p-badge value="Primary" styleClass="bg-primary-subtle text-primary badge-border"></p-badge>
+                    <p-badge value="Secondary" styleClass="bg-secondary-subtle text-secondary badge-border"></p-badge>
+                    <p-badge value="Success" styleClass="bg-success-subtle text-success badge-border"></p-badge>
+                    <p-badge value="Info" styleClass="bg-info-subtle text-info badge-border"></p-badge>
+                    <p-badge value="Warning" styleClass="bg-warning-subtle text-warning  badge-border"></p-badge>
+                    <p-badge value="Danger" styleClass="badge bg-danger-subtle text-danger badge-border"></p-badge>
+                    <p-badge value="Dark" styleClass="bg-dark-subtle text-body badge-border"></p-badge>
+                    <p-badge value="Light" styleClass="bg-light-subtle badge-border text-body"></p-badge>
+                </div>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 175px;">
+<code>&lt;span class=&quot;badge bg-primary-subtle text-primary badge-border&quot;&gt;Primary&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge bg-secondary-subtle text-secondary badge-border&quot;&gt;Secondary&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge bg-success-subtle text-success badge-border&quot;&gt;Success&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge bg-info-subtle text-info badge-border&quot;&gt;Info&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge bg-warning-subtle text-warning  badge-border&quot;&gt;Warning&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge bg-danger-subtle text-danger badge-border&quot;&gt;Danger&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge bg-dark-subtle text-body badge-border&quot;&gt;Dark&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge bg-light-subtle badge-border&quot;&gt;Light&lt;/span&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+
+
+</div>
+
+<div class="row">
+    <div class="col-xxl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Outline Pill Badges </h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">
+                    Use the <code>rounded-pill badge-outline-</code> class with the below-mentioned
+                    variation to create a outline Pill badge.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                    <p-badge value="Primary" styleClass=" rounded-pill badge-outline-primary"></p-badge>
+                    <p-badge value="Secondary" styleClass="rounded-pill badge-outline-secondary"></p-badge>
+                    <p-badge value="Success" styleClass="rounded-pill badge-outline-success"></p-badge>
+                    <p-badge value="Info" styleClass="rounded-pill badge-outline-info"></p-badge>
+                    <p-badge value="Warning" styleClass="rounded-pill badge-outline-warning"></p-badge>
+                    <p-badge value="Danger" styleClass="rounded-pill badge-outline-danger"></p-badge>
+                    <p-badge value="Dark" styleClass="rounded-pill badge-outline-dark text-body"></p-badge>
+                    <p-badge value="Light" styleClass="rounded-pill badge-outline-light text-body"></p-badge>
+                </div>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 175px;">
+<code>&lt;span class=&quot;badge rounded-pill badge-outline-primary&quot;&gt;Primary&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge rounded-pill badge-outline-secondary&quot;&gt;Secondary&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge rounded-pill badge-outline-success&quot;&gt;Success&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge rounded-pill badge-outline-info&quot;&gt;Info&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge rounded-pill badge-outline-warning&quot;&gt;Warning&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge rounded-pill badge-outline-danger&quot;&gt;Danger&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge rounded-pill badge-outline-dark text-body&quot;&gt;Dark&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge rounded-pill badge-outline-light&quot;&gt;Light&lt;/span&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+
+    <div class="col-xxl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Label Badges </h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">
+                    Use the <code>badge-label</code> class to create a badge with the label.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                    <p-badge value="Primary" styleClass="badge-label bg-primary"></p-badge>
+                    <p-badge value="Secondary" styleClass="badge-label bg-secondary"></p-badge>
+                    <p-badge value="Success" styleClass="badge-label bg-success"></p-badge>
+                    <p-badge value="Info" styleClass="badge-label bg-info"></p-badge>
+                    <p-badge value="Warning" styleClass="badge-label bg-warning"></p-badge>
+                    <p-badge value="Danger" styleClass="badge-label bg-danger"></p-badge>
+                    <p-badge value="Dark" styleClass="badge-label bg-dark"></p-badge>
+                    <p-badge value="Light" styleClass="badge-label bg-light text-body"></p-badge>
+                </div>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 175px;">
+<code>&lt;span class=&quot;badge badge-label bg-primary&quot;&gt;&lt;i class=&quot;mdi mdi-circle-medium&quot;&gt;&lt;/i&gt; Primary&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge badge-label bg-secondary&quot;&gt;&lt;i class=&quot;mdi mdi-circle-medium&quot;&gt;&lt;/i&gt; Secondary&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge badge-label bg-success&quot;&gt;&lt;i class=&quot;mdi mdi-circle-medium&quot;&gt;&lt;/i&gt; Success&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge badge-label bg-danger&quot;&gt;&lt;i class=&quot;mdi mdi-circle-medium&quot;&gt;&lt;/i&gt; Danger&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge badge-label bg-warning&quot;&gt;&lt;i class=&quot;mdi mdi-circle-medium&quot;&gt;&lt;/i&gt; Warning&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge badge-label bg-info&quot;&gt;&lt;i class=&quot;mdi mdi-circle-medium&quot;&gt;&lt;/i&gt; Info&lt;/span&gt;</code>
+
+<code>&lt;span class=&quot;badge badge-label bg-dark&quot;&gt;&lt;i class=&quot;mdi mdi-circle-medium&quot;&gt;&lt;/i&gt; Dark&lt;/span&gt;</code>\
+
+<code>&lt;span class=&quot;badge badge-label bg-light&quot;&gt;&lt;i class=&quot;mdi mdi-circle-medium&quot;&gt;&lt;/i&gt; Light&lt;/span&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xxl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Button Position Badges</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Use the below utilities to modify a badge and position it in the corner of a link
+                    or button.</p>
+                <div class="d-flex flex-wrap gap-3">
+                    <p-button label="Mails" pBadge [value]="'+99'" styleClass="p-button-primary" severity="success"></p-button>
+                    <p-button label="Alerts" pBadge styleClass="p-button-light" severity="danger"></p-button>
+                    <p-button styleClass="p-button-primary" pBadge severity="danger">
+                        <!-- <span class="avatar-title bg-transparent"> -->
+                        <i class="bx bxs-envelope"></i>
+                        <!-- </span> -->
+                    </p-button>
+                    <p-button type="button" styleClass="p-button-light">
+                        <span class="avatar-title bg-transparent text-reset">
+                            <i class="bx bxs-bell"></i>
+                        </span>
+                    </p-button>
+                    <p-button type="button" styleClass="p-button-light" pBadge severity="success">
+                        <span class="avatar-title bg-transparent text-reset">
+                            <i class="bx bx-menu"></i>
+                        </span>
+                    </p-button>
+                </div>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 175px;">
+<code>&lt;button type=&quot;button&quot; class=&quot;btn btn-primary position-relative&quot;&gt;
+Mails &lt;span class=&quot;position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success&quot;&gt;+99 &lt;span class=&quot;visually-hidden&quot;&gt;unread messages&lt;/span&gt;&lt;/span&gt;
+&lt;/button&gt;</code>
+
+<code>&lt;button type=&quot;button&quot; class=&quot;btn btn-light position-relative&quot;&gt;
+Alerts &lt;span class=&quot;position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-1&quot;&gt;&lt;span class=&quot;visually-hidden&quot;&gt;unread messages&lt;/span&gt;&lt;/span&gt;
+&lt;/button&gt;</code>
+
+<code>&lt;button type=&quot;button&quot; class=&quot;btn btn-primary position-relative p-0 avatar-xs rounded&quot;&gt;
+&lt;span class=&quot;avatar-title bg-transparent&quot;&gt;
+&lt;i class=&quot;bx bxs-envelope&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;span class=&quot;position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-1&quot;&gt;&lt;span class=&quot;visually-hidden&quot;&gt;unread messages&lt;/span&gt;&lt;/span&gt;
+&lt;/button&gt;</code>
+
+<code>&lt;button type=&quot;button&quot; class=&quot;btn btn-light position-relative p-0 avatar-xs rounded-circle&quot;&gt;
+&lt;span class=&quot;avatar-title bg-transparent text-reset&quot;&gt;
+&lt;i class=&quot;bx bxs-bell&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;/button&gt;</code>
+
+<code>&lt;button type=&quot;button&quot; class=&quot;btn btn-light position-relative p-0 avatar-xs rounded-circle&quot;&gt;
+&lt;span class=&quot;avatar-title bg-transparent text-reset&quot;&gt;
+&lt;i class=&quot;bx bx-menu&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;
+&lt;span class=&quot;position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-success p-1&quot;&gt;&lt;span class=&quot;visually-hidden&quot;&gt;unread messages&lt;/span&gt;&lt;/span&gt;
+&lt;/button&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+
+    <div class="col-xxl-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Badges With Button</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Badges can be used as part of buttons to provide a counter.</p>
+                <div class="d-flex flex-wrap gap-2">
+
+                    <p-button label="Notifications" badge="4" styleClass="p-button-primary" badgeClass="p-badge-success ms-1"></p-button>
+                    <p-button label="Messages" styleClass="p-button-success" badge="2" badgeClass="p-badge-danger ms-1"></p-button>
+                    <p-button label="Draft" styleClass="btn btn-outline-secondary" badge="2" badgeClass="p-badge-success ms-1"></p-button>
+                </div>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 175px;">
+<code>&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;
+Notifications &lt;span class=&quot;badge bg-success ms-1&quot;&gt;4&lt;/span&gt;
+&lt;/button&gt;</code>
+
+<code>&lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;
+Messages &lt;span class=&quot;badge bg-danger ms-1&quot;&gt;2&lt;/span&gt;
+&lt;/button&gt;</code>
+
+<code>&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-secondary&quot;&gt;
+Draft &lt;span class=&quot;badge bg-success ms-1&quot;&gt;2&lt;/span&gt;
+&lt;/button&gt;
+</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+
+    <div class="col-xxl-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Badges with Heading</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Example of the badge used in the HTML Heading.</p>
+                <h1>Example heading <p-badge value="New" styleClass="text-bg-secondary"></p-badge> </h1>
+                <h2>Example heading <p-badge value="New" styleClass="text-bg-secondary"></p-badge></h2>
+                <h3>Example heading <p-badge value="New" styleClass="text-bg-secondary"></p-badge></h3>
+                <h4>Example heading <p-badge value="New" styleClass="text-bg-secondary"></p-badge></h4>
+                <h5>Example heading <p-badge value="New" styleClass="text-bg-secondary"></p-badge></h5>
+                <h6 class="mb-0">Example heading <p-badge value="New" styleClass="text-bg-secondary"></p-badge></h6>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup">
+<code>&lt;h1&gt;Example heading &lt;span class=&quot;badge text-bg-secondary&quot;&gt;New&lt;/span&gt;&lt;/h1&gt;</code>
+
+<code>&lt;h2&gt;Example heading &lt;span class=&quot;badge text-bg-secondary&quot;&gt;New&lt;/span&gt;&lt;/h2&gt;</code>
+
+<code>&lt;h3&gt;Example heading &lt;span class=&quot;badge text-bg-secondary&quot;&gt;New&lt;/span&gt;&lt;/h3&gt;</code>
+
+<code>&lt;h4&gt;Example heading &lt;span class=&quot;badge text-bg-secondary&quot;&gt;New&lt;/span&gt;&lt;/h4&gt;</code>
+
+<code>&lt;h5&gt;Example heading &lt;span class=&quot;badge text-bg-secondary&quot;&gt;New&lt;/span&gt;&lt;/h5&gt;</code>
+
+<code>&lt;h6&gt;Example heading &lt;span class=&quot;badge text-bg-secondary&quot;&gt;New&lt;/span&gt;&lt;/h6&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+</div>

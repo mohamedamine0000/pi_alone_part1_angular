@@ -1,0 +1,147 @@
+{
+  "MENUITEMS": {
+    "MENU": {
+      "TEXT": "COMPONENTS"
+    },
+    "OVERVIEW": {
+      "TEXT": "Overview"
+    },
+    "BOOTSTRAPUI": {
+      "TEXT": "Bootstrap UI",
+      "LIST": {
+        "ALERTS": "Alerts",
+        "BADGES": "Badges",
+        "BUTTONS": "Buttons",
+        "COLORS": "Colors",
+        "CARDS": "Cards",
+        "CAROUSEL": "Carousel",
+        "DROPDOWNS": "Dropdowns",
+        "GRID": "Grid",
+        "IMAGES": "Images",
+        "TIMELINE": "Timeline",
+        "KNOB": "Knob",
+        "SPLITTER": "Splitter",
+        "SPEEDDIAL": "Speed-Dial",
+        "TABS": "Tabs",
+        "ACCORDIAN": "Accordion & Collapse",
+        "MODALS": "Modals",
+        "OFFCANVAS": "Offcanvas",
+        "PLACEHOLDERS": "Placeholders",
+        "PROGRESS": "Progress",
+        "NOTIFICATION": "Notifications",
+        "MEDIA": "Media object",
+        "VIDEO": "Embed Video",
+        "TYPOGRAPHY": "Typography",
+        "LISTS": "Lists",
+        "GENERAL": "General",
+        "UTILITIES": "Utilities"
+      }
+    },
+    "ADVANCEUI": {
+      "TEXT": "Advance UI",
+      "LIST": {
+        "SWEETALERT": "Sweet Alerts",
+        "NESTABLELIST": "Nestable List",
+        "SCROLLBAR": "Scrollbar",
+        "SWIPER": "Swiper Slider",
+        "RATINGS": "Ratings",
+        "HIGHLIGHT": "Highlight",
+        "SCROLLSPY": "ScrollSpy"
+      }
+    },
+    "CUSTOMUI": {
+      "TEXT": "Custom UI",
+      "BADGE": "Custom",
+      "LIST": {
+        "RIBBONS": "Ribbons",
+        "PROFILE": "Profile",
+        "COUNTER": "Counter"
+      }
+    },
+    "FORMS": {
+      "TEXT": "Forms",
+      "LIST": {
+        "ELEMENTS": "Basic Elements",
+        "SELECT": "Form Select",
+        "CHECKBOXES": "Checkboxs & Radios",
+        "PICKERS": "Pickers",
+        "MASK": "Input Mask",
+        "ADVANCED": "Advanced",
+        "SLIDER": "Range Slider",
+        "VALIDATION": "Validation",
+        "WIZARD": "Wizard",
+        "EDITOR": "Editors",
+        "FILEUPLOAD": "File Upload",
+        "LAYOUTS": "Form Layouts",
+        "TOMSELECT": "Tom Select"
+      }
+    },
+    "MORE": {
+      "TEXT": "More"
+    },
+    "TABLES": {
+      "TEXT": "Tables",
+      "LIST": {
+        "BASIC": "Basic Tables",
+        "GRIDJS": "Grid Js",
+        "LISTJS": "List Js"
+      }
+    },
+    "APEXCHARTS": {
+      "TEXT": "Apexcharts",
+      "LIST": {
+        "LINE": "line",
+        "AREA": "Area",
+        "COLUMN": "Column",
+        "BAR": "Bar",
+        "MIXED": "Mixed",
+        "TIMELINE": "Timeline",
+        "CANDLESTICK": "Candlestick",
+        "BOXPLOT": "Boxplot",
+        "BUBBLE": "Bubble",
+        "SCATTER": "Scatter",
+        "HEATMAP": "Heatmap",
+        "TREEMAP": "Treemap",
+        "PIE": "Pie",
+        "RADIALBAR": "Radialbar",
+        "RADAR": "Radar",
+        "POLARAREA": "Polararea"
+      }
+    },
+    "ICONS": {
+      "TEXT": "Icons",
+      "LIST": {
+        "REMIX": "Remix",
+        "BOXICONS": "Boxicons",
+        "MATERIALDESIGN": "Material Design",
+        "BOOTSTRAP": "Bootstrap",
+        "PHOSPHOR": "Phosphor"
+      }
+    },
+    "MAPS": {
+      "TEXT": "Maps",
+      "LIST": {
+        "GOOGLE": "Google",
+        "AMCHARTS": "AmCharts",
+        "LEAFLET": "Leaflet"
+      }
+    },
+    "MULTILEVEL": {
+      "TEXT": "Multi Level",
+      "LIST": {
+        "Level1": {
+          "1": "Level 1.1"
+        },
+        "Level2": {
+          "TEXT": "Level 1.2",
+          "1": "Level 2.1",
+          "2": "Level 2.2"
+        },
+        "Level3": {
+          "1": "Level 3.1",
+          "2": "Level 3.2"
+        }
+      }
+    }
+  }
+}

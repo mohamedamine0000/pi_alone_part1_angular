@@ -1,0 +1,194 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumb title="Dropdowns" [breadcrumbItems]="breadCrumbItems"></app-breadcrumb>
+<!-- End Breadcrumbs -->
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Basic Dropdown</h4>
+            </div><!-- end card header -->
+
+
+            <div class="card-body">
+                <div class="d-flex flex-wrap gap-3">
+                    <p-dropdown [options]="country" [(ngModel)]="selectedCity" styleClass="p-button-secondary mb-2"></p-dropdown>
+                </div>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 70px;">
+<code>&lt;p-dropdown [options]=&quot;country&quot; formControlName=&quot;selectedCity&quot;
+    styleClass=&quot;p-button-secondary mb-2&quot;&gt;&lt;/p-dropdown&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Editable Dropdown</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Use <code> [editable]="true"</code> is present, the input can also be entered with
+                    typing.
+                </p>
+                <div class="d-flex flex-wrap gap-3">
+                    <p-dropdown [options]="country" [(ngModel)]="selectedCity" placeholder="Select Value " [editable]="true" optionLabel="label"></p-dropdown>
+                </div>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 70px;"><code>&lt;p-dropdown [options]=&quot;country&quot; formControlName=&quot;selectedCity&quot; placeholder=&quot;Select Value &quot;
+[editable]=&quot;true&quot; optionLabel=&quot;label&quot;&gt;&lt;/p-dropdown&gt;</code>
+ </pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Split Button Dropdown</h4>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <p class="text-muted">Use <code>p-splitButton</code> to create split button dropdowns as a
+                    single button dropdown. </p>
+                <div class="d-flex flex-wrap gap-3">
+                    <p-splitButton [model]="splitdropdown" label="Primary" styleClass="p-button-raised p-button-info mr-2 mb-2"></p-splitButton>
+                </div>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 70px;">
+<code> &lt;p-splitButton [model]=&quot;splitdropdown&quot; label=&quot;Primary&quot;
+styleClass=&quot;p-button-raised p-button-info mr-2 mb-2&quot;&gt;&lt;/p-splitButton&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Group Dropdown</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Options can be grouped when a nested data structures is provided.
+                </p>
+                <div class="d-flex flex-wrap gap-3 align-items-center">
+                    <p-dropdown [options]="groupedCities" [(ngModel)]="selectedCity" placeholder="Select a City" [group]="true">
+                        <ng-template let-group pTemplate="group">
+                            <div class="flex align-items-center">
+                                <span>{{ group.label }}</span>
+                            </div>
+                        </ng-template>
+                    </p-dropdown>
+                </div>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 150px;">
+<code> &lt;p-dropdown [options]=&quot;groupedCities&quot; [(ngModel)]=&quot;selectedCity&quot; placeholder=&quot;Select a City&quot;
+    [group]=&quot;true&quot;&gt;
+    &lt;ng-template let-group pTemplate=&quot;group&quot;&gt;
+        &lt;div class=&quot;flex align-items-center&quot;&gt;
+            &lt;span&gt;group.label &lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/ng-template&gt;
+&lt;/p-dropdown&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Filter Dropdown</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <p class="text-muted">Dropdown provides built-in filtering that is enabled by adding
+                    the<code> filter</code> property.
+                </p>
+                <p-dropdown [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" [filter]="true" filterBy="name" [showClear]="true" placeholder="Select a Country">
+                    <ng-template pTemplate="selectedItem">
+                        @if(selectedCountry){
+                        <div class="flex align-items-center gap-2">
+                            <div>{{ selectedCountry.name }}</div>
+                        </div>}
+                    </ng-template>
+                    <ng-template let-country pTemplate="item">
+                        <div class="flex align-items-center gap-2">
+                            <div>{{ country.name }}</div>
+                        </div>
+                    </ng-template>
+                </p-dropdown>
+            </div><!-- end card-body -->
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 260px;">
+<code>  &lt;p-dropdown [options]=&quot;countries&quot; [(ngModel)]=&quot;selectedCountry&quot; optionLabel=&quot;name&quot; [filter]=&quot;true&quot;
+    filterBy=&quot;name&quot; [showClear]=&quot;true&quot; placeholder=&quot;Select a Country&quot;&gt;
+    &lt;ng-template pTemplate=&quot;selectedItem&quot;&gt;
+        &lt;div class=&quot;flex align-items-center gap-2&quot; *ngIf=&quot;selectedCountry&quot;&gt;
+            &lt;div&gt;selectedCountry.name &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/ng-template&gt;
+    &lt;ng-template let-country pTemplate=&quot;item&quot;&gt;
+        &lt;div class=&quot;flex align-items-center gap-2&quot;&gt;
+            &lt;div&gt;country.name &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/ng-template&gt;
+&lt;/p-dropdown&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Float Label Dropdown</h4>
+            </div><!-- end card header -->
+
+            <div class="card-body">
+                <span class="p-float-label">
+                    <p-dropdown [options]="country" [(ngModel)]="selectedCity" placeholder="Select a City" optionLabel="label" inputId="float-label"></p-dropdown>
+                    <label for="float-label">Select a City</label>
+                </span>
+            </div>
+            <div class="card-body bg-light border-bottom border-top bg-opacity-25">
+                <h5 class="fs-12 text-muted mb-0">HTML Preview</h5>
+            </div>
+            <div class="card-body">
+                <pre class="language-markup" style="height: 70px;">
+<code>  &lt;p-dropdown [options]=&quot;country&quot; [(ngModel)]=&quot;selectedCity&quot; placeholder=&quot;Select a City&quot;
+                        optionLabel=&quot;label&quot; inputId=&quot;float-label&quot;&gt;&lt;/p-dropdown&gt;</code></pre>
+            </div>
+        </div><!-- end card -->
+    </div>
+</div>

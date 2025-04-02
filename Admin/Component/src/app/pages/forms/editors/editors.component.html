@@ -1,0 +1,20 @@
+<!-- Start Breadcrumbs -->
+<app-breadcrumb title="Editors" [breadcrumbItems]="breadCrumbItems"></app-breadcrumb>
+<!-- End Breadcrumbs -->
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header align-items-center d-flex">
+                <h4 class="card-title mb-0">Prime Ng Editor</h4>
+            </div><!-- end card header -->
+            <div class="card-body">
+                <p class="text-muted">Use <code>p-editor</code> element to set ckeditor classic editor.</p>
+                <p-editor [(ngModel)]="text" [style]="{'height':'320px'}"></p-editor>
+            </div><!-- end card-body -->
+        </div><!-- end card -->
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->

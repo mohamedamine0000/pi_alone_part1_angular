@@ -1,0 +1,147 @@
+{
+  "MENUITEMS": {
+    "MENU": {
+      "TEXT": "المكونات"
+    },
+    "OVERVIEW": {
+      "TEXT": "نظرة عامة"
+    },
+    "BOOTSTRAPUI": {
+      "TEXT": "واجهة Bootstrap",
+      "LIST": {
+        "ALERTS": "التنبيهات",
+        "BADGES": "الشارات",
+        "BUTTONS": "الأزرار",
+        "COLORS": "الألوان",
+        "CARDS": "البطاقات",
+        "CAROUSEL": "عرض الشرائح",
+        "DROPDOWNS": "القوائم المنسدلة",
+        "GRID": "الشبكة",
+        "IMAGES": "الصور",
+        "TIMELINE": "الجدول الزمني",
+        "KNOB": "المقبض",
+        "SPLITTER": "المقسم",
+        "SPEEDDIAL": "الاتصال السريع",
+        "TABS": "العلامات التبويب",
+        "ACCORDIAN": "الأكورديون والطي",
+        "MODALS": "النماذج النمطية",
+        "OFFCANVAS": "Offcanvas",
+        "PLACEHOLDERS": "عناصر الاحتياطي",
+        "PROGRESS": "شريط التقدم",
+        "NOTIFICATION": "الإشعارات",
+        "MEDIA": "عنصر الوسائط",
+        "VIDEO": "تضمين الفيديو",
+        "TYPOGRAPHY": "الخطوط",
+        "LISTS": "القوائم",
+        "GENERAL": "عام",
+        "UTILITIES": "أدوات"
+      }
+    },
+    "ADVANCEUI": {
+      "TEXT": "واجهة متقدمة",
+      "LIST": {
+        "SWEETALERT": "تنبيهات Sweet",
+        "NESTABLELIST": "قائمة Nestable",
+        "SCROLLBAR": "شريط التمرير",
+        "SWIPER": "منزلق Swiper",
+        "RATINGS": "تصنيفات",
+        "HIGHLIGHT": "تمييز",
+        "SCROLLSPY": "مراقبة التمرير"
+      }
+    },
+    "CUSTOMUI": {
+      "TEXT": "واجهة مخصصة",
+      "BADGE": "مخصص",
+      "LIST": {
+        "RIBBONS": "الشرائط",
+        "PROFILE": "الملف الشخصي",
+        "COUNTER": "عداد"
+      }
+    },
+    "FORMS": {
+      "TEXT": "النماذج",
+      "LIST": {
+        "ELEMENTS": "عناصر أساسية",
+        "SELECT": "اختيار النموذج",
+        "CHECKBOXES": "صناديق الاختيار والأزرار الاختيارية",
+        "PICKERS": "أدوات الاختيار",
+        "MASK": "قناع الإدخال",
+        "ADVANCED": "متقدم",
+        "SLIDER": "شريط النطاق",
+        "VALIDATION": "التحقق",
+        "WIZARD": "معالج",
+        "EDITOR": "المحررات",
+        "FILEUPLOAD": "تحميل الملفات",
+        "LAYOUTS": "تخطيطات النموذج",
+        "TOMSELECT": "اختيار Tom"
+      }
+    },
+    "MORE": {
+      "TEXT": "المزيد"
+    },
+    "TABLES": {
+      "TEXT": "الجداول",
+      "LIST": {
+        "BASIC": "الجداول الأساسية",
+        "GRIDJS": "Grid Js",
+        "LISTJS": "List Js"
+      }
+    },
+    "APEXCHARTS": {
+      "TEXT": "رسوم بيانية Apex",
+      "LIST": {
+        "LINE": "خط",
+        "AREA": "منطقة",
+        "COLUMN": "عمود",
+        "BAR": "شريط",
+        "MIXED": "متنوع",
+        "TIMELINE": "الجدول الزمني",
+        "CANDLESTICK": "شموع",
+        "BOXPLOT": "مخطط صندوقي",
+        "BUBBLE": "فقاعة",
+        "SCATTER": "مبعثر",
+        "HEATMAP": "خريطة الحرارة",
+        "TREEMAP": "خريطة الأشجار",
+        "PIE": "فطيرة",
+        "RADIALBAR": "شريط شعاعي",
+        "RADAR": "رادار",
+        "POLARAREA": "منطقة قطبية"
+      }
+    },
+    "ICONS": {
+      "TEXT": "الرموز",
+      "LIST": {
+        "REMIX": "ريميكس",
+        "BOXICONS": "رموز الصندوق",
+        "MATERIALDESIGN": "تصميم المواد",
+        "BOOTSTRAP": "Bootstrap",
+        "PHOSPHOR": "فوسفور"
+      }
+    },
+    "MAPS": {
+      "TEXT": "الخرائط",
+      "LIST": {
+        "GOOGLE": "جوجل",
+        "AMCHARTS": "الفيكتور",
+        "LEAFLET": "Leaflet"
+      }
+    },
+    "MULTILEVEL": {
+      "TEXT": "مستوى متعدد",
+      "LIST": {
+        "Level1": {
+          "1": "المستوى 1.1"
+        },
+        "Level2": {
+          "TEXT": "المستوى 1.2",
+          "1": "المستوى 2.1",
+          "2": "المستوى 2.2"
+        },
+        "Level3": {
+          "1": "المستوى 3.1",
+          "2": "المستوى 3.2"
+        }
+      }
+    }
+  }
+}

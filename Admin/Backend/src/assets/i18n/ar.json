@@ -1,0 +1,120 @@
+{
+  "HEADER": {
+    "MORE": {
+      "TEXT": "أكثر"
+    }
+  },
+  "MENUITEMS": {
+    "MENU": {
+      "TEXT": "قائمة طعام"
+    },
+    "DASHBOARD": {
+      "TEXT": "لوحة القيادة",
+      "BADGE": "حار"
+    },
+    "PRODUCTS": {
+      "TEXT": "منتجات",
+      "LIST": {
+        "LISTVIEW": "عرض القائمة",
+        "GRIDVIEW": "عرض شبكي",
+        "OVERVIEW": "ملخص",
+        "CREATEPRODUCT": "إنشاء منتج",
+        "CATEGORIES": "فئات",
+        "SUBCATEGORIES": "الفئات الفرعية"
+      }
+    },
+    "ORDERS": {
+      "TEXT": "طلبات",
+      "LIST": {
+        "LISTVIEW": "عرض القائمة",
+        "OVERVIEW": "ملخص"
+      }
+    },
+    "CALENDER": {
+      "TEXT": "تقويم"
+    },
+    "SELLERS": {
+      "TEXT": "الباعة",
+      "LIST": {
+        "LISTVIEW": "عرض القائمة",
+        "GRIDVIEW": "عرض شبكي",
+        "OVERVIEW": "ملخص"
+      }
+    },
+    "INVOICE": {
+      "TEXT": "فاتورة",
+      "LIST": {
+        "LISTVIEW": "عرض القائمة",
+        "OVERVIEW": "ملخص",
+        "CREATEINVOICE": "إنشاء فاتورة"
+      }
+    },
+    "USERLIST": {
+      "TEXT": "قائمة المستخدمين"
+    },
+    "SHIPPING": {
+      "TEXT": "شحن",
+      "LIST": {
+        "SHIPPINGLIST": "قائمة الشحن",
+        "SHIPMENT": "الشحنات"
+      }
+    },
+    "COUPONS": {
+      "TEXT": "كوبونات"
+    },
+    "REVIEWS&RATINGS": {
+      "TEXT": "التقييمات والتقييمات"
+    },
+    "BRANDS": {
+      "TEXT": "العلامات التجارية"
+    },
+    "STATISTICS": {
+      "TEXT": "إحصائيات"
+    },
+    "LOCALIZATION": {
+      "TEXT": "الموقع",
+      "LIST": {
+        "TRANSACTIONS": "المعاملات",
+        "CURRENCYRATES": "أسعار العملات"
+      }
+    },
+    "ACCOUNTS": {
+      "TEXT": "حسابات",
+      "LIST": {
+        "MYACCOUNT": "حسابي",
+        "SETTINGS": "إعدادات",
+        "SIGNUP": "اشتراك",
+        "SIGNIN": "تسجيل الدخول",
+        "PASSWORDRESET": "إعادة تعيين كلمة المرور",
+        "PASSWORDCREATE": "إنشاء كلمة المرور",
+        "SUCCESSMESSAGE": "نجاح رسالة",
+        "TWOSTEPVERIFY": "خطوتين تحقق",
+        "LOGOUT": "تسجيل خروج",
+        "ERROR404": "خطأ 404",
+        "ERROR500": "خطأ 500",
+        "COMINGSOON": "قريباً"
+      }
+    },
+    "COMPONENTS": {
+      "TEXT": "عناصر",
+      "BADGE": "الإصدار 1.0"
+    },
+    "MULTILEVEL": {
+      "TEXT": "متعدد المستويات",
+      "LIST": {
+        "LEVEL1": {
+          "1": "المستوى 1.1",
+          "2": "المستوى 1.2",
+          "LEVEL2": {
+            "1": "المستوى 2.2",
+            "2": "المستوى 2.2",
+            "LEVEL3": {
+              "1": "المستوى 3.1",
+              "2": "المستوى 3.2"
+            }
+          }
+        }
+      }
+    }
+  }
+}

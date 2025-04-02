@@ -1,0 +1,147 @@
+{
+  "MENUITEMS": {
+    "MENU": {
+      "TEXT": "КОМПОНЕНТЫ"
+    },
+    "OVERVIEW": {
+      "TEXT": "Обзор"
+    },
+    "BOOTSTRAPUI": {
+      "TEXT": "Начальный пользовательский интерфейс",
+      "LIST": {
+        "ALERTS": "Оповещения",
+        "BADGES": "Значки",
+        "BUTTONS": "Кнопки",
+        "COLORS": "Цвета",
+        "CARDS": "Карты",
+        "CAROUSEL": "Карусель",
+        "DROPDOWNS": "Выпадающие списки",
+        "GRID": "Сетка",
+        "IMAGES": "Изображений",
+        "TIMELINE": "График",
+        "KNOB": "Ручка",
+        "SPLITTER": "Сплиттер",
+        "SPEEDDIAL": "Быстрый набор",
+        "TABS": "Вкладки",
+        "ACCORDIAN": "Аккордеон и свернуть",
+        "MODALS": "Модальные",
+        "OFFCANVAS": "Offcanvas",
+        "PLACEHOLDERS": "Заполнители",
+        "PROGRESS": "Прогресс",
+        "NOTIFICATION": "Уведомления",
+        "MEDIA": "Медиа объект",
+        "VIDEO": "Встроенное видео",
+        "TYPOGRAPHY": "Типография",
+        "LISTS": "Списки",
+        "GENERAL": "Общий",
+        "UTILITIES": "Утилиты"
+      }
+    },
+    "ADVANCEUI": {
+      "TEXT": "Расширенный пользовательский интерфейс",
+      "LIST": {
+        "SWEETALERT": "Сладкие оповещения",
+        "NESTABLELIST": "Вложенный список",
+        "SCROLLBAR": "Полоса прокрутки",
+        "SWIPER": "Слайдер Swiper",
+        "RATINGS": "Рейтинги",
+        "HIGHLIGHT": "Выделять",
+        "SCROLLSPY": "ПрокруткаШпион"
+      }
+    },
+    "CUSTOMUI": {
+      "TEXT": "Пользовательский интерфейс",
+      "BADGE": "Обычай",
+      "LIST": {
+        "RIBBONS": "ленты",
+        "PROFILE": "Профиль",
+        "COUNTER": "Прилавок"
+      }
+    },
+    "FORMS": {
+      "TEXT": "Формы",
+      "LIST": {
+        "ELEMENTS": "Основные элементы",
+        "SELECT": "Выбор формы",
+        "CHECKBOXES": "Флажки и радио",
+        "PICKERS": "Сборщики",
+        "MASK": "Маска ввода",
+        "ADVANCED": "Передовой",
+        "SLIDER": "Ползунок диапазона",
+        "VALIDATION": "Проверка",
+        "WIZARD": "Волшебник",
+        "EDITOR": "Редакторы",
+        "FILEUPLOAD": "Файл загружен",
+        "LAYOUTS": "Макеты форм",
+        "TOMSELECT": "Том Селект"
+      }
+    },
+    "MORE": {
+      "TEXT": "Более"
+    },
+    "TABLES": {
+      "TEXT": "Столы",
+      "LIST": {
+        "BASIC": "Основные таблицы",
+        "GRIDJS": "Сетка Js",
+        "LISTJS": "Список Js"
+      }
+    },
+    "APEXCHARTS": {
+      "TEXT": "Апексчарты",
+      "LIST": {
+        "LINE": "линия",
+        "AREA": "Область",
+        "COLUMN": "Столбец",
+        "BAR": "Бар",
+        "MIXED": "Смешанный",
+        "TIMELINE": "График",
+        "CANDLESTICK": "Подсвечник",
+        "BOXPLOT": "Блочная диаграмма",
+        "BUBBLE": "Пузырь",
+        "SCATTER": "Разброс",
+        "HEATMAP": "Тепловая карта",
+        "TREEMAP": "Древовидная карта",
+        "PIE": "пирог",
+        "RADIALBAR": "Радиальная полоса",
+        "RADAR": "Радар",
+        "POLARAREA": "Поларареа"
+      }
+    },
+    "ICONS": {
+      "TEXT": "Иконки",
+      "LIST": {
+        "REMIX": "Ремикс",
+        "BOXICONS": "Боксиконы",
+        "MATERIALDESIGN": "Материальный дизайн",
+        "BOOTSTRAP": "Начальная загрузка",
+        "PHOSPHOR": "фосфор"
+      }
+    },
+    "MAPS": {
+      "TEXT": "Карты",
+      "LIST": {
+        "GOOGLE": "Google",
+        "AMCHARTS": "Вектор",
+        "LEAFLET": "Листовка"
+      }
+    },
+    "MULTILEVEL": {
+      "TEXT": "Многоуровневый",
+      "LIST": {
+        "Level1": {
+          "1": "Уровень  1.1"
+        },
+        "Level2": {
+          "TEXT": "Уровень  1.2",
+          "1": "Уровень  2.1",
+          "2": "Уровень  2.2"
+        },
+        "Level3": {
+          "1": "Уровень  3.1",
+          "2": "Уровень  3.2"
+        }
+      }
+    }
+  }
+}
