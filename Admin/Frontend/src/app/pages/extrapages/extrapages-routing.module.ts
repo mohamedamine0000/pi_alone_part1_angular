@@ -5,7 +5,7 @@ import { ContactUsComponent } from "./contact-us/contact-us.component";
 import { EcommerceFaqComponent } from "./ecommerce-faq/ecommerce-faq.component";
 import { InvoiceComponent } from "./invoice/invoice.component";
 import { PrivacyPolicyComponent } from "./privacy-policy/privacy-policy.component";
-import { GymComponent } from "./gym/gym.component";
+
 // Component
 import { ProductsCategoryComponent } from "./products-category/products-category.component";
 import { PurchaseGuideComponent } from "./purchase-guide/purchase-guide.component";
@@ -13,6 +13,7 @@ import { StoreLocatorComponent } from "./store-locator/store-locator.component";
 import { TermsConditionsComponent } from "./terms-conditions/terms-conditions.component";
 import { AddGymComponent } from "./add-gym/add-gym.component";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GymComponent } from "./gym/gym.component";
 
 
 const routes: Routes = [

@@ -1,0 +1,8 @@
+.main-content {
+    margin-top: 70px; // Adjust this value based on your header height
+}
+
+.page-content {
+    min-height: calc(100vh - 140px); // Accounts for header and footer
+    padding: 20px 0;
+}

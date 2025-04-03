@@ -4,6 +4,7 @@
         <div class="container">
             <h2>Available Gyms</h2>
             
+              <button class="add-gym-btn" routerLink="/extrapages/add-gym">Add Gym</button>
             <div class="gym-container">
               <div class="gym-card" *ngFor="let gym of gyms">
                 <!-- Matterport 3D Tour -->
@@ -29,6 +30,7 @@
                   <p><strong>Coaches:</strong> {{ gym.numbercoaches }}</p>
                   <p><strong>Open Days:</strong> {{ gym.open_days }}</p>
                   <p><strong>Open Hours:</strong> {{ gym.open_hours }}</p>
+                  <button (click)="deleteGym(gym.gym_id)" class="btn btn-danger">Delete</button>
 
                 </div>
               </div>

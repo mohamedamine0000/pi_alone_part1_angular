@@ -10,7 +10,20 @@ import { ReviewRatingComponent } from './review-rating/review-rating.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { UserlistComponent } from './userlist/userlist.component';
 
+import { AddGymComponent } from "./add-gym/add-gym.component";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GymComponent } from "./gym/gym.component";
+
+
 const routes: Routes = [
+  {
+    path : "add-gym",
+    component : AddGymComponent,
+},
+{
+    path: "gym",
+    component: GymComponent, 
+},
   {
     path: 'calender',
     component: CalendarComponent

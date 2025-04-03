@@ -9,13 +9,18 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { ExtrapagesRoutingModule } from './extrapages-routing.module';
 
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     ComingSoonComponent
+   
   ],
 
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     ExtrapagesRoutingModule
   ]

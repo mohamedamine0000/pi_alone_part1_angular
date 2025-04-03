@@ -53,9 +53,16 @@ import { NgxMasonryModule } from 'ngx-masonry';
 // SlickCarouselModule
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 
+import { GymComponent } from "./gym/gym.component";
+import { SafeUrlPipe } from "src/app/safe-url.pipe";
+import { AddGymComponent } from "./add-gym/add-gym.component";
+
+
+
 
 @NgModule({
   declarations: [
+    AddGymComponent,SafeUrlPipe,GymComponent ,
     CalendarComponent,
     UserlistComponent,
     CouponsComponent,
