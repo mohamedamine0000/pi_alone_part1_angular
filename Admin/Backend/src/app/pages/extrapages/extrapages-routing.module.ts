@@ -13,9 +13,12 @@ import { UserlistComponent } from './userlist/userlist.component';
 import { AddGymComponent } from "./add-gym/add-gym.component";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GymComponent } from "./gym/gym.component";
+import { UpdateGymComponent } from './update-gym/update-gym.component';
 
 
 const routes: Routes = [
+  { path: 'update-gym/:id', 
+    component: UpdateGymComponent },
   {
     path : "add-gym",
     component : AddGymComponent,

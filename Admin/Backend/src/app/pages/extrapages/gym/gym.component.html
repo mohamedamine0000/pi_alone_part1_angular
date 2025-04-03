@@ -31,6 +31,8 @@
                   <p><strong>Open Days:</strong> {{ gym.open_days }}</p>
                   <p><strong>Open Hours:</strong> {{ gym.open_hours }}</p>
                   <button (click)="deleteGym(gym.gym_id)" class="btn btn-danger">Delete</button>
+                  <a [routerLink]="['/extrapages/update-gym', gym.gym_id]" class="btn btn-warning">Edit</a>
+
 
                 </div>
               </div>

@@ -56,12 +56,13 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { GymComponent } from "./gym/gym.component";
 import { SafeUrlPipe } from "src/app/safe-url.pipe";
 import { AddGymComponent } from "./add-gym/add-gym.component";
+import { UpdateGymComponent } from './update-gym/update-gym.component';
 
 
 
 
 @NgModule({
-  declarations: [
+  declarations: [UpdateGymComponent,
     AddGymComponent,SafeUrlPipe,GymComponent ,
     CalendarComponent,
     UserlistComponent,
