@@ -30,10 +30,11 @@ export class UpdateGymComponent implements OnInit {
     private activitiesService: ActivitiesService,
     private eventService: EventService
   ) {}
+
   ngOnInit(): void {
     // Get gym ID from URL
     this.gymId = Number(this.route.snapshot.paramMap.get('id'));
-  
+
     // Initialize the form
     this.gymForm = this.fb.group({
       gymName: ['', Validators.required],
@@ -46,23 +47,20 @@ export class UpdateGymComponent implements OnInit {
       open_hours: ['', Validators.required],
       gym_3d: ['', Validators.required]
     });
-  
-    // Load gym details
-    this.gymService.getGymById(this.gymId).subscribe(gym => {
-      // Map gym_name from the API response to gymName for the form
-      const mappedGym = {
-        ...gym,
-        gymName: (gym as any).gym_name  // Map snake_case to camelCase
-      };
-      this.gymForm.patchValue(mappedGym);  // This should correctly patch gymName and other fields
-  
-      this.selectedActivities = gym.activities?.map(a => a.activity_id) || [];
-      this.selectedEvents = gym.events?.map(e => e.id_event) || [];
-  
-      console.log('Loaded Gym:', gym);  // Debugging to check if the gym data is loaded
-      console.log('Selected Events:', this.selectedEvents);  // Check selected events
-    });
-  
+
+  // Load gym details
+this.gymService.getGymById(this.gymId).subscribe(gym => {
+  // Patch the form with the gym data received from the API
+  this.gymForm.patchValue(gym);
+
+  // Map activities and events as they are
+  this.selectedActivities = gym.activities?.map(a => a.activity_id) || [];
+  this.selectedEvents = gym.events?.map(e => e.id_event) || [];
+
+  console.log('Loaded Gym:', gym);  // Debugging to check if the gym data is loaded
+  console.log('Selected Events:', this.selectedEvents);  // Check selected events
+});
+
     // Fetch activities and events
     this.activitiesService.getActivities().subscribe(data => this.activities = data);
     this.eventService.getEvents().subscribe(data => this.events = data);
