@@ -1,0 +1,98 @@
+<app-header></app-header>
+<div class="main-content">
+  <div class="page-content mt-5 pt-5">
+    <div class="container">
+      <h2>Gym Details</h2>
+
+      <div class="gym-details-container" *ngIf="gym">
+        <!-- Matterport 3D Tour -->
+        <div class="matterport-tour-container" *ngIf="gym.gym_3d">
+          <iframe
+            [src]="gym.gym_3d | safeUrl"
+            width="100%"
+            height="400"
+            frameborder="0"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+
+        <!-- Gym Details -->
+        <div class="gym-details">
+          <h3>{{ gym.gymName }}</h3>
+          <p><strong>Location:</strong> {{ gym.location }}</p>
+          <p><strong>Subscription Fee:</strong> {{ gym.subscription_fee }} TND</p>
+          <p><strong>Members:</strong> {{ gym.num_members }}</p>
+          <p><strong>Machines:</strong> {{ gym.number_machines }}</p>
+          <p><strong>Coaches:</strong> {{ gym.numbercoaches }}</p>
+          <p><strong>Open Days:</strong> {{ gym.open_days }}</p>
+          <p><strong>Open Hours:</strong> {{ gym.open_hours }}</p>
+
+          <!-- Activities -->
+          <div *ngIf="gym.activities?.length">
+            <h3>Activities:</h3>
+            <ul>
+              <li *ngFor="let activity of gym.activities">{{ activity.type_act }}</li>
+            </ul>
+          </div>
+
+          <!-- Events -->
+          <div *ngIf="gym.events?.length">
+            <h3>Events:</h3>
+            <ul>
+              <li *ngFor="let event of gym.events">{{ event.event_name }}</li>
+            </ul>
+          </div>
+
+          <!-- Back Button -->
+          <button routerLink="/extrapages/gym">Back to Gym List</button>
+        </div>
+      </div>
+
+      <!-- Error & Loading -->
+      <div *ngIf="isLoading">Loading gym details...</div>
+      <div *ngIf="error" class="error">{{ error }}</div>
+
+      <!-- Styles -->
+      <style>
+        .gym-details-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+          max-width: 800px;
+          margin: auto;
+        }
+        .matterport-tour-container {
+          width: 100%;
+          max-height: 400px;
+        }
+        .matterport-tour-container iframe {
+          width: 100%;
+          height: 100%;
+          border: none;
+        }
+        .gym-details {
+          background: #fff;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+        }
+        button {
+          background: #007bff;
+          color: #fff;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          margin-top: 10px;
+        }
+        button:hover {
+          background: #0056b3;
+        }
+      </style>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

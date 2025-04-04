@@ -32,11 +32,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { SafeUrlPipe } from "src/app/safe-url.pipe";
 import { AddGymComponent } from "./add-gym/add-gym.component";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GymDetailsComponent } from "./gym-details/gym-details.component";
 
 
 
 @NgModule({
-  declarations: [ AddGymComponent,SafeUrlPipe,GymComponent ,ProductsCategoryComponent, AboutUsComponent, PurchaseGuideComponent, TermsConditionsComponent, PrivacyPolicyComponent, StoreLocatorComponent, EcommerceFaqComponent, InvoiceComponent, ContactUsComponent],
+  declarations: [ GymDetailsComponent,AddGymComponent,SafeUrlPipe,GymComponent ,ProductsCategoryComponent, AboutUsComponent, PurchaseGuideComponent, TermsConditionsComponent, PrivacyPolicyComponent, StoreLocatorComponent, EcommerceFaqComponent, InvoiceComponent, ContactUsComponent],
   imports: [  FormsModule,
     ReactiveFormsModule,HttpClientModule,CommonModule, ExtraPagesRoutingModule, SharedModule, CarouselModule, SimplebarAngularModule, GoogleMapsModule, AccordionModule, LeafletModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

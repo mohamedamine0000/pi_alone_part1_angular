@@ -24,11 +24,8 @@
                   <h3>{{ gym.gymName }}</h3>
                   <p><strong>Location:</strong> {{ gym.location }}</p>
                   <p><strong>Subscription Fee:</strong> {{ gym.subscription_fee }} TND</p>
-                  <p><strong>Members:</strong> {{ gym.num_members }}</p>
-                  <p><strong>Machines:</strong> {{ gym.number_machines }}</p>
-                  <p><strong>Coaches:</strong> {{ gym.numbercoaches }}</p>
-                  <p><strong>Open Days:</strong> {{ gym.open_days }}</p>
-                  <p><strong>Open Hours:</strong> {{ gym.open_hours }}</p>
+                  <button (click)="viewDetails(gym.gym_id)">Details</button>
+
 
                 </div>
               </div>

@@ -14,9 +14,12 @@ import { TermsConditionsComponent } from "./terms-conditions/terms-conditions.co
 import { AddGymComponent } from "./add-gym/add-gym.component";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GymComponent } from "./gym/gym.component";
+import { GymDetailsComponent } from "./gym-details/gym-details.component";
 
 
 const routes: Routes = [
+    { path: 'gym-details/:id', component: GymDetailsComponent },
+
     {
         path : "add-gym",
         component : AddGymComponent,
