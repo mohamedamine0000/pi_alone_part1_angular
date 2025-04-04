@@ -28,13 +28,20 @@
           <p><strong>Open Days:</strong> {{ gym.open_days }}</p>
           <p><strong>Open Hours:</strong> {{ gym.open_hours }}</p>
 
-          <!-- Activities -->
-          <div *ngIf="gym.activities?.length">
-            <h3>Activities:</h3>
-            <ul>
-              <li *ngFor="let activity of gym.activities">{{ activity.type_act }}</li>
-            </ul>
-          </div>
+        <!-- Activities -->
+<div *ngIf="gym.activities?.length">
+    <h3>Activities:</h3>
+    <ul>
+      <li *ngFor="let activity of gym.activities">
+        <strong>{{ activity.type_act }}</strong>  
+        <br />
+        <span>Time: {{ activity.activity_time }}</span>  
+        <br />
+        <span>Coach: {{ activity.coach }}</span>  
+      </li>
+    </ul>
+  </div>
+  
 
           <!-- Events -->
           <div *ngIf="gym.events?.length">
