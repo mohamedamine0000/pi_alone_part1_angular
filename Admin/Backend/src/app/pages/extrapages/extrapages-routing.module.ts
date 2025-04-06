@@ -14,9 +14,16 @@ import { AddGymComponent } from "./add-gym/add-gym.component";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GymComponent } from "./gym/gym.component";
 import { UpdateGymComponent } from './update-gym/update-gym.component';
-
+import { MachinesComponent } from "./machines/machines.component";
+import { AddMachineComponent } from './add-machine/add-machine.component';
+import { UpdateMachineComponent } from './update-machine/update-machine.component';
 
 const routes: Routes = [
+  { path: 'machines/:gymId' , 
+    component: MachinesComponent },
+  { path: 'add-machine/:gymId', component: AddMachineComponent },
+  { path: 'update-machine/:id', component: UpdateMachineComponent },
+
   { path: 'update-gym/:id', 
     component: UpdateGymComponent },
   {

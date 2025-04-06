@@ -1,0 +1,25 @@
+<app-header></app-header>
+<div class="main-content">
+  <div class="page-content mt-5 pt-5">
+    <div class="container">
+      <h2>Update Machine in {{gym?.gymName}}</h2>
+      <form [formGroup]="machineForm" (ngSubmit)="updateMachine()">
+        
+        <label>Machine Name:</label>
+        <input type="text" formControlName="machine_name" required>
+
+        <label>Muscles Worked:</label>
+        <input type="text" formControlName="muscles_touched" required>
+
+        <label>Activities Included:</label>
+        <input type="text" formControlName="activities_included" required>
+
+        <label>Machine 3D Link (optional):</label>
+        <input type="text" formControlName="machine_3d">
+
+        <button type="submit" class="btn btn-warning" [disabled]="!machineForm.valid">Update Machine</button>
+      </form>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

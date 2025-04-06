@@ -57,12 +57,20 @@ import { GymComponent } from "./gym/gym.component";
 import { SafeUrlPipe } from "src/app/safe-url.pipe";
 import { AddGymComponent } from "./add-gym/add-gym.component";
 import { UpdateGymComponent } from './update-gym/update-gym.component';
+import { MachinesComponent } from "./machines/machines.component";
+import { AddMachineComponent } from './add-machine/add-machine.component';
+import { UpdateMachineComponent } from './update-machine/update-machine.component';
+
 
 
 
 
 @NgModule({
-  declarations: [UpdateGymComponent,
+  declarations: [
+    UpdateMachineComponent,
+    AddMachineComponent,
+    MachinesComponent,
+    MachinesComponent,UpdateGymComponent,
     AddGymComponent,SafeUrlPipe,GymComponent ,
     CalendarComponent,
     UserlistComponent,
